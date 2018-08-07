@@ -22,7 +22,7 @@ Welcome to the 365Scores Web API documentation!
 
 ### General root
 
-`GET http://webwidgets.365scores.com/`
+`GET https://api.365scores.com/`
 
 ### General Query Parameters
 
@@ -62,7 +62,7 @@ This endpoint retrieves all countries.
 
 ### HTTP Request
 
-`GET http://webwidgets.365scores.com/countries`
+`GET https://api.365scores.com/countries`
 
 <aside class="notice">
 Don't forget general parameters.
@@ -90,7 +90,7 @@ Don't forget general parameters.
                      "id": 12,
                      "name": "Brazil"
                  }],
-   "competitions":[{
+   "leagues":[{
                          "id": 1,
                          "name": "World Cup",
                          "hasTable": true,
@@ -142,9 +142,11 @@ Don't forget general parameters.
 
 This endpoint retrieves all games.
 
+Return only partial game data.
+
 ### HTTP Request
 
-`GET http://webwidgets.365scores.com/games`
+`GET https://api.365scores.com/games`
 
 ### Query Parameters
 
@@ -152,10 +154,10 @@ Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
 sports | false | '' | 1,2 | 1-9 | Return games from specific sports
 countryId | false | 1 | 6 | | Sort competition priority by country
-updateId | false | '' | 848293001 | | Return only updated properties from the current updateId 
+lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
 startDate | false |  current date | 07/08/2018 |  | Return games from specific date(included)
 endDate | false |  current date | 09/08/2018 |  |  Return games until specific date(included)
-competitions | false | '' | 5930,11 | | Return games for specific competitions
+leagues | false | '' | 5930,11 | | Return games for specific leagues
 competitors | false | '' | 131,132 | | Return games for specific competitors
 gameIds | false | '' | 131132 | | Return specific games by ids
 filter | false | '' | 'fixtures' | 'fixtures' 'recent' 'results' | Filter games
@@ -164,19 +166,19 @@ filter | false | '' | 'fixtures' | 'fixtures' 'recent' 'results' | Filter games
 
 ####dashboard
 
-`GET http://webwidgets.365scores.com/games?sport=1,2&countryId=12&updateId=848293001&startDate=07/08/2018&endDate=07/08/2018`
+`GET https://api.365scores.com/games?sport=1,2&countryId=12&lastUpdateId=848293001&startDate=07/08/2018&endDate=07/08/2018`
 
 ####competition dashboard
 
-`GET http://webwidgets.365scores.com/games?competitions=5930&countryId=12&updateId=848293001&filter=results`
+`GET https://api.365scores.com/games?leagues=5930&countryId=12&lastUpdateId=848293001&filter=results`
 
 ####competitor dashboard
 
-`GET http://webwidgets.365scores.com/games?competitors=131&competitions=12&countryId=12&updateId=848293001`
+`GET https://api.365scores.com/games?competitors=131&leagues=12&countryId=12&lastUpdateId=848293001`
 
 ####partial games
 
-`GET http://webwidgets.365scores.com/games?gameIds=123123,123456,165432`
+`GET https://api.365scores.com/games?gameIds=123123,123456,165432`
 
 <aside class="notice">
 Don't forget general parameters.
@@ -196,7 +198,7 @@ Don't forget general parameters.
                 "isFutureGame": false,
                 "description": "Barcelona has won 5-3 after Penalties",
                 "aggregatedText": "aggregated",
-                "lmt": "http://lmt.365scores.com/SportRadar?gameId=13307987&langId=1&timeZoneId=15",
+                "lmt": "https://lmt.365scores.com/SportRadar?gameId=13307987&langId=1&timeZoneId=15",
                 "venue": {
                     "name": "Saint-Petersburg Stadium",
                     "capacity": "20,000",
@@ -461,7 +463,7 @@ Don't forget general parameters.
                                   "type": 1,
                                   "name": "Kan 11",
                                   "countryId": 2,
-                                  "website": "http://www.iba.org.il",
+                                  "website": "https://www.iba.org.il",
                                   "bookmakerId": 0
                               }]
             },
@@ -472,7 +474,7 @@ Don't forget general parameters.
                     "id": 2,
                     "name": "Brazil"
                 }],
-    "competitions": [{
+    "leagues": [{
                       "id": 1,
                       "name": "World Cup",
                       "countryId": 1
@@ -489,20 +491,22 @@ Don't forget general parameters.
 }
 ```
 
+Return full game data.
+
 ### HTTP Request
 
-`GET http://webwidgets.365scores.com/game/:gameId`
+`GET https://api.365scores.com/game/:gameId`
 
 
 ### Query Parameters
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
-updateId | false | '' | 848293001 | | Return only updated properties from the current updateId 
+lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
 
 ### Examples
 
-`GET http://webwidgets.365scores.com/game/123123?updateId=848293001`
+`GET https://api.365scores.com/game/123123?lastUpdateId=848293001`
 
 <aside class="notice">
 Don't forget general parameters.
@@ -547,17 +551,18 @@ This endpoint retrieves all leagues.
 
 ### HTTP Request
 
-`GET http://webwidgets.365scores.com/leagues`
+`GET https://api.365scores.com/leagues`
 
 ### Query Parameters
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
-leagueIds | false | '' | 12 | | Return specific leagues 
+leagueIds | false | '' | 12 | | Return specific leagues
+lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
 
 ### Examples
 
-`GET http://webwidgets.365scores.com/leagues?leagueIds=12,13,123`
+`GET https://api.365scores.com/leagues?leagueIds=12,13,123`
 
 
 <aside class="notice">
@@ -601,7 +606,132 @@ This endpoint retrieves top leagues.
 
 ### HTTP Request
 
-`GET http://webwidgets.365scores.com/leagues/top`
+`GET https://api.365scores.com/leagues/top`
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
+
+
+# Tables
+
+## Get Tables
+
+```json
+{
+   "header": [{
+                 "key": "gamesPlayed",
+                 "name": "P",
+                 "major": true
+             },
+             {
+                 "key": "gamesWon",
+                 "name": "W",
+                 "major": false
+             },
+             {
+                 "key": "gamesEven",
+                 "name": "D",
+                 "major": false
+             },
+             {
+                 "key": "gamesLost",
+                 "name": "L",
+                 "major": false
+             },
+             {
+                 "key": "goals",
+                 "name": "F:A",
+                 "major": true
+             },
+             {
+                 "key": "ratio",
+                 "name": "+/-",
+                 "major": true
+             },
+             {
+                 "key": "points",
+                 "name": "PTS",
+                 "major": true
+             },
+             {
+                 "key": "form",
+                 "name": "Form",
+                 "major": false
+             }],
+   "data":   [{
+                "rows":[{
+                            "competitor":{
+                                            "id": 131,
+                                            "name": "Real Madrid",
+                                            "countryId": 1,
+                                            "sportId": 1
+                                         },
+                            "group": {
+                                        "id":1,
+                                        "name": "Group A"
+                                     },
+                            "gamesPlayed": 3,
+                            "gamesWon": 3,
+                            "gamesLost": 3,
+                            "gamesEven": 1,
+                            "for": 26,
+                            "against": 9,
+                            "ratio": 17,
+                            "points": 19,
+                            "strike": -1,
+                            "gamesOverTime": 0,
+                            "gamesWonOnOverTime": 0,
+                            "gamesWonOnPenalties": 0,
+                            "gamesLossOnOverTime": 0,
+                            "gamesLossOnPenalties": 0,
+                            "position": 1,
+                            "trend": 0,
+                            "recentForm": [0,1,2,2,1],
+                            "destinationId": 1
+                        }]
+             }],
+    "destinations": [{
+                          "id": 1,
+                          "name": "Champions League",
+                          "color": "#ff0000",
+                          "type": 1
+                     }],
+    "countries":[{
+                     "id": 1,
+                     "name": "Argentina"
+                }],
+    "sports":[{
+                    "id": 1,
+                    "name": "Football"
+             }]
+}
+```
+
+Return league standings.
+
+### HTTP Request
+
+`GET https://api.365scores.com/table`
+
+### Query Parameters
+
+Parameter | required | Default | Example | Options | Description
+--------- | ------- | ----------- | --- | ----- | ---------
+leagueIds | false | '' | 12 | | Return table for each league 
+competitorId | false | '' | 132 | | Return all table for specific competitor
+lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
+
+### Examples
+
+leagues tables
+
+`GET https://api.365scores.com/table?leagueIds=12,13,123`
+
+competitors tables
+
+`GET https://api.365scores.com/table?competitorId=131`
+
 
 <aside class="notice">
 Don't forget general parameters.
