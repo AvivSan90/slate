@@ -144,19 +144,13 @@ This endpoint retrieves all games.
 
 ### Query Parameters
 
-Parameter | required | Default | Example | Description
---------- | ------- | ----------- | --- | ---------
-sports | false | '' | 1,2 | Return games from specific sports
-countryId | false | 1 | 6 | Sort competition priority by country
-updateId | false | '' | 848293001 | Return only updated properties from the current updateId 
-startDate | false |  current date  | 07/08/2018 | Return games from specific date(include)
-endDate | false |  current date | 09/08/2018 | Return games until specific date(include)
-competitions | false | '' | 5930,11 | Return games for specific competitions
-competitors | false | '' | 131,132 | Return games for specific competitors
-filter | false | '' | 'fixtures' | Filter games
-
-
-<aside class="notice">
-You must attach all parameters to all API requests.
-</aside>
-
+Parameter | required | Default | Example | Options | Description
+--------- | ------- | ----------- | --- | ----- | ---------
+sports | false | '' | 1,2 | 1-9 | Return games from specific sports
+countryId | false | 1 | 6 | | Sort competition priority by country
+updateId | false | '' | 848293001 | | Return only updated properties from the current updateId 
+startDate | false |  current date  | | 07/08/2018 | Return games from specific date(included)
+endDate | false |  current date | | 09/08/2018 | Return games until specific date(included)
+competitions | false | '' | 5930,11 | | Return games for specific competitions
+competitors | false | '' | 131,132 | | Return games for specific competitors
+filter | false | '' | 'fixtures' | 'fixtures' 'recent' 'results' | Filter games
