@@ -2,10 +2,7 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
-  - javascript
+  - response
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -19,233 +16,147 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the 365Scores Web API documentation! 
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+# General usage
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+### General root
 
-# Introduction
+`GET http://webwidgets.365scores.com/`
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+### General Query Parameters
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+Parameter | required | Default | Example | Description
+--------- | ------- | ----------- | --- |  ---------
+langId | false | 1 | Translate all strings to requested language.
+timezone | false | '' | Set date and time by the timezone.
+userCountryId | false | 31 | Modify data by requested country.
+appType | false | ''  | Modify data by app type
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Attach all parameters to all API requests.
 </aside>
 
-# Kittens
+# Countries
 
-## Get All Dogs
-Hi Lenny
-
-
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
+## Get All Countries
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
+    {
+        "id": 1,
+        "name": "Argentina",
+        "liveGames": 2,
+        "totalGames": 5
+    },
+    {
+        "id": 2,
+        "name": "Brazil",
+        "liveGames": 2,
+        "totalGames": 5
+    }
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all countries.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://webwidgets.365scores.com/countries`
+
+
+# Games
+
+## Get All Games
+
+```json
+{
+  "description": "Future api response for games:",
+  "lastUpdateId": 987654321,
+   "ttl": 10,
+   "sport":[{
+               "id": 1,
+               "name": "Football"
+           }],
+   "countries":[{
+                     "id": 11,
+                     "name": "Argentina"
+               },
+               {
+                     "id": 12,
+                     "name": "Brazil"
+                 }],
+   "competitions":[{
+                         "id": 1,
+                         "name": "World Cup",
+                         "hasTable": true,
+                         "countryId": 11
+                   }],
+   "games": [{
+             "id": 1,
+             "date": "16/07/2018", 
+             "status": "started",
+             "statusText": "ET 109'",
+             "time": "21:00",
+             "timePostfix": "AM",
+             "isFutureGame": false,
+             "lineupsStatus": 1,
+             "hasTVNetworks": false,
+             "hasMissingPlayers": false,
+             "hasBetsTeaser": false,
+             "description": "Barcelona has won 5-3 after Penalties",
+             "aggregatedText": "aggregated",
+             "homeCompetitor": {
+                  "id": 1,
+                  "name": "Argentina",
+                  "score": 2,
+                  "aggregatedScore": 4,
+                  "isQualified": false,
+                  "isWinner": false,
+                  "redCards": 0,
+                  "countryId": 11
+             },
+             "awayCompetitor": {
+                  "id": 2,
+                  "name": "Brazil",
+                  "score": 0,
+                  "aggregatedScore": 2,
+                  "isQualified": false,
+                  "isWinner": false,
+                  "redCards": 1,
+                  "countryId": 12
+             },
+             "sportId": 1,
+             "competitionId": 1,
+             "round": {
+                          "id": 1,
+                          "name": "Round One"
+                      }
+       }]
+}
+```
+
+This endpoint retrieves all games.
+
+### HTTP Request
+
+`GET http://webwidgets.365scores.com/games`
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+Parameter | required | Default | Example | Description
+--------- | ------- | ----------- | --- | ---------
+sports | false | '' | 1,2 | Return games from specific sports
+countryId | false | 1 | 6 | Sort competition priority by country
+updateId | false | '' | 848293001 | Return only updated properties from the current updateId 
+startDate | false |  current date  | 07/08/2018 | Return games from specific date(include)
+endDate | false |  current date | 09/08/2018 | Return games until specific date(include)
+competitions | false | '' | 5930,11 | Return games for specific competitions
+competitors | false | '' | 131,132 | Return games for specific competitors
+filter | false | '' | 'fixtures' | Filter games
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+
+<aside class="notice">
+You must attach all parameters to all API requests.
 </aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON s tructured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
 
