@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;response&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="response">response</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -225,25 +222,51 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#introduction-2" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#general-usage" class="toc-h1 toc-link" data-title="General usage">General usage</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-dogs" class="toc-h2 toc-link" data-title="Get All Dogs">Get All Dogs</a>
+                    <a href="#general-root" class="toc-h2 toc-link" data-title="General root">General root</a>
                   </li>
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#general-query-parameters" class="toc-h2 toc-link" data-title="General Query Parameters">General Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#countries" class="toc-h1 toc-link" data-title="Countries">Countries</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-countries" class="toc-h2 toc-link" data-title="Get All Countries">Get All Countries</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#games" class="toc-h1 toc-link" data-title="Games">Games</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-games" class="toc-h2 toc-link" data-title="Get All Games">Get All Games</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#get-game-center" class="toc-h2 toc-link" data-title="Get Game Center">Get Game Center</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#leagues" class="toc-h1 toc-link" data-title="Leagues">Leagues</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-leagues" class="toc-h2 toc-link" data-title="Get All Leagues">Get All Leagues</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-top-leagues" class="toc-h2 toc-link" data-title="Get Top Leagues">Get Top Leagues</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tables" class="toc-h1 toc-link" data-title="Tables">Tables</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-tables" class="toc-h2 toc-link" data-title="Get Tables">Get Tables</a>
                   </li>
               </ul>
           </li>
@@ -260,192 +283,814 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='introduction-2'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>Welcome to the 365Scores Web API documentation! </p>
+<h1 id='general-usage'>General usage</h1><h3 id='general-root'>General root</h3>
+<p><code>GET https://api.365scores.com/</code></p>
+<h3 id='general-query-parameters'>General Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>required</th>
+<th>Default</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>langId</td>
+<td>false</td>
+<td>1</td>
+<td>Translate all strings to requested language.</td>
+<td></td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>Set date and time by the timezone.</td>
+<td></td>
+</tr>
+<tr>
+<td>userCountryId</td>
+<td>false</td>
+<td>31</td>
+<td>Modify data by requested country.</td>
+<td></td>
+</tr>
+<tr>
+<td>appType</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>Modify data by app type</td>
+<td></td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Attach all parameters to all API requests.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-dogs'>Get All Dogs</h2>
-<p>Hi Lenny</p>
-<h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<h1 id='countries'>Countries</h1><h2 id='get-all-countries'>Get All Countries</h2><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"liveGames"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"totalGames"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brazil"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"liveGames"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"totalGames"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all countries.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p><code>GET https://api.365scores.com/countries</code></p>
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
+<h1 id='games'>Games</h1><h2 id='get-all-games'>Get All Games</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Future api response for games:"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastUpdateId"</span><span class="p">:</span><span class="w"> </span><span class="mi">987654321</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"ttl"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"sport"</span><span class="p">:[{</span><span class="w">
+               </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football"</span><span class="w">
+           </span><span class="p">}],</span><span class="w">
+   </span><span class="s2">"countries"</span><span class="p">:[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="w">
+               </span><span class="p">},</span><span class="w">
+               </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brazil"</span><span class="w">
+                 </span><span class="p">}],</span><span class="w">
+   </span><span class="s2">"leagues"</span><span class="p">:[{</span><span class="w">
+                         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"World Cup"</span><span class="p">,</span><span class="w">
+                         </span><span class="s2">"hasTable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                         </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+                   </span><span class="p">}],</span><span class="w">
+   </span><span class="s2">"games"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/07/2018"</span><span class="p">,</span><span class="w"> 
+             </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"started"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"statusText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ET 109'"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"timePostfix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AM"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"isFutureGame"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"lineupsStatus"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"hasTVNetworks"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"hasMissingPlayers"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"hasBetsTeaser"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barcelona has won 5-3 after Penalties"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"aggregatedText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aggregated"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"homeCompetitor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"aggregatedScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"isQualified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"isWinner"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"redCards"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="s2">"awayCompetitor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brazil"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"aggregatedScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"isQualified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"isWinner"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"redCards"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"competitionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"round"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Round One"</span><span class="w">
+                      </span><span class="p">}</span><span class="w">
+       </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all games.</p>
+
+<p>Return only partial game data.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://api.365scores.com/games</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>required</th>
 <th>Default</th>
+<th>Example</th>
+<th>Options</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
+<td>sports</td>
 <td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>&#39;&#39;</td>
+<td>1,2</td>
+<td>1-9</td>
+<td>Return games from specific sports</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>countryId</td>
+<td>false</td>
+<td>1</td>
+<td>6</td>
+<td></td>
+<td>Sort competition priority by country</td>
+</tr>
+<tr>
+<td>lastUpdateId</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>848293001</td>
+<td></td>
+<td>Return only updated properties from the current lastUpdateId</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>false</td>
+<td>current date</td>
+<td>07/08/2018</td>
+<td></td>
+<td>Return games from specific date(included)</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>false</td>
+<td>current date</td>
+<td>09/08/2018</td>
+<td></td>
+<td>Return games until specific date(included)</td>
+</tr>
+<tr>
+<td>leagues</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>5930,11</td>
+<td></td>
+<td>Return games for specific leagues</td>
+</tr>
+<tr>
+<td>competitors</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>131,132</td>
+<td></td>
+<td>Return games for specific competitors</td>
+</tr>
+<tr>
+<td>gameIds</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>131132</td>
+<td></td>
+<td>Return specific games by ids</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>&#39;fixtures&#39;</td>
+<td>&#39;fixtures&#39; &#39;recent&#39; &#39;results&#39;</td>
+<td>Filter games</td>
 </tr>
 </tbody></table>
+<h3 id='examples'>Examples</h3><h4 id='dashboard'>dashboard</h4>
+<p><code>GET https://api.365scores.com/games?sport=1,2&amp;countryId=12&amp;lastUpdateId=848293001&amp;startDate=07/08/2018&amp;endDate=07/08/2018</code></p>
+<h4 id='competition-dashboard'>competition dashboard</h4>
+<p><code>GET https://api.365scores.com/games?leagues=5930&amp;countryId=12&amp;lastUpdateId=848293001&amp;filter=results</code></p>
+<h4 id='competitor-dashboard'>competitor dashboard</h4>
+<p><code>GET https://api.365scores.com/games?competitors=131&amp;leagues=12&amp;countryId=12&amp;lastUpdateId=848293001</code></p>
+<h4 id='partial-games'>partial games</h4>
+<p><code>GET https://api.365scores.com/games?gameIds=123123,123456,165432</code></p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="notice">
+Don't forget general parameters.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+<h2 id='get-game-center'>Get Game Center</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"game"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"started"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"statusText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"טרם החל"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16/07.2018"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"timePostfix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AM"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"isFutureGame"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barcelona has won 5-3 after Penalties"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"aggregatedText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aggregated"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lmt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lmt.365scores.com/SportRadar?gameId=13307987&amp;langId=1&amp;timeZoneId=15"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"venue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Petersburg Stadium"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20,000"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"attendance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19,999"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"googlePlaceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"homeCompetitor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"aggregatedScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"isQualified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"isWinner"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryid"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"lineups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Not Confirmed"</span><span class="p">,</span><span class="w">
+                                     </span><span class="s2">"formation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4-4-2"</span><span class="p">,</span><span class="w">
+                                     </span><span class="s2">"hasFieldPositions"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                     </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6688408</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"athleteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">26574</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Moshe Cohen"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoC"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"JerseyNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"statusText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"כוכב עולה"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"striker"</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"formation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left back"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LB"</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"yardFormation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                     </span><span class="s2">"line"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldLine"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldSide"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"substitude"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                     </span><span class="s2">"playerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="mf">90.0</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                                  </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}],</span><span class="w">
+                     </span><span class="s2">"statistics"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fouls"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"categoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Posessions"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"valuePercentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                                   </span><span class="p">}]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"awayCompetitor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brazil"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"aggregatedScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"isQualified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"isWinner"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryid"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"lineups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Not Confirmed"</span><span class="p">,</span><span class="w">
+                                     </span><span class="s2">"formation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4-4-2"</span><span class="p">,</span><span class="w">
+                                     </span><span class="s2">"hasFieldPositions"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                     </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6688408</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"athleteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">26574</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Moshe Cohen"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoC"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"JerseyNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"statusText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"כוכב עולה"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"striker"</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"formation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left back"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LB"</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"yardFormation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                     </span><span class="s2">"line"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldLine"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"fieldSide"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                                                 </span><span class="p">},</span><span class="w">
+                                    </span><span class="s2">"substitude"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                     </span><span class="s2">"playerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="mf">90.0</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                                  </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}],</span><span class="w">
+                     </span><span class="s2">"statistics"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fouls"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"categoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Posessions"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"valuePercentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                                   </span><span class="p">}]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> 
+                </span><span class="s2">"season"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Season 1"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"stage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stage 1"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 1"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"competitionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"round"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Round 1"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"odds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"live"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"lines"</span><span class="p">:[{</span><span class="w">
+                                            </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.winner.co.il"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"rates"</span><span class="p">:[{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                                    </span><span class="p">},{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                                                    </span><span class="p">},{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+                                                    </span><span class="p">}]</span><span class="w">
+                                        </span><span class="p">}]</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"games"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                            </span><span class="s2">"gameId"</span><span class="p">:</span><span class="w"> </span><span class="mi">123123</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"lines"</span><span class="p">:[{</span><span class="w">
+                                            </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.winner.co.il"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"rates"</span><span class="p">:[{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                                    </span><span class="p">},{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                                                    </span><span class="p">},{</span><span class="w">
+                                                        </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                            </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                            </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                        </span><span class="p">},</span><span class="w">
+                                                        </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+                                                    </span><span class="p">}]</span><span class="w">
+                                        </span><span class="p">}]</span><span class="w">
+                                         </span><span class="p">},{</span><span class="w">
+                                            </span><span class="s2">"gameId"</span><span class="p">:</span><span class="w"> </span><span class="mi">123134</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"lines"</span><span class="p">:[{</span><span class="w">
+                                                        </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.winner.co.il"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"rates"</span><span class="p">:[{</span><span class="w">
+                                                                    </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                                        </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                                    </span><span class="p">},</span><span class="w">
+                                                                    </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                                                </span><span class="p">},{</span><span class="w">
+                                                                    </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                                        </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                                    </span><span class="p">},</span><span class="w">
+                                                                    </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                                                                </span><span class="p">},{</span><span class="w">
+                                                                    </span><span class="s2">"rateOptions"</span><span class="p">:{</span><span class="w">
+                                                                                        </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+100"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"fractional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100/150"</span><span class="p">,</span><span class="w">
+                                                                                        </span><span class="s2">"decimal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="w">
+                                                                                    </span><span class="p">},</span><span class="w">
+                                                                    </span><span class="s2">"oldRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"kickOffRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.25"</span><span class="p">,</span><span class="w">
+                                                                    </span><span class="s2">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+                                                                </span><span class="p">}]</span><span class="w">
+                                                    </span><span class="p">}]</span><span class="w">
+                                         </span><span class="p">}]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"previousMeetings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"gameIds"</span><span class="p">],</span><span class="w">
+                </span><span class="s2">"recentMatches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"gameIds"</span><span class="p">],</span><span class="w">
+                </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                    </span><span class="s2">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"playerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6688408</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"גול - שער שדה"</span><span class="w">
+                             </span><span class="p">}</span><span class="w">
+                </span><span class="p">}],</span><span class="w">
+                </span><span class="s2">"eventsCategories"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"watchOnline"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+                </span><span class="s2">"officials"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6688408</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Moshe Cohen"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"shortName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoC"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"JerseyNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                             </span><span class="p">}],</span><span class="w">
+                </span><span class="s2">"tvNetworks"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                                  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kan 11"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.iba.org.il"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"bookmakerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                              </span><span class="p">}]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"countries"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="w">
+                </span><span class="p">},{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brazil"</span><span class="w">
+                </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"leagues"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"World Cup"</span><span class="p">,</span><span class="w">
+                      </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                 </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"sports"</span><span class="p">:[{</span><span class="w">
+                 </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football"</span><span class="w">
+            </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"bookmakers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"winner"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.winner.co.il"</span><span class="w">
+                    </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON s tructured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>Return full game data.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>GET https://api.365scores.com/game/:gameId</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>required</th>
+<th>Default</th>
+<th>Example</th>
+<th>Options</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>lastUpdateId</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>848293001</td>
+<td></td>
+<td>Return only updated properties from the current lastUpdateId</td>
 </tr>
 </tbody></table>
+<h3 id='examples-2'>Examples</h3>
+<p><code>GET https://api.365scores.com/game/123123?lastUpdateId=848293001</code></p>
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
+<h1 id='leagues'>Leagues</h1><h2 id='get-all-leagues'>Get All Leagues</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"countries"</span><span class="p">:[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spain"</span><span class="w">
+                </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"sports"</span><span class="p">:[{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football"</span><span class="w">
+             </span><span class="p">}],</span><span class="w">
+     </span><span class="s2">"leagues"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">595</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Copa America"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"hasTable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LaLiga"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"hasTable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+                </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all leagues.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://api.365scores.com/leagues</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>required</th>
+<th>Default</th>
+<th>Example</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>leagueIds</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>12</td>
+<td></td>
+<td>Return specific leagues</td>
+</tr>
+<tr>
+<td>lastUpdateId</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>848293001</td>
+<td></td>
+<td>Return only updated properties from the current lastUpdateId</td>
+</tr>
+</tbody></table>
+<h3 id='examples-3'>Examples</h3>
+<p><code>GET https://api.365scores.com/leagues?leagueIds=12,13,123</code></p>
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
+<h2 id='get-top-leagues'>Get Top Leagues</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"countries"</span><span class="p">:[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spain"</span><span class="w">
+                </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"sports"</span><span class="p">:[{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football"</span><span class="w">
+             </span><span class="p">}],</span><span class="w">
+     </span><span class="s2">"leagues"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">595</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Copa America"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"hasTable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LaLiga"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"hasTable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+                </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves top leagues.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://api.365scores.com/leagues/top</code></p>
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
+<h1 id='tables'>Tables</h1><h2 id='get-tables'>Get Tables</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+   </span><span class="s2">"header"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamesPlayed"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamesWon"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamesEven"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamesLost"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goals"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F:A"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ratio"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+/-"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PTS"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"form"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Form"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"major"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+             </span><span class="p">}],</span><span class="w">
+   </span><span class="s2">"data"</span><span class="p">:</span><span class="w">   </span><span class="p">[{</span><span class="w">
+                </span><span class="s2">"rows"</span><span class="p">:[{</span><span class="w">
+                            </span><span class="s2">"competitor"</span><span class="p">:{</span><span class="w">
+                                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">131</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Real Madrid"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"sportId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                                         </span><span class="p">},</span><span class="w">
+                            </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group A"</span><span class="w">
+                                     </span><span class="p">},</span><span class="w">
+                            </span><span class="s2">"gamesPlayed"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesWon"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesLost"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesEven"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"for"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"against"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"ratio"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"points"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"strike"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesOverTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesWonOnOverTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesWonOnPenalties"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesLossOnOverTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"gamesLossOnPenalties"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"trend"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"recentForm"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="w">
+                            </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                        </span><span class="p">}]</span><span class="w">
+             </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"destinations"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Champions League"</span><span class="p">,</span><span class="w">
+                          </span><span class="s2">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ff0000"</span><span class="p">,</span><span class="w">
+                          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                     </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"countries"</span><span class="p">:[{</span><span class="w">
+                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argentina"</span><span class="w">
+                </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"sports"</span><span class="p">:[{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football"</span><span class="w">
+             </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Return league standings.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://api.365scores.com/table</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>required</th>
+<th>Default</th>
+<th>Example</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>leagueIds</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>12</td>
+<td></td>
+<td>Return table for each league</td>
+</tr>
+<tr>
+<td>competitorId</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>132</td>
+<td></td>
+<td>Return all table for specific competitor</td>
+</tr>
+<tr>
+<td>lastUpdateId</td>
+<td>false</td>
+<td>&#39;&#39;</td>
+<td>848293001</td>
+<td></td>
+<td>Return only updated properties from the current lastUpdateId</td>
+</tr>
+</tbody></table>
+<h3 id='examples-4'>Examples</h3>
+<p>leagues tables</p>
+
+<p><code>GET https://api.365scores.com/table?leagueIds=12,13,123</code></p>
+
+<p>competitors tables</p>
+
+<p><code>GET https://api.365scores.com/table?competitorId=131</code></p>
+
+<aside class="notice">
+Don't forget general parameters.
+</aside>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
@@ -477,7 +1122,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a game with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -485,15 +1130,11 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>Gone -- The Games requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many Games! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
@@ -508,10 +1149,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="response">response</a>
           </div>
       </div>
     </div>
