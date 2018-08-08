@@ -27,18 +27,21 @@
                    }],
    "games": [{
              "id": 1,
-             "date": "16/07/2018", 
+             "datetime":{
+                 "timeStamp": 12334423423423,
+                 "dateText": "16/07/2018",
+                 "timeText": "21:00 AM"
+             },
              "status": "started",
-             "statusText": "ET 109'",
-             "time": "21:00",
-             "timePostfix": "AM",
+             "statusText": "ET",
+             "gameTimeText": "109'",
              "isFutureGame": false,
              "lineupsStatus": 1,
              "hasTVNetworks": false,
              "hasMissingPlayers": false,
              "hasBetsTeaser": false,
              "description": "Barcelona has won 5-3 after Penalties",
-             "aggregatedText": "aggregated",
+             "aggregatedText": "aggregated 4-2",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -81,6 +84,7 @@ Return only partial game data.
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
+relation | false | '' | 'or' | 'or' 'and' | Relation between competition and competitor
 sports | false | '' | 1,2 | 1-9 | Return games from specific sports
 countryId | false | 1 | 6 | | Sort competition priority by country
 lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
@@ -120,13 +124,16 @@ Don't forget general parameters.
     "game": {
                 "id": 1,
                 "status": "started",
-                "statusText": "schedule",
-                "date": "16/07.2018",
-                "time": "21:00",
-                "timePostfix": "AM",
+                "statusText": "ET",
+                "gameTimeText": "109'",
+                "datetime":{
+                                "timeStamp": 12334423423423,
+                                "dateText": "16/07/2018",
+                                "timeText": "21:00 AM"
+                            },
                 "isFutureGame": false,
                 "description": "Barcelona has won 5-3 after Penalties",
-                "aggregatedText": "aggregated",
+                "aggregatedText": "aggregated 4-2",
                 "lmt": "https://lmt.365scores.com/SportRadar?gameId=13307987&langId=1&timeZoneId=15",
                 "venue": {
                     "name": "Saint-Petersburg Stadium",
@@ -372,6 +379,7 @@ Don't forget general parameters.
                     "index": 1,
                     "time": "30",
                     "playerId": 6688408,
+                    "subPlayerId" :6688100,
                     "event": {
                                 "id": 1,
                                 "name": "Goal"

@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - general
+  - search
   - countries
   - games
   - tables
