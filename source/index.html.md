@@ -10,12 +10,13 @@ toc_footers:
 
 includes:
   - general
-  - search
   - countries
   - games
   - tables
   - leagues
+  - search
   - errors
+  - entities
 
 search: true
 ---

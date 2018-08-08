@@ -73,7 +73,9 @@
                             "position": 1,
                             "trend": 0,
                             "recentForm": [0,1,2,2,1],
-                            "destinationId": 1
+                            "destinationId": 1,
+                            "destinationGuaranteed": true,
+                            "isWinner": true
                         }]
              }],
     "destinations": [{
@@ -94,6 +96,14 @@
 ```
 
 Return league standings.
+
+### Entities map 
+
+Object | Usage | Description | Example
+--------- | ------- | --------- | -----
+header | Standings | Table's columns | [See Example](#header)
+rows | Standings | Table's rows | [See Example](#rows)
+destinations | Standings | Table's rows - position destination | [See Example](#destinations)
 
 ### HTTP Request
 
