@@ -21,14 +21,18 @@
                      "name": "Copa America",
                      "hasTable": true,
                      "sportId": 1,
-                     "countryId": 1
+                     "countryId": 1,
+                     "liveGames": 2,
+                     "totalGames": 5
                 },
                 {
                      "id": 121,
                      "name": "LaLiga",
                      "hasTable": true,
                      "sportId": 1,
-                     "countryId": 12
+                     "countryId": 12,
+                     "liveGames": 2,
+                     "totalGames": 5
                 }]
 }
 ```
@@ -84,14 +88,18 @@ Don't forget general parameters.
                      "name": "Copa America",
                      "hasTable": true,
                      "sportId": 1,
-                     "countryId": 1
+                     "countryId": 1,
+                     "liveGames": 2,
+                     "totalGames": 5
                 },
                 {
                      "id": 121,
                      "name": "LaLiga",
                      "hasTable": true,
                      "sportId": 1,
-                     "countryId": 12
+                     "countryId": 12,
+                     "liveGames": 2,
+                     "totalGames": 5
                 }]
 }
 ```
