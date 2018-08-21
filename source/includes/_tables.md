@@ -44,40 +44,38 @@
                  "name": "Form",
                  "major": false
              }],
-   "data":   [{
-                "rows":[{
-                            "competitor":{
-                                            "id": 131,
-                                            "name": "Real Madrid",
-                                            "countryId": 1,
-                                            "sportId": 1
-                                         },
-                            "group": {
-                                        "id":1,
-                                        "name": "Group A"
-                                     },
-                            "gamesPlayed": 3,
-                            "gamesWon": 3,
-                            "gamesLost": 3,
-                            "gamesEven": 1,
-                            "for": 26,
-                            "against": 9,
-                            "ratio": 17,
-                            "points": 19,
-                            "strike": -1,
-                            "gamesOverTime": 0,
-                            "gamesWonOnOverTime": 0,
-                            "gamesWonOnPenalties": 0,
-                            "gamesLossOnOverTime": 0,
-                            "gamesLossOnPenalties": 0,
-                            "position": 1,
-                            "trend": 0,
-                            "recentForm": [0,1,2,2,1],
-                            "destinationId": 1,
-                            "destinationGuaranteed": true,
-                            "isWinner": true
-                        }]
-             }],
+    "rows":[{
+                "competitor":{
+                                "id": 131,
+                                "name": "Real Madrid",
+                                "countryId": 1,
+                                "sportId": 1
+                             },
+                "group": {
+                            "id":1,
+                            "name": "Group A"
+                         },
+                "gamesPlayed": 3,
+                "gamesWon": 3,
+                "gamesLost": 3,
+                "gamesEven": 1,
+                "for": 26,
+                "against": 9,
+                "ratio": 17,
+                "points": 19,
+                "strike": -1,
+                "gamesOverTime": 0,
+                "gamesWonOnOverTime": 0,
+                "gamesWonOnPenalties": 0,
+                "gamesLossOnOverTime": 0,
+                "gamesLossOnPenalties": 0,
+                "position": 1,
+                "trend": 0,
+                "recentForm": [0,1,2,2,1],
+                "destinationId": 1,
+                "destinationGuaranteed": true,
+                "isWinner": true
+            }],
     "destinations": [{
                           "id": 1,
                           "name": "Champions League",

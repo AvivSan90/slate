@@ -108,7 +108,13 @@ This endpoint retrieves top leagues.
 
 ### HTTP Request
 
-`GET https://api.365scores.com/leagues/top`
+`GET https://api.365scores.com/leagues/top?limit=10`
+
+### Query Parameters
+
+Parameter | required | Default | Example | Options | Description
+--------- | ------- | ----------- | --- | ----- | ---------
+limit | false | '' | 10 | | Return limited size of leagues
 
 <aside class="notice">
 Don't forget general parameters.

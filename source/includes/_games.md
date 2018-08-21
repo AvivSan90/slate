@@ -38,7 +38,6 @@
              "isFutureGame": false,
              "lineupsStatus": 1,
              "hasTVNetworks": false,
-             "hasMissingPlayers": false,
              "hasBetsTeaser": false,
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
@@ -198,7 +197,7 @@ Don't forget general parameters.
                                         "name": "fouls",
                                         "categoryId": 3,
                                         "categoryName": "Posessions",
-                                        "value": 2,
+                                        "value": "2",
                                         "valuePercentage": 2
                                    }]
                 },
@@ -251,7 +250,7 @@ Don't forget general parameters.
                                         "categoryId": 3,
                                         "categoryName": "Posessions",
                                         "value": 2,
-                                        "valuePercentage": 2
+                                        "percentage": 2
                                    }]
                 },
                 "countryId": 2, 
@@ -274,7 +273,7 @@ Don't forget general parameters.
                      "name": "Round 1"
                 },
                 "odds": {
-                    "live": {
+                    "current": {
                                 "bookmakerId": 1,
                                 "lines":[{
                                             "link": "https://www.winner.co.il",
@@ -309,7 +308,7 @@ Don't forget general parameters.
                                                     }]
                                         }]
                             },
-                    "next": {
+                    "teaser": {
                                 "bookmakerId": 1,
                                 "games": [{
                                             "gameId": 123123,
@@ -388,14 +387,14 @@ Don't forget general parameters.
                     "index": 1,
                     "time": "30",
                     "playerId": 6688408,
-                    "subPlayerId" :6688100,
+                    "subPlayerId": 6688100,
+                    "isMajor": true,
                     "event": {
                                 "id": 1,
                                 "name": "Goal"
                              }
                 }],
                 "eventsCategories": 2,
-                "watchOnline": {},
                 "officials": [{
                                     "status": 1,
                                     "id": 6688408,

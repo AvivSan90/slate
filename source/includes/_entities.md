@@ -29,8 +29,8 @@ Parameter | required | type | Options  | Description
 --------- | ------- |  ----- |  ----- | ---------
 id | true | Integer |  | Country's id
 name | true | String | | Country's name
-liveGames | false | | Integer | Live games for current country
-totalGames | false |  | Integer | Total games for current country
+liveGames | false | Integer |  | Live games for current country
+totalGames | false | Integer |  | Total games for current country
 
 ## League
 
@@ -340,7 +340,6 @@ link | true | Integer | | Bookmaker's website link
                              }
                 }],
                 "eventsCategories": 2,
-                "watchOnline": {},
                 "officials": [{
                                     "status": 1,
                                     "id": 6688408,
@@ -410,7 +409,6 @@ odds | false | Object | | [Description](#odds)
 previousMeetings | false | Array | | Array of gameIds for previous meeting between current competitors
 events | false | Array | | Array of match events
 eventsCategories | false | Integer | | ?????????????????????
-watchOnline | false | Object | | Data for watch stream online
 officials | false | Array | | Array of game's officials
 tvNetworks | false | Array | | Array of tv networks
 bookmakers | false | Array | | Array of Bookmakers for odds -> lines
@@ -686,7 +684,7 @@ status  | false | String | ?????? | ???????????
     "name": "fouls",
     "categoryId": 3,
     "categoryName": "Posessions",
-    "value": 2,
+    "value": "2",
     "valuePercentage": 2
 }]
 ```
@@ -698,15 +696,15 @@ name | true | String | | Statistic's name
 categoryId | true | Integer | | Statistics need to be group by category id 
 categoryName | true | String | ?????? | Substitution type
 status  | true | Integer | ?????? | ???????????
-value  | true | Integer | ?????? | Value of current statistic
-valuePercentage  | false | Double | ?????? | Percentage from away and home current statistic
+value  | true | String | ?????? | Value of current statistic
+percentage  | false | Double | ?????? | Percentage from away and home current statistic
 
 
 ## Odds
 
 ```json
 {
-    "live": {
+    "current": {
                 "bookmakerId": 1,
                 "lines":[{
                             "link": "https://www.winner.co.il",
@@ -741,7 +739,7 @@ valuePercentage  | false | Double | ?????? | Percentage from away and home curre
                                     }]
                         }]
             },
-    "next": {
+    "teaser": {
                 "bookmakerId": 1,
                 "games": [{
                             "gameId": 123123,
@@ -819,8 +817,8 @@ valuePercentage  | false | Double | ?????? | Percentage from away and home curre
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 odds | false | Object | | Game's odds
-live | false | Object | | Odds for current game
-next | false | Object | | Odds for next game for each competitor
+current | false | Object | | Odds for current game
+teaser | false | Object | | Odds for next game for each competitor
 
 ## Lines
 
@@ -864,9 +862,9 @@ Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 link | false | Integer | | Bookmaker line link to website
 bookmakerId | true | String | | Bookmaker's id
-rates | true | Array | | [Description](#line)
+rates | true | Array | | [Description](#rate)
 
-## Line
+## Rate
 
 ```json
 {
@@ -896,6 +894,7 @@ num | true | Integer | 0-2 | Rate label 0 - 'X', 1 - '1', 2 - '2'
     "time": "30",
     "playerId": 6688408,
     "subPlayerId" :6688100,
+    "isMajor": true,
     "event": {
                 "id": 1,
                 "name": "Goal"
@@ -910,6 +909,7 @@ time | true | String | | Event time
 playerId | true | Integer | | Main player for the event
 subPlayerId | false | Integer | | Sub player 
 event | true | Object |  | Event Object with id and name
+isMajor | false | Boolean |  | If event are major (filter top)
 
 ## Officials
 
