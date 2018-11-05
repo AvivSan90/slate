@@ -38,8 +38,9 @@ totalGames | false | Integer |  | Total games for current country
 {
       "id": 1,
       "name": "World Cup",
-      "hasTable": true,
+      "hasStanding": true,
       "countryId": 11,
+      "sportId": 11,
       "liveGames": 2,
       "totalGames": 5
 }
@@ -50,7 +51,8 @@ Parameter | required | type | Options  | Description
 id | true | Integer |  | League's id
 name | true | String | | League's name
 countryId | true | Integer | | League's countryId
-hasTable | false | Boolean | | If league has table data
+sportId | true | Integer | | League's sportId
+hasStanding | false | Boolean | | If league has Standing data
 liveGames | false | Integer | | Live games for current competition
 totalGames | false | Integer | | Total games for current competition
 
@@ -76,24 +78,52 @@ link | true | Integer | | Bookmaker's website link
 {
     "game": {
                 "id": 1,
-                "status": "started",
+                "statusGroup": 1,
                 "statusText": "ET",
-                "gameTimeText": "109'",
-                "datetime":{
-                                "timeStamp": 12334423423423,
-                                "dateText": "16/07/2018",
-                                "timeText": "21:00 AM"
-                            },
+                "gameTimeDisplay": "89'",
+                "gameTime": 89,
+                "gameTimeAndStatusDisplayType": 1,
+                "hasLineups": false,
+                "hasMissingPlayers": false,
+                "hasFieldPositions": false,
                 "isFutureGame": false,
                 "description": "Barcelona has won 5-3 after Penalties",
                 "aggregatedText": "aggregated 4-2",
                 "lmt": "https://lmt.365scores.com/SportRadar?gameId=13307987&langId=1&timeZoneId=15",
+                "countryId": 2, 
+                "competitionId": 1,
+                "sportId": 1,
+                "roundNum": 3,
+                "seasonNum": 6,
+                "stageNum": 4,
+                "groupNum": 1,
+                "datetime":{
+                    "timeStamp": 12334423423423,
+                    "dateText": "16/07/2018",
+                    "timeText": "21:00 AM"
+                },
                 "venue": {
                     "name": "Saint-Petersburg Stadium",
                     "capacity": "20,000",
                     "attendance": "19,999",
                     "googlePlaceId": 1
-                },
+                }, 
+                "stages": [{
+                                "id": 7,
+                                "name": "Halftime",
+                                "shortName": "HT",
+                                "homeCompetitorScore": 0,
+                                "awayCompetitorScore": 0
+                            }],
+                "members": [{
+                                "status": 1,
+                                "playerId": 6688408,
+                                "athleteId": 26574,
+                                "name": "Moshe Cohen",
+                                "shortName": "MoC",
+                                "JerseyNumber": 6,
+                                "statusText": "Rising star",
+                            }],
                 "homeCompetitor": {
                      "id": 1,
                      "name": "Argentina",
@@ -104,47 +134,36 @@ link | true | Integer | | Bookmaker's website link
                      "countryid": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
-                                     "status": "Not Confirmed",
-                                     "formation": "4-4-2",
-                                     "hasFieldPositions": true
+                                    "status": "Not Confirmed",
+                                    "formation": "4-4-2",
+                                    "hasFieldPositions": true,
+                                    "members": [{
+                                                    "playerId": 6688408,
+                                                    "position": {
+                                                                    "id": 1,
+                                                                    "name": "striker"
+                                                                },
+                                                    "formation": {
+                                                                    "id": 1,
+                                                                    "name": "left back",
+                                                                    "shortName": "LB"
+                                                                },
+                                                    "yardFormation": {
+                                                                    "line": 2,
+                                                                    "fieldPosition": 2,
+                                                                    "fieldLine": 33,
+                                                                    "fieldSide": 0
+                                                                }
+                                                }],
                                 },
-                     "members": [{
-                                    "status": 1,
-                                    "id": 6688408,
-                                    "athleteId": 26574,
-                                    "name": "Moshe Cohen",
-                                    "shortName": "MoC",
-                                    "JerseyNumber": 6,
-                                    "statusText": "Rising star",
-                                    "position": {
-                                                    "id": 1,
-                                                    "name": "striker"
-                                                 },
-                                    "formation": {
-                                                    "id": 1,
-                                                    "name": "left back",
-                                                    "shortName": "LB"
-                                                 },
-                                    "yardFormation": {
-                                                     "line": 2,
-                                                     "fieldPosition": 2,
-                                                     "fieldLine": 33,
-                                                     "fieldSide": 0
-                                                 },
-                                    "substitude": {
-                                                     "playerId": 22,
-                                                     "time": 90.0,
-                                                     "type": 1,
-                                                     "status": 1
-                                                  }
-                                }],
                      "statistics": [{
                                         "id": 1,
                                         "name": "fouls",
                                         "categoryId": 3,
                                         "categoryName": "Posessions",
-                                        "value": 2,
-                                        "valuePercentage": 2
+                                        "value": "50%",
+                                        "valuePercentage": 2,
+                                        "isMajor": true,
                                    }]
                 },
                 "awayCompetitor": {
@@ -157,67 +176,36 @@ link | true | Integer | | Bookmaker's website link
                      "countryid": 2,
                      "recentMatches": ["gameIds"],
                      "lineups": {
-                                     "status": "Not Confirmed",
-                                     "formation": "4-4-2",
-                                     "hasFieldPositions": true
+                                    "status": "Not Confirmed",
+                                    "formation": "4-4-2",
+                                    "hasFieldPositions": true,
+                                    "members": [{
+                                                    "playerId": 6688408,
+                                                    "position": {
+                                                                    "id": 1,
+                                                                    "name": "striker"
+                                                                },
+                                                    "formation": {
+                                                                    "id": 1,
+                                                                    "name": "left back",
+                                                                    "shortName": "LB"
+                                                                },
+                                                    "yardFormation": {
+                                                                    "line": 2,
+                                                                    "fieldPosition": 2,
+                                                                    "fieldLine": 33,
+                                                                    "fieldSide": 0
+                                                                }
+                                                }],
                                 },
-                     "members": [{
-                                    "status": 1,
-                                    "id": 6688408,
-                                    "athleteId": 26574,
-                                    "name": "Moshe Cohen",
-                                    "shortName": "MoC",
-                                    "JerseyNumber": 6,
-                                    "statusText": "Rising star",
-                                    "position": {
-                                                    "id": 1,
-                                                    "name": "striker"
-                                                 },
-                                    "formation": {
-                                                    "id": 1,
-                                                    "name": "left back",
-                                                    "shortName": "LB"
-                                                 },
-                                    "yardFormation": {
-                                                     "line": 2,
-                                                     "fieldPosition": 2,
-                                                     "fieldLine": 33,
-                                                     "fieldSide": 0
-                                                 },
-                                    "substitude": {
-                                                     "playerId": 22,
-                                                     "time": 90.0,
-                                                     "type": 1,
-                                                     "status": 1
-                                                  }
-                                }],
                      "statistics": [{
                                         "id": 1,
                                         "name": "fouls",
                                         "categoryId": 3,
                                         "categoryName": "Posessions",
-                                        "value": 2,
+                                        "value": "50%",
                                         "valuePercentage": 2
                                    }]
-                },
-                "countryId": 2, 
-                "season": {
-                     "id": 1,
-                     "name": "Season 1"
-                },
-                "stage": {
-                     "id": 1,
-                     "name": "Stage 1"
-                },
-                "group": {
-                     "id": 1,
-                     "name": "Group 1"
-                },
-                "competitionId": 1,
-                "sportId": 1,
-                "round": {
-                     "id": 1,
-                     "name": "Round 1"
                 },
                 "odds": {
                     "live": {
@@ -227,125 +215,80 @@ link | true | Integer | | Bookmaker's website link
                                             "bookmakerId": 1,
                                             "rates":[{
                                                         "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                        "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                         "kickOffRate": "1.25",
-                                                        "num": 1
+                                                        "name": "1",
+                                                        "template": "#COMPETITOR1",
+                                                        "competitorId": 132
                                                     },{
                                                         "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                        "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                         "kickOffRate": "1.25",
-                                                        "num": 2
+                                                        "name": "X",
+                                                        "template": "Draw",
+                                                        "competitorId": 132
                                                     },{
                                                         "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                        "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                         "kickOffRate": "1.25",
-                                                        "num": 3
+                                                        "name": "2",
+                                                        "template": "#COMPETITOR2",
+                                                        "competitorId": 131
                                                     }]
                                         }]
                             },
-                    "next": {
-                                "bookmakerId": 1,
-                                "games": [{
-                                            "gameId": 123123,
-                                            "lines":[{
-                                            "link": "https://www.winner.co.il",
-                                            "bookmakerId": 1,
-                                            "rates":[{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 1
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 2
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 3
-                                                    }]
-                                        }]
-                                         },{
-                                            "gameId": 123134,
-                                            "lines":[{
-                                                        "link": "https://www.winner.co.il",
-                                                        "bookmakerId": 1,
-                                                        "rates":[{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 1
-                                                                },{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 2
-                                                                },{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 3
-                                                                }]
-                                                    }]
-                                         }]
-                            }
                 },
                 "previousMeetings": ["gameIds"],
                 "events": [{
-                    "index": 1,
-                    "time": "30",
-                    "playerId": 6688408,
-                    "subPlayerId" :6688100,
-                    "event": {
-                                "id": 1,
-                                "name": "Goal"
-                             }
-                }],
-                "eventsCategories": 2,
+                                    "competitorId": 562,
+                                    "statusId": 6,
+                                    "stageId": 7,
+                                    "order": 1,
+                                    "num": 1,
+                                    "gameTimeDisplay": "89'",
+                                    "gameTime": 89,
+                                    "addedTime": 0,
+                                    "gameTimeAndStatusDisplayType": 1,
+                                    "playerId": 6688408,
+                                    "isMajor": false,
+                                    "extraPlayers" :[
+                                        6688100,
+                                    ],
+                                    "eventType": {
+                                                "id": 1,
+                                                "name": "Goal",
+                                                "subTypeId": -1,
+                                    }
+                            }],
                 "officials": [{
                                     "status": 1,
-                                    "id": 6688408,
+                                    "athleteId": -1,
+                                    "id": 1075450,
                                     "name": "Moshe Cohen",
-                                    "shortName": "MoC",
-                                    "JerseyNumber": 6,
                                     "countryId": 2
                              }],
                 "tvNetworks": [{
@@ -387,31 +330,37 @@ game | true | Object |  | Full game data
 id | true | Integer |  | Game's id
 lastUpdateId | true | Integer |  | Game's update id for delta fetching
 ttl | true | Integer |  | Seconds for next game request 
-status | true | String | 'scheduled' 'started' 'ended' | Game's Status
+statusGroup | true | Integer | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
 statusText | false | String | | Game's Status formatted text
-gameTimeText | false | String | | Game's Status formatted text
+showCountdown | false | Boolean | | if game card should show countdown
+gameTime | false | Integer | | Game's time 
+gameTimeDisplay | false | String | | Game's time formatted text
+gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
+hasLineups | false | Boolean | | if game have full lineups
+hasMissingPlayers | false | Boolean | | if game have only missing player lineups
+hasFieldPositions | false | Boolean | | if game have positions for lineups yard
 datetime | true | Object | | [Description](#datetime)
 isFutureGame | false | Boolean |  | if true don't display game
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
 lmt | false | String |  | if exist use iframe with the lmt url
 venue | false | Object | | [Description](#venue)
+members | false | Array | | Game's members (both competitors, include management) [Description](#gameMember)
+stages | false | Array | | Game's stages [Description](#stage)
 homeCompetitor | true | Object | | [Description](#competitor)
 awayCompetitor | true | Object | | [Description](#competitor) 
-season | false | Object | | Game's season (league season)
-stage | false | Object | | Game's stage (use on qualification competition)
-season | false | Object | | Game's season 
-group | false | Object | | Game's group of competition
-round | false | Object | | season's round
 competitionId | true | Integer | | Game's competition
 sportId | true | Integer | | Game's sport type
 odds | false | Object | | [Description](#odds)
 previousMeetings | false | Array | | Array of gameIds for previous meeting between current competitors
 events | false | Array | | Array of match events
-eventsCategories | false | Integer | | ?????????????????????
 officials | false | Array | | Array of game's officials
 tvNetworks | false | Array | | Array of tv networks
 bookmakers | false | Array | | Array of Bookmakers for odds -> lines
+roundNum | false | Integer | | Game part of round 
+seasonNum | false | Integer | | Game part of season 
+stageNum | false | Integer | | Game part of stage 
+groupNum | false | Integer | | Game part of group 
  
 
 ## Partial Game
@@ -436,25 +385,32 @@ bookmakers | false | Array | | Array of Bookmakers for odds -> lines
    "leagues":[{
                          "id": 1,
                          "name": "World Cup",
-                         "hasTable": true,
+                         "hasStanding": true,
                          "countryId": 11
                    }],
    "games": [{
              "id": 1,
+             "statusGroup": 1,
+             "statusText": "ET",
+             "gameTimeDisplay": "89'",
+             "gameTime": 89,
+             "gameTimeAndStatusDisplayType": 1,
+             "isFutureGame": false,
+             "hasLineups": false,
+             "hasMissingPlayers": false,
+             "hasFieldPositions": false,
+             "showCountdown": false,
+             "hasTVNetworks": false,
+             "hasBetsTeaser": false,
+             "hasFieldPositions": true,
+             "hasLineups": true,
+             "description": "Barcelona has won 5-3 after Penalties",
+             "aggregatedText": "aggregated 4-2",
              "datetime":{
                  "timeStamp": 12334423423423,
                  "dateText": "16/07/2018",
                  "timeText": "21:00 AM"
              },
-             "status": "started",
-             "statusText": "ET",
-             "gameTimeText": "109'",
-             "isFutureGame": false,
-             "lineupsStatus": 1,
-             "hasTVNetworks": false,
-             "hasBetsTeaser": false,
-             "description": "Barcelona has won 5-3 after Penalties",
-             "aggregatedText": "aggregated 4-2",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -477,10 +433,10 @@ bookmakers | false | Array | | Array of Bookmakers for odds -> lines
              },
              "sportId": 1,
              "competitionId": 1,
-             "round": {
-                          "id": 1,
-                          "name": "Round One"
-                      }
+             "roundNum": 3,
+             "seasonNum": 6,
+             "stageNum": 4,
+             "groupNum": 1,
        }]
 }
 ```
@@ -491,22 +447,29 @@ lastUpdateId | true | Integer |  | Game's update id for delta fetching
 ttl | true | Integer |  | Seconds for next game request 
 games | true | Array |  | Array of partial games
 id | true | Integer |  | Game's id
-datetime | true | Object | | [Description](#datetime)
-status | true | String | 'scheduled' 'started' 'ended' | Game's Status
-statusText | false | String | | Game's Status formatted text
-gameTimeText | false | String | | Game's Status formatted text
+datetime | true | Object |  | [Description](#datetime)
+statusGroup | true | Integer | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
+statusText | false | Integer | | Game's time
+gameTimeDisplay | false | String | | Game's time formatted text
+gameTime | false | Integer | | Game's time formatted text
 isFutureGame | false | Boolean |  | if true don't display game
-lineupsStatus | true | Integer | 0 - none, 1 - partial, 2 - full | Game's lineups status (icon display functionality)
-hasTVNetworks | false | Boolean | | if games have tv networks (icon display functionality)
+hasLineups | false | Boolean | | if game have full lineups
+hasMissingPlayers | false | Boolean | | if game have only missing player lineups
+hasFieldPositions | false | Boolean | | if game have positions for lineups yard
+hasTVNetworks | false | Boolean | | if game have tv networks
+showCountdown | false | Boolean | | if game card should show countdown
 hasBetsTeaser | false | Boolean | | if games have odds (icon display functionality)
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
+members | false | Array | | game's Members [Description](#gameMember)
 homeCompetitor | true | Object | | [Description](#competitor)
 awayCompetitor | true | Object | | [Description](#competitor)
 competitionId | true | Integer | | Game's competition
 sportId | true | Integer | | Game's sport type
-round | false | Object | | Game part of round 
-
+roundNum | false | Integer | | Game part of round 
+seasonNum | false | Integer | | Game part of season 
+stageNum | false | Integer | | Game part of stage 
+groupNum | false | Integer | | Game part of group 
 
 ## Competitor
 
@@ -519,7 +482,30 @@ round | false | Object | | Game part of round
     "isQualified": false,
     "isWinner": false,
     "redCards": 0,
-    "countryId": 11
+    "countryId": 11,
+    "lineups": {
+                "status": "Not Confirmed",
+                "formation": "4-4-2",
+                "hasFieldPositions": true,
+                "members": [{
+                                "playerId": 6688408,
+                                "position": {
+                                                "id": 1,
+                                                "name": "striker"
+                                            },
+                                "formation": {
+                                                "id": 1,
+                                                "name": "left back",
+                                                "shortName": "LB"
+                                            },
+                                "yardFormation": {
+                                                "line": 2,
+                                                "fieldPosition": 2,
+                                                "fieldLine": 33,
+                                                "fieldSide": 0
+                                            }
+                            }],
+            },
 }
 ```
 
@@ -533,12 +519,34 @@ isQualified | false | Boolean |  | If competitor qualified to next stage
 isWinner | false | Boolean |  | If competitor qualified to next stage
 redCards | false | Integer |  | If competitor qualified to next stage
 countryId | true | Integer |  | Competitor's country
+lineups | false | Array | | [Description](#lineups)
+
+## Stage
+
+```json
+{
+    "id": 7,
+    "name": "Halftime",
+    "shortName": "HT",
+    "homeCompetitorScore": 0,
+    "awayCompetitorScore": 0
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | true | Integer |  | stage's id
+name | true | String |  | stage's name
+shortName | false | String |  | stage's short name
+homeCompetitorScore | true | Integer |  | stage's home competitor score
+awayCompetitorScore | true | Integer |  | stage's away competitor scored
+
 
 ## Datetime
 
 ```json
 {
-    "timeStamp": 12334423423423,
+    "msFromEpoch": 12334423423423,
     "dateText": "16/07/2018",
     "timeText": "21:00 AM"
 }
@@ -546,7 +554,7 @@ countryId | true | Integer |  | Competitor's country
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-timeStamp | true | Integer |  | UNIX Time stamp
+msFromEpoch | true | Integer |  | UNIX Time stamp
 dateText | true | String |  | Date formatted by country and timezone
 timeText | true | String |  | Time formatted by country and timezone
 
@@ -556,7 +564,31 @@ timeText | true | String |  | Time formatted by country and timezone
 {
      "status": "Not Confirmed",
      "formation": "4-4-2",
-     "hasFieldPositions": true
+     "hasFieldPositions": true,
+     "members": [{
+                    "playerId": 6688408,
+                    "position": {
+                                    "id": 1,
+                                    "name": "striker"
+                                },
+                    "formation": {
+                                    "id": 1,
+                                    "name": "left back",
+                                    "shortName": "LB"
+                                },
+                    "yardFormation": {
+                                    "line": 2,
+                                    "fieldPosition": 2,
+                                    "fieldLine": 33,
+                                    "fieldSide": 0
+                                },
+                    "substitute": {
+                                    "playerId": 22,
+                                    "time": 90.0,
+                                    "type": 1,
+                                    "status": 1
+                                }
+                }]
 }
 ```
 
@@ -565,8 +597,9 @@ Parameter | required | type | Options | Description
 status | true | Integer | ??? | Lineup's status
 formation | false | String |  | Competitor's lineups formation
 hasFieldPositions | false | Boolean |  | Flag if members has field positions
+members | false | Array | | array of lineups members [Description](#lineupsMember)
 
-## Members
+## gameMember
 
 ```json
 [{
@@ -577,6 +610,23 @@ hasFieldPositions | false | Boolean |  | Flag if members has field positions
     "shortName": "MoC",
     "JerseyNumber": 6,
     "statusText": "Rising star",
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+status | true | Integer | 0 - Not playing, 1 - Doubtful, 2 - playing | Member's status
+id | true | Integer | | Member's id (id for specific game)
+athleteId | true | Integer | | Member's id (athlete entity id)
+name | true | String | | Member's name
+shortName | false | String | | Member's nickname
+JerseyNumber | false | Integer | | Member's jersey number
+
+## lineupsMember
+
+```json
+[{
+    "playerId": 6688408,
     "position": {
                     "id": 1,
                     "name": "striker"
@@ -591,24 +641,17 @@ hasFieldPositions | false | Boolean |  | Flag if members has field positions
                      "fieldPosition": 2,
                      "fieldLine": 33,
                      "fieldSide": 0
-                 },
-    "substitute": {
-                     "playerId": 22,
-                     "time": 90.0,
-                     "type": 1,
-                     "status": 1
-                  }
+                 }
 }]
 ```
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-status | true | Integer | 0 - Not playing, 1 - Doubtful, 2 - playing | Member's status
-id | true | Integer | | Member's id (id for specific game)
-athleteId | true | Integer | | Member's id (athlete entity id)
-name | true | String | | Member's name
-shortName | false | String | | Member's nickname
-JerseyNumber | false | Integer | | Member's jersey number
+playerId | true | Integer | | Member's id (id for specific game)
+position | true | Object | | [Description](#position)
+formation | false | Object | | [Description](#formation)
+yardFormation | false | Object | | [Description](#yardFormation)
+
 
 ## Position
 
@@ -658,24 +701,6 @@ fieldPosition | true | String | | ???????????
 fieldLine | false | String | | ????????????
 fieldSide  | false | String | | ???????????
 
-## Substitute
-
-```json
-{
-   "playerId": 22,
-   "time": 90.0,
-   "type": 1,
-   "status": 1
-}
-```
-
-Parameter | required | type | Options | Description
---------- | ------- |  ----- |  ----- | ---------
-playerId | true | Integer | | Substitute player's id
-time | true | String | | Substitute time
-type | false | String | ?????? | Substitution type
-status  | false | String | ?????? | ???????????
-
 ## Statistics
 
 ```json
@@ -684,8 +709,9 @@ status  | false | String | ?????? | ???????????
     "name": "fouls",
     "categoryId": 3,
     "categoryName": "Posessions",
-    "value": "2",
-    "valuePercentage": 2
+    "value": "50%",
+    "valuePercentage": 2,
+    "isMajor": true
 }]
 ```
 
@@ -695,10 +721,9 @@ id | true | Integer | | Statistic's id
 name | true | String | | Statistic's name
 categoryId | true | Integer | | Statistics need to be group by category id 
 categoryName | true | String | ?????? | Substitution type
-status  | true | Integer | ?????? | ???????????
 value  | true | String | ?????? | Value of current statistic
 percentage  | false | Double | ?????? | Percentage from away and home current statistic
-
+isMajor  | true | Boolean | ?????? | If current statistic is major
 
 ## Odds
 
@@ -711,31 +736,49 @@ percentage  | false | Double | ?????? | Percentage from away and home current st
                             "bookmakerId": 1,
                             "rates":[{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 1
+                                        "name": "1",
+                                        "template": "#COMPETITOR1",
+                                        "competitorId": 132
                                     },{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 2
+                                        "name": "X",
+                                        "template": "Draw",
+                                        "competitorId": 132
                                     },{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 3
+                                        "name": "2",
+                                        "template": "#COMPETITOR2",
+                                        "competitorId": 131
                                     }]
                         }]
             },
@@ -748,33 +791,50 @@ percentage  | false | Double | ?????? | Percentage from away and home current st
                             "bookmakerId": 1,
                             "rates":[{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 1
+                                        "name": "1",
+                                        "template": "#COMPETITOR1",
+                                        "competitorId": 132
                                     },{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 2
+                                        "name": "X",
+                                        "template": "Draw",
+                                        "competitorId": 132
                                     },{
                                         "rateOptions":{
-                                                            "american": "+100",
-                                                            "fractional": "100/150",
-                                                            "decimal": "1.25"
-                                                        },
-                                        "oldRate": "1.10",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                        "oldRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                         "kickOffRate": "1.25",
-                                        "num": 3
+                                        "name": "2",
+                                        "template": "#COMPETITOR2",
+                                        "competitorId": 131
                                     }]
-                        }]
                          },{
                             "gameId": 123134,
                             "lines":[{
@@ -782,31 +842,49 @@ percentage  | false | Double | ?????? | Percentage from away and home current st
                                         "bookmakerId": 1,
                                         "rates":[{
                                                     "rateOptions":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "oldRate": "1.10",
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                    "oldRate": {
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
                                                     "kickOffRate": "1.25",
-                                                    "num": 1
+                                                    "name": "1",
+                                                    "template": "#COMPETITOR1",
+                                                    "competitorId": 132
                                                 },{
                                                     "rateOptions":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "oldRate": "1.10",
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                    "oldRate": {
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
                                                     "kickOffRate": "1.25",
-                                                    "num": 2
+                                                    "name": "X",
+                                                    "template": "Draw",
+                                                    "competitorId": 132
                                                 },{
                                                     "rateOptions":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "oldRate": "1.10",
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                    "oldRate": {
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
                                                     "kickOffRate": "1.25",
-                                                    "num": 3
+                                                    "name": "2",
+                                                    "template": "#COMPETITOR2",
+                                                    "competitorId": 131
                                                 }]
                                     }]
                          }]
@@ -828,31 +906,49 @@ teaser | false | Object | | Odds for next game for each competitor
     "bookmakerId": 1,
     "rates":[{
                 "rateOptions":{
-                                    "american": "+100",
-                                    "fractional": "100/150",
-                                    "decimal": "1.25"
-                                },
-                "oldRate": "1.10",
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
+                "oldRate": {
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
                 "kickOffRate": "1.25",
-                "num": 1
+                "name": "1",
+                "template": "#COMPETITOR1",
+                "competitorId": 132
             },{
                 "rateOptions":{
-                                    "american": "+100",
-                                    "fractional": "100/150",
-                                    "decimal": "1.25"
-                                },
-                "oldRate": "1.10",
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
+                "oldRate": {
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
                 "kickOffRate": "1.25",
-                "num": 2
+                "name": "X",
+                "template": "Draw",
+                "competitorId": 132
             },{
                 "rateOptions":{
-                                    "american": "+100",
-                                    "fractional": "100/150",
-                                    "decimal": "1.25"
-                                },
-                "oldRate": "1.10",
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
+                "oldRate": {
+                                "american": "+100",
+                                "fractional": "100/150",
+                                "decimal": "1.25"
+                            },
                 "kickOffRate": "1.25",
-                "num": 3
+                "name": "2",
+                "template": "#COMPETITOR2",
+                "competitorId": 131
             }]
 }]
 
@@ -873,7 +969,11 @@ rates | true | Array | | [Description](#rate)
                         "fractional": "100/150",
                         "decimal": "1.25"
                     },
-    "oldRate": "1.10",
+    "oldRate": {
+                    "american": "+120",
+                    "fractional": "100/230",
+                    "decimal": "1.40"
+                },
     "kickOffRate": "1.25",
     "num": 1
 }
@@ -882,34 +982,67 @@ rates | true | Array | | [Description](#rate)
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 rateOptions | true | Object | | All supported rate types
-oldRate | false | Double | | if rate changes saving old rate for trend (Decimal)
+oldRate | false | Object | | if rate changes saving old rate for trend
 kickOffRate | false | Double | | the rate when the game is startting (Decimal)
-num | true | Integer | 0-2 | Rate label 0 - 'X', 1 - '1', 2 - '2'
+name | true | String | | Rate label Ex. '1', 'x', '2', 'Under', 'Over',
 
 ## Events
 
 ```json
 [{
-    "index": 1,
-    "time": "30",
-    "playerId": 6688408,
-    "subPlayerId" :6688100,
-    "isMajor": true,
-    "event": {
-                "id": 1,
-                "name": "Goal"
-             }
+        "competitorId": 562,
+        "statusId": 6,
+        "stageId": 7,
+        "order": 1,
+        "num": 1,
+        "gameTimeDisplay": "89'",
+        "gameTime": 89,
+        "addedTime": 0,
+        "gameTimeAndStatusDisplayType": 1,
+        "playerId": 6688408,
+        "isMajor": false,
+        "extraPlayers" :[
+            6688100,
+        ],
+        "eventType": {
+                    "id": 1,
+                    "name": "Goal",
+                    "subTypeId": -1,
+        }
 }]
 ```
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-index | true | Object | | Event index on display 
-time | true | String | | Event time
+competitorId | true | Integer| | Event's competitior id
+statusId | true | Integer | | game status at the event
+stageId | true | Integer | | game stage at the event
+order | true | Integer | | Event order on display 
+num | true | Object | | Event num on display 
+gameTime | false | Integer | | Game's time 
+addedTime | false | Integer | | Game's added time 
+gameTimeDisplay | false | String | | Game's time formatted text
+gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
 playerId | true | Integer | | Main player for the event
-subPlayerId | false | Integer | | Sub player 
-event | true | Object |  | Event Object with id and name
+extraPlayers | false | Array | | array of extra players [playerId]
+eventType | true | Object |  |  [Description](#EventType)
 isMajor | false | Boolean |  | If event are major (filter top)
+
+## Event Type
+
+```json
+{
+        "id": 1,
+        "name": "Goal",
+        "subTypeId": -1,
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | true | Integer |  | Enum of events
+name | true | Integer | | Events desplay name
+subTypeId | true | String | | Event Sub type
 
 ## Officials
 
@@ -976,52 +1109,52 @@ googlePlaceId | false | Integer |  | Google maps place id of the current venue
 
 ```json
 [{
-       "key": "gamesPlayed",
-       "name": "P",
-       "major": true
-       },
-       {
-       "key": "gamesWon",
-       "name": "W",
-       "major": false
-       },
-       {
-       "key": "gamesEven",
-       "name": "D",
-       "major": false
-       },
-       {
-       "key": "gamesLost",
-       "name": "L",
-       "major": false
-       },
-       {
-       "key": "goals",
-       "name": "F:A",
-       "major": true
-       },
-       {
-       "key": "ratio",
-       "name": "+/-",
-       "major": true
-       },
-       {
-       "key": "points",
-       "name": "PTS",
-       "major": true
-       },
-       {
-       "key": "form",
-       "name": "Form",
-       "major": false
+    "key": "gamesPlayed",
+    "name": "P",
+    "isMajor": true
+    },
+    {
+    "key": "gamesWon",
+    "name": "W",
+    "isMajor": false
+    },
+    {
+    "key": "gamesEven",
+    "name": "D",
+    "isMajor": false
+    },
+    {
+    "key": "gamesLost",
+    "name": "L",
+    "isMajor": false
+    },
+    {
+    "key": "goals",
+    "name": "F:A",
+    "isMajor": true
+    },
+    {
+    "key": "ratio",
+    "name": "+/-",
+    "isMajor": true
+    },
+    {
+    "key": "points",
+    "name": "PTS",
+    "isMajor": true
+    },
+    {
+    "key": "form",
+    "name": "Form",
+    "isMajor": false
 }]
 ```
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-key | true | String | | Key of column use as key for table rows
+key | true | String | | Key of column use as key for Standing rows
 name | false | Integer |  | Column display name 
-major | false | Integer |  | If show on small view
+isMajor | false | Integer |  | If show on small view
 
 ## Rows
 
@@ -1078,8 +1211,8 @@ gamesWonOnOverTime | true | Integer |  | Total games that won after over time
 gamesWonOnPenalties | true | Integer |  | Total games that won after penalties
 gamesLossOnOverTime | true | Integer |  | Total games that lost after over time
 gamesLossOnPenalties | true | Integer |  | Total games that lost after penalties
-position | true | Integer |  | Position on table (row number)
-trend | false | Integer |  | On live game if team goes up or down on table 
+position | true | Integer |  | Position on Standing (row number)
+trend | false | Integer |  | On live game if team goes up or down on Standing 
 recentForm | false | Array |  | trend for recent matches on current league
 destinationId | false | Integer |  | Destination by position
 destinationGuaranteed | false | Boolean |  | If Destination guaranteed for current competitor
@@ -1098,7 +1231,7 @@ isWinner | false | Boolean |  | If current competitor won the league title
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-id | true | Integer | | Key of column use as key for table rows
+id | true | Integer | | Key of column use as key for Standing rows
 name | true | String |  | Destination competition name
 color | true | String |  | Destination display color
 type | true | Integer | ??????? | Destination's type

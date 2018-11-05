@@ -23,7 +23,7 @@ This endpoint retrieves all countries.
 
 ### HTTP Request
 
-`GET https://api.365scores.com/countries`
+`GET https://ws.365scores.com/web/countries`
 
 <aside class="notice">
 Don't forget general parameters.

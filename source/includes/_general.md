@@ -2,7 +2,7 @@
 
 ### General root
 
-`GET https://api.365scores.com/`
+`GET https://ws.365scores.com/web/`
 
 ### General Query Parameters
 

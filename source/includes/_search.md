@@ -4,17 +4,17 @@
 
 ```json
 [
-    "leagues" : [{
+    "competitions" : [{
                            "id": 595,
                            "name": "Copa America",
-                           "hasTable": true,
+                           "hasStanding": true,
                            "sportId": 1,
                            "countryId": 11
                       },
                       {
                            "id": 121,
                            "name": "LaLiga",
-                           "hasTable": true,
+                           "hasStanding": true,
                            "sportId": 1,
                            "countryId": 12
                       }],
@@ -42,18 +42,18 @@
 
 ### HTTP Request
 
-`GET https://api.365scores.com/search`
+`GET https://ws.365scores.com/web/search`
 
 ### Query Parameters
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
 query | true | '' | 'Barce' | | Return all entities that include the query
-filter | false | all | 'leagues' | 'all' 'leagues' 'competitors' 'athletes' | Filter the results
+filter | false | all | 'competitions' | 'all' 'competitions' 'competitors' 'athletes' | Filter the results
 
 ### Examples
 
-`GET https://api.365scores.com/search?query=Barcelona&filter=competitors`
+`GET https://ws.365scores.com/web/search?query=Barcelona&filter=competitors`
 
 <aside class="notice">
 Don't forget general parameters.

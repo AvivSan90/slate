@@ -1,6 +1,6 @@
-# Leagues
+# Competitions
 
-## Get All Leagues
+## Get All Competitions
 
 ```json
 {
@@ -16,10 +16,10 @@
                     "id": 1,
                     "name": "Football"
              }],
-     "leagues": [{
+     "competitions": [{
                      "id": 595,
                      "name": "Copa America",
-                     "hasTable": true,
+                     "hasStanding": true,
                      "sportId": 1,
                      "countryId": 1,
                      "liveGames": 2,
@@ -28,7 +28,7 @@
                 {
                      "id": 121,
                      "name": "LaLiga",
-                     "hasTable": true,
+                     "hasStanding": true,
                      "sportId": 1,
                      "countryId": 12,
                      "liveGames": 2,
@@ -37,37 +37,36 @@
 }
 ```
 
-This endpoint retrieves all leagues.
+This endpoint retrieves all competitions.
 
 ### HTTP Request
 
-`GET https://api.365scores.com/leagues`
+`GET https://ws.365scores.com/web/competitions`
 
 ### Query Parameters
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
-leagueIds | false | '' | 12 | | Return specific leagues
-lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
-sportId | false | '' | 1 | | Filter leagues by sport 
-countryId | false | '' | 12 | | Filter leagues by country  
+competitions | false | '' | 12 | | Return specific competitions
+sports | false | '' | 1 | | Filter competitions by sport 
+countries | false | '' | 12 | | Filter competitions by country  
 
 ### Examples
 
-get tables by id
+get Standings by id
 
-`GET https://api.365scores.com/leagues?leagueIds=12,13,123`
+`GET https://ws.365scores.com/web/competitions/?competitions=12,13,123`
 
-get tables for specific countries
+get Standings for specific countries
 
-`GET https://api.365scores.com/leagues?countryId=12,13`
+`GET https://ws.365scores.com/web/competitions/?countryId=12,13`
 
 
 <aside class="notice">
 Don't forget general parameters.
 </aside>
 
-## Get Top Leagues
+## Get Top Competitions
 
 ```json
 {
@@ -83,10 +82,10 @@ Don't forget general parameters.
                     "id": 1,
                     "name": "Football"
              }],
-     "leagues": [{
+     "competitions": [{
                      "id": 595,
                      "name": "Copa America",
-                     "hasTable": true,
+                     "hasStanding": true,
                      "sportId": 1,
                      "countryId": 1,
                      "liveGames": 2,
@@ -95,7 +94,7 @@ Don't forget general parameters.
                 {
                      "id": 121,
                      "name": "LaLiga",
-                     "hasTable": true,
+                     "hasStanding": true,
                      "sportId": 1,
                      "countryId": 12,
                      "liveGames": 2,
@@ -104,17 +103,17 @@ Don't forget general parameters.
 }
 ```
 
-This endpoint retrieves top leagues.
+This endpoint retrieves top competitions.
 
 ### HTTP Request
 
-`GET https://api.365scores.com/leagues/top?limit=10`
+`GET https://ws.365scores.com/web/competitions/top?limit=10`
 
 ### Query Parameters
 
 Parameter | required | Default | Example | Options | Description
 --------- | ------- | ----------- | --- | ----- | ---------
-limit | false | '' | 10 | | Return limited size of leagues
+limit | false | '' | 10 | | Return limited size of competitions
 
 <aside class="notice">
 Don't forget general parameters.
