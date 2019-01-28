@@ -24,7 +24,11 @@
                          "hasStanding": true,
                          "countryId": 11,
                          "sportId": 1,
+                         "liveGames": 2,
+                         "totalGames": 5
                    }],
+                   
+                                       
    "games": [{
              "id": 1,
              "statusGroup": 1,

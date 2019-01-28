@@ -12,6 +12,7 @@ includes:
   - countries
   - games
   - standings
+  - competitors
   - competitions
   - search
   - entities
