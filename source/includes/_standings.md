@@ -120,7 +120,7 @@ destinations | Standings | Standing's rows - position destination | [See Example
 
 ### HTTP Request
 
-`GET https:/ws.365scores.com/web/standings`
+`GET https://ws.365scores.com/web/standings`
 
 ### Query Parameters
 
