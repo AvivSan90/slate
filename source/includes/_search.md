@@ -7,6 +7,7 @@
     "competitions" : [{
                            "id": 595,
                            "name": "Copa America",
+                           "nameForURL": "copa-america",
                            "hasStanding": true,
                            "sportId": 1,
                            "countryId": 11
@@ -14,6 +15,7 @@
                       {
                            "id": 121,
                            "name": "LaLiga",
+                           "nameForURL": "laliga",
                            "hasStanding": true,
                            "sportId": 1,
                            "countryId": 12
@@ -21,21 +23,25 @@
     "competitors" : [{
                          "id": 1,
                          "name": "Argentina",
+                         "nameForURL": "argentina",
                          "countryId": 11,
                          "sportId": 1,
                     }]
     "athletes" : [],
     "sport":[{
                "id": 1,
-               "name": "Football"
+               "name": "Football",
+               "nameForURL": "football"
            }],
     "countries":[{
                      "id": 11,
-                     "name": "Argentina"
+                     "name": "Argentina",
+                     "nameForURL": "argentina"
                },
                {
                      "id": 12,
-                     "name": "Brazil"
+                     "name": "Brazil",
+                     "nameForURL": "brazil"
                  }],
 ]
 ```

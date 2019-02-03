@@ -53,6 +53,7 @@
                                 "competitor":{
                                                 "id": 131,
                                                 "name": "Real Madrid",
+                                                "nameForURL": "real-madrid",
                                                 "countryId": 1,
                                                 "sportId": 1
                                             },
@@ -82,19 +83,26 @@
                                 "isWinner": true
                             }]
                     }],
-    "destinations": [{
-                          "id": 1,
-                          "name": "Champions League",
-                          "color": "#ff0000",
-                          "type": 1
-                     }],
+    
     "countries":[{
                      "id": 1,
-                     "name": "Argentina"
+                     "name": "Argentina",
+                     "nameForURL": "argentina"
+                     
+
+                }],
+    "competitions": [{
+                    "id": 7,
+                    "countryId": 1,
+                    "sportId": 1,
+                    "name": "Premier League",
+                    "nameForURL": "premier-league",
+                    "hasStandings": true
                 }],
     "sports":[{
                     "id": 1,
-                    "name": "Football"
+                    "name": "Football",
+                    "nameForURL": "football"
              }]
 }
 ```

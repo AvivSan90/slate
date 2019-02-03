@@ -8,19 +8,23 @@
    "ttl": 10,
    "sport":[{
                "id": 1,
-               "name": "Football"
+               "name": "Football",
+               "nameForUrl": "football"
            }],
    "countries":[{
                      "id": 11,
-                     "name": "Argentina"
+                     "name": "Argentina",
+                     "nameForUrl": "argentina"
                },
                {
                      "id": 12,
-                     "name": "Brazil"
+                     "name": "Brazil",
+                     "nameForUrl": "brazil"
                  }],
    "competitions":[{
                          "id": 1,
                          "name": "World Cup",
+                         "nameForUrl": "world-cup",
                          "hasStanding": true,
                          "countryId": 11,
                          "sportId": 1,
@@ -169,6 +173,7 @@ Don't forget general parameters.
                 "venue": {
                     "id": 1,
                     "name": "Saint-Petersburg Stadium",
+                    "nameForURL": "saint-petersburg-stadium",
                     "capacity": "20,000",
                     "attendance": "19,999",
                     "googlePlaceId": 1,
@@ -185,6 +190,7 @@ Don't forget general parameters.
                                 "playerId": 6688408,
                                 "athleteId": 26574,
                                 "name": "Moshe Cohen",
+                                "nameForURL": "moshe-cohen",
                                 "shortName": "MoC",
                                 "JerseyNumber": 6,
                                 "statusText": "Rising star",
@@ -415,19 +421,24 @@ Don't forget general parameters.
             },
     "countries": [{
                     "id": 1,
-                    "name": "Argentina"
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    
                 },{
                     "id": 2,
-                    "name": "Brazil"
+                    "name": "Brazil",
+                    "nameForURL": "brazil",
                 }],
     "competitions": [{
                       "id": 1,
                       "name": "World Cup",
+                      "nameForURL": "world-cup",
                       "countryId": 1
                  }],
     "sports":[{
                  "id": 1,
-                 "name": "Football"
+                 "name": "Football",
+                 "nameForURL": "football"
             }],
     "bookmakers": [{
                         "id": 1,

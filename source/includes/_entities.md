@@ -5,7 +5,8 @@
 ```json
 {
      "id": 1,
-     "name": "Football"
+     "name": "Football",
+     "nameForURL": "football"
 }
 ```
 
@@ -20,6 +21,7 @@ name | true | String |  | Sport's name
 {
     "id": 1,
     "name": "Argentina",
+    "nameForURL": "argentina",
     "liveGames": 2,
     "totalGames": 5
 }
@@ -38,6 +40,7 @@ totalGames | false | Integer |  | Total games for current country
 {
       "id": 1,
       "name": "World Cup",
+      "nameForURL": "world-cup",
       "hasStanding": true,
       "countryId": 11,
       "sportId": 11,
@@ -120,6 +123,7 @@ link | true | Integer | | Bookmaker's website link
                                 "playerId": 6688408,
                                 "athleteId": 26574,
                                 "name": "Moshe Cohen",
+                                "nameForURL": "world-cup",
                                 "shortName": "MoC",
                                 "JerseyNumber": 6,
                                 "statusText": "Rising star",
@@ -302,19 +306,23 @@ link | true | Integer | | Bookmaker's website link
             },
     "countries": [{
                     "id": 1,
-                    "name": "Argentina"
+                    "name": "Argentina",
+                    "nameForURL": "argentina"
                 },{
                     "id": 2,
-                    "name": "Brazil"
+                    "name": "Brazil",
+                    "nameForURL": "brazil"
                 }],
     "leagues": [{
                       "id": 1,
                       "name": "World Cup",
+                      "nameForURL": "world-cup",
                       "countryId": 1
                  }],
     "sports":[{
                  "id": 1,
-                 "name": "Football"
+                 "name": "Football",
+                 "nameForURL": "football"
             }],
     "bookmakers": [{
                         "id": 1,
@@ -372,19 +380,23 @@ groupNum | false | Integer | | Game part of group
    "ttl": 10,
    "sport":[{
                "id": 1,
-               "name": "Football"
+               "name": "Football",
+               "nameForURL": "football"
            }],
    "countries":[{
                      "id": 11,
-                     "name": "Argentina"
+                     "name": "Argentina",
+                     "nameForURL": "argentina"
                },
                {
                      "id": 12,
-                     "name": "Brazil"
+                     "name": "Brazil",
+                     "nameForURL": "brazil"
                  }],
    "leagues":[{
                          "id": 1,
                          "name": "World Cup",
+                         "nameForURL": "world-cup",
                          "hasStanding": true,
                          "countryId": 11
                    }],
@@ -607,6 +619,7 @@ members | false | Array | | array of lineups members [Description](#lineupsMembe
     "id": 6688408,
     "athleteId": 26574,
     "name": "Moshe Cohen",
+    "nameForURL": "moshe-cohen",
     "shortName": "MoC",
     "JerseyNumber": 6,
     "statusText": "Rising star",
@@ -1051,6 +1064,7 @@ subTypeId | true | String | | Event Sub type
       "status": 1,
       "id": 6688408,
       "name": "Moshe Cohen",
+      "nameForURL": "moshe-cohen",
       "shortName": "MoC",
       "countryId": 2
 }]
@@ -1072,6 +1086,7 @@ countryId | true | Integer |  | Official's country
     "id": 6,
     "type": 1,
     "name": "Kan 11",
+    "nameForURL": "kan-11",
     "countryId": 2,
     "website": "https://www.iba.org.il",
     "bookmakerId": 0
@@ -1092,6 +1107,7 @@ bookmakerId | false | Integer |  | ??????????
 ```json
 {
     "name": "Saint-Petersburg Stadium",
+    "nameForURL": "saint-petersburg-stadium",
     "capacity": "20,000",
     "attendance": "19,999",
     "googlePlaceId": 1
@@ -1163,6 +1179,7 @@ isMajor | false | Integer |  | If show on small view
     "competitor":{
                     "id": 131,
                     "name": "Real Madrid",
+                    "nameForURL": "real-madrid",
                     "countryId": 1,
                     "sportId": 1
                  },
@@ -1224,6 +1241,7 @@ isWinner | false | Boolean |  | If current competitor won the league title
 [{
     "id": 1,
     "name": "Champions League",
+    "nameForURL": "champions-league",
     "color": "#ff0000",
     "type": 1
 }]

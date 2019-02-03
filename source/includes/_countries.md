@@ -7,12 +7,14 @@
     {
         "id": 1,
         "name": "Argentina",
+        "nameForURL": "argentina",
         "liveGames": 2,
         "totalGames": 5
     },
     {
         "id": 2,
         "name": "Brazil",
+        "nameForURL": "brazil",
         "liveGames": 2,
         "totalGames": 5
     }
