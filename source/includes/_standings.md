@@ -61,6 +61,12 @@
                                             "id":1,
                                             "name": "Group A"
                                         },
+                                "liveData": {
+                                      "isLive": true,
+                                      "homeScore": 2,
+                                      "awayScore": 1,
+                                      "gameStatus": 2
+                                },
                                 "gamesPlayed": 3,
                                 "gamesWon": 3,
                                 "gamesLost": 3,

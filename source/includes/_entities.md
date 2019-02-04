@@ -1,5 +1,28 @@
 # Entities
 
+
+## LiveData
+
+```json
+{
+     "isLive": true,
+     "homeScore": 2,
+     "awayScore": 1,
+     "gameStatus": 2
+}
+
+```
+
+Parameter | required | type | Options  | Description
+--------- | ------- |  ----- |  ----- | ---------
+isLive | true | Boolean |  | is live game
+homeScore | false | Integer |  | Score of the home competitor
+awayScore | false | Integer |  | Score of the away competitor
+gameStatus | false | Integer |  | 1 -> Competitor is wining  ,  2 -> Competitor is losing  ,  3 -> Drew 
+
+
+
+
 ## Sport
 
 ```json
