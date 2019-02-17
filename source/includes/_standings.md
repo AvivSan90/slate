@@ -104,6 +104,7 @@
                     "name": "Premier League",
                     "nameForURL": "premier-league",
                     "hasStandings": true
+                    "hasStandingGroups": true,
                 }],
     "sports":[{
                     "id": 1,

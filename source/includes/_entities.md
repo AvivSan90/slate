@@ -65,6 +65,7 @@ totalGames | false | Integer |  | Total games for current country
       "name": "World Cup",
       "nameForURL": "world-cup",
       "hasStanding": true,
+      "hasStandingGroups": true,
       "countryId": 11,
       "sportId": 11,
       "liveGames": 2,
@@ -79,6 +80,7 @@ name | true | String | | League's name
 countryId | true | Integer | | League's countryId
 sportId | true | Integer | | League's sportId
 hasStanding | false | Boolean | | If league has Standing data
+hasStandingGroups | false | Boolean | | If Standing has groups
 liveGames | false | Integer | | Live games for current competition
 totalGames | false | Integer | | Total games for current competition
 
@@ -416,11 +418,12 @@ groupNum | false | Integer | | Game part of group
                      "name": "Brazil",
                      "nameForURL": "brazil"
                  }],
-   "leagues":[{
+   "competitions":[{
                          "id": 1,
                          "name": "World Cup",
                          "nameForURL": "world-cup",
                          "hasStanding": true,
+                         "hasStandingGroups": true,
                          "countryId": 11
                    }],
    "games": [{

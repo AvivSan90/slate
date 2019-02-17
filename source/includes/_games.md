@@ -26,6 +26,7 @@
                          "name": "World Cup",
                          "nameForUrl": "world-cup",
                          "hasStanding": true,
+                         "hasStandingGroups": true,
                          "countryId": 11,
                          "sportId": 1,
                          "liveGames": 2,

@@ -9,6 +9,7 @@
                            "name": "Copa America",
                            "nameForURL": "copa-america",
                            "hasStanding": true,
+                           "hasStandingGroups": true,
                            "sportId": 1,
                            "countryId": 11
                       },
@@ -17,6 +18,7 @@
                            "name": "LaLiga",
                            "nameForURL": "laliga",
                            "hasStanding": true,
+                           "hasStandingGroups": true,
                            "sportId": 1,
                            "countryId": 12
                       }],
