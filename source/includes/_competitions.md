@@ -19,7 +19,8 @@
      "competitions": [{
                      "id": 595,
                      "name": "Copa America",
-                     "hasStanding": true,
+                     "hasStandings": true,
+                     "hasStandingsGroups": true,
                      "sportId": 1,
                      "countryId": 1,
                      "liveGames": 2,
@@ -29,6 +30,7 @@
                      "id": 121,
                      "name": "LaLiga",
                      "hasStanding": true,
+                     "hasStandingsGroups": true,
                      "sportId": 1,
                      "countryId": 12,
                      "liveGames": 2,
