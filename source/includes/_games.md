@@ -49,16 +49,13 @@
              "hasLineups": true,
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
+             "displayTitle": "Semi Final",
              "sportId": 1,
              "competitionId": 1,
              "roundNum": 3,
              "seasonNum": 6,
              "stageNum": 4,
-             "datetime":{
-                 "msFromEpoch": 12334423423423,
-                 "dateText": "16/07/2018",
-                 "timeText": "21:00 AM"
-             },
+             "startTime": "2018-12-06T17:15:00+02:00",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -166,11 +163,7 @@ Don't forget general parameters.
                 "groupNum": 2,
                 "competitionId": 1,
                 "sportId": 1,
-                 "datetime":{
-                                "timeStamp": 12334423423423,
-                                "dateText": "16/07/2018",
-                                "timeText": "21:00 AM"
-                            },
+                "startTime": "2018-12-06T17:15:00+02:00",
                 "venue": {
                     "id": 1,
                     "name": "Saint-Petersburg Stadium",
@@ -454,7 +447,6 @@ Don't forget general parameters.
 Object | Usage | Description | Example
 --------- | ------- | --------- | -----
 game | Game center | Game's full data | [See Example](#full-game)
-datetime | Game center header | Date and time data already formatted by timezone and country | [See Example](#datetime)
 hasLineups | false | Boolean | | if game have full lineups
 hasMissingPlayers | false | Boolean | | if game have only missing player lineups
 hasFieldPositions | false | Boolean | | if game have positions for lineups yard

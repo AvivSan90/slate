@@ -125,11 +125,7 @@ link | true | Integer | | Bookmaker's website link
                 "seasonNum": 6,
                 "stageNum": 4,
                 "groupNum": 1,
-                "datetime":{
-                    "timeStamp": 12334423423423,
-                    "dateText": "16/07/2018",
-                    "timeText": "21:00 AM"
-                },
+                "startTime": "2018-12-06T17:15:00+02:00",
                 "venue": {
                     "name": "Saint-Petersburg Stadium",
                     "capacity": "20,000",
@@ -372,7 +368,7 @@ gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDispl
 hasLineups | false | Boolean | | if game have full lineups
 hasMissingPlayers | false | Boolean | | if game have only missing player lineups
 hasFieldPositions | false | Boolean | | if game have positions for lineups yard
-datetime | true | Object | | [Description](#datetime)
+startTime | true | String | | ISO string game start time
 isFutureGame | false | Boolean |  | if true don't display game
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
@@ -442,13 +438,10 @@ groupNum | false | Integer | | Game part of group
              "hasBetsTeaser": false,
              "hasFieldPositions": true,
              "hasLineups": true,
+             "displayTitle": "Semi Final",
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
-             "datetime":{
-                 "timeStamp": 12334423423423,
-                 "dateText": "16/07/2018",
-                 "timeText": "21:00 AM"
-             },
+             "startTime": "2018-12-06T17:15:00+02:00",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -485,13 +478,14 @@ lastUpdateId | true | Integer |  | Game's update id for delta fetching
 ttl | true | Integer |  | Seconds for next game request 
 games | true | Array |  | Array of partial games
 id | true | Integer |  | Game's id
-datetime | true | Object |  | [Description](#datetime)
+startTime | true | String |  | ISO string game start time
 statusGroup | true | Integer | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
 statusText | false | Integer | | Game's time
 gameTimeDisplay | false | String | | Game's time formatted text
 gameTime | false | Integer | | Game's time formatted text
 isFutureGame | false | Boolean |  | if true don't display game
 hasLineups | false | Boolean | | if game have full lineups
+displayTitle | false | String | 'Match Week 12' 'Semi Final' | games groups title 
 hasMissingPlayers | false | Boolean | | if game have only missing player lineups
 hasFieldPositions | false | Boolean | | if game have positions for lineups yard
 hasTVNetworks | false | Boolean | | if game have tv networks
@@ -578,23 +572,6 @@ name | true | String |  | stage's name
 shortName | false | String |  | stage's short name
 homeCompetitorScore | true | Integer |  | stage's home competitor score
 awayCompetitorScore | true | Integer |  | stage's away competitor scored
-
-
-## Datetime
-
-```json
-{
-    "msFromEpoch": 12334423423423,
-    "dateText": "16/07/2018",
-    "timeText": "21:00 AM"
-}
-```
-
-Parameter | required | type | Options | Description
---------- | ------- |  ----- |  ----- | ---------
-msFromEpoch | true | Integer |  | UNIX Time stamp
-dateText | true | String |  | Date formatted by country and timezone
-timeText | true | String |  | Time formatted by country and timezone
 
 ## Lineups
 
