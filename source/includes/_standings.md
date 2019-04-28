@@ -83,7 +83,23 @@
                                 "gamesLossOnPenalties": 0,
                                 "position": 1,
                                 "trend": 0,
-                                "recentForm": [0,1,2,2,1],
+                                "recentForm": [{
+                                   "status": 0,
+                                   "startTime": "2018-12-06T17:15:00+02:00",
+                                   "homeCompetitor": {
+                                        "id": 1,
+                                        "name": "Argentina",
+                                        "score": 2,
+                                        "isWinner": true
+                                   },
+                                   "awayCompetitor": {
+                                        "id": 2,
+                                        "name": "Brazil",
+                                        "score": 0,
+                                        "isWinner": false
+                                   }                                  
+                                }
+                                ],
                                 "destinationId": 1,
                                 "destinationGuaranteed": true,
                                 "isWinner": true
