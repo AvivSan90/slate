@@ -64,7 +64,8 @@
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 0,
-                  "countryId": 11
+                  "countryId": 11,
+                  "imgVer": 1
              },
              "awayCompetitor": {
                   "id": 2,
@@ -74,7 +75,8 @@
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 1,
-                  "countryId": 12
+                  "countryId": 12,
+                  "imgVer": 1
              }
        }]
 }
@@ -188,6 +190,7 @@ Don't forget general parameters.
                                 "shortName": "MoC",
                                 "JerseyNumber": 6,
                                 "statusText": "Rising star",
+                                "imgVer": 1
                             }],
                 "homeCompetitor": {
                      "id": 1,
@@ -197,6 +200,7 @@ Don't forget general parameters.
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 1,
+                     "imgVer": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -239,6 +243,7 @@ Don't forget general parameters.
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 2,
+                     "imgVer": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -417,17 +422,20 @@ Don't forget general parameters.
                     "id": 1,
                     "name": "Argentina",
                     "nameForURL": "argentina",
+                    "imgVer": 1
                     
                 },{
                     "id": 2,
                     "name": "Brazil",
                     "nameForURL": "brazil",
+                    "imgVer": 2
                 }],
     "competitions": [{
                       "id": 1,
                       "name": "World Cup",
                       "nameForURL": "world-cup",
-                      "countryId": 1
+                      "countryId": 1,
+                      "imgVer": 1
                  }],
     "sports":[{
                  "id": 1,

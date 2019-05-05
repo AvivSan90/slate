@@ -46,7 +46,8 @@ name | true | String |  | Sport's name
     "name": "Argentina",
     "nameForURL": "argentina",
     "liveGames": 2,
-    "totalGames": 5
+    "totalGames": 5,
+    "imgVer": 1
 }
 ```
 
@@ -56,8 +57,9 @@ id | true | Integer |  | Country's id
 name | true | String | | Country's name
 liveGames | false | Integer |  | Live games for current country
 totalGames | false | Integer |  | Total games for current country
+imgVer | false | Integer |  | Image version (add to image url)
 
-## League
+## Competition
 
 ```json
 {
@@ -69,20 +71,22 @@ totalGames | false | Integer |  | Total games for current country
       "countryId": 11,
       "sportId": 11,
       "liveGames": 2,
-      "totalGames": 5
+      "totalGames": 5,
+      "imgVer": 1
 }
 ```
 
 Parameter | required | type | Options  | Description
 --------- | ------- | ----- | ----- | ---------
-id | true | Integer |  | League's id
-name | true | String | | League's name
-countryId | true | Integer | | League's countryId
-sportId | true | Integer | | League's sportId
-hasStanding | false | Boolean | | If league has Standing data
+id | true | Integer |  | Competition's id
+name | true | String | | Competition's name
+countryId | true | Integer | | Competition's countryId
+sportId | true | Integer | | Competition's sportId
+hasStanding | false | Boolean | | If Competition has Standing data
 hasStandingGroups | false | Boolean | | If Standing has groups
 liveGames | false | Integer | | Live games for current competition
 totalGames | false | Integer | | Total games for current competition
+imgVer | false | Integer |  | Image version (add to image url)
 
 ## Bookmaker
 
@@ -148,10 +152,12 @@ link | true | Integer | | Bookmaker's website link
                                 "shortName": "MoC",
                                 "JerseyNumber": 6,
                                 "statusText": "Rising star",
+                                "imgVer": 1
                             }],
                 "homeCompetitor": {
                      "id": 1,
                      "name": "Argentina",
+                     "imgVer": 1,
                      "score": 2,
                      "aggregatedScore": 4,
                      "isQualified": false,
@@ -199,6 +205,7 @@ link | true | Integer | | Bookmaker's website link
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 2,
+                     "imgVer": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -328,17 +335,20 @@ link | true | Integer | | Bookmaker's website link
     "countries": [{
                     "id": 1,
                     "name": "Argentina",
-                    "nameForURL": "argentina"
+                    "nameForURL": "argentina",
+                    "imgVer": 1
                 },{
                     "id": 2,
                     "name": "Brazil",
-                    "nameForURL": "brazil"
+                    "nameForURL": "brazil",
+                    "imgVer": 1
                 }],
-    "leagues": [{
+    "competitions": [{
                       "id": 1,
                       "name": "World Cup",
                       "nameForURL": "world-cup",
-                      "countryId": 1
+                      "countryId": 1,
+                      "imgVer": 1
                  }],
     "sports":[{
                  "id": 1,
@@ -407,12 +417,14 @@ groupNum | false | Integer | | Game part of group
    "countries":[{
                      "id": 11,
                      "name": "Argentina",
-                     "nameForURL": "argentina"
+                     "nameForURL": "argentina",
+                     "imgVer": 1
                },
                {
                      "id": 12,
                      "name": "Brazil",
-                     "nameForURL": "brazil"
+                     "nameForURL": "brazil",
+                     "imgVer": 1
                  }],
    "competitions":[{
                          "id": 1,
@@ -420,7 +432,8 @@ groupNum | false | Integer | | Game part of group
                          "nameForURL": "world-cup",
                          "hasStanding": true,
                          "hasStandingGroups": true,
-                         "countryId": 11
+                         "countryId": 11,
+                         "imgVer": 1
                    }],
    "games": [{
              "id": 1,
@@ -436,8 +449,6 @@ groupNum | false | Integer | | Game part of group
              "showCountdown": false,
              "hasTVNetworks": false,
              "hasBetsTeaser": false,
-             "hasFieldPositions": true,
-             "hasLineups": true,
              "displayTitle": "Semi Final",
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
@@ -446,6 +457,7 @@ groupNum | false | Integer | | Game part of group
                   "id": 1,
                   "name": "Argentina",
                   "score": 2,
+                  "imgVer": 2,
                   "aggregatedScore": 4,
                   "isQualified": false,
                   "isWinner": false,
@@ -456,6 +468,7 @@ groupNum | false | Integer | | Game part of group
                   "id": 2,
                   "name": "Brazil",
                   "score": 0,
+                  "imgVer": 1,
                   "aggregatedScore": 2,
                   "isQualified": false,
                   "isWinner": false,
@@ -509,6 +522,7 @@ groupNum | false | Integer | | Game part of group
 {
     "id": 1,
     "name": "Argentina",
+    "imgVer": 1,
     "score": 2,
     "aggregatedScore": 4,
     "isQualified": false,
@@ -552,6 +566,7 @@ isWinner | false | Boolean |  | If competitor qualified to next stage
 redCards | false | Integer |  | If competitor qualified to next stage
 countryId | true | Integer |  | Competitor's country
 lineups | false | Array | | [Description](#lineups)
+imgVer | false | Integer |  | Image version (add to image url)
 
 ## Stage
 
@@ -626,6 +641,7 @@ members | false | Array | | array of lineups members [Description](#lineupsMembe
     "shortName": "MoC",
     "JerseyNumber": 6,
     "statusText": "Rising star",
+    "imgVer": 1
 }]
 ```
 
@@ -637,6 +653,7 @@ athleteId | true | Integer | | Member's id (athlete entity id)
 name | true | String | | Member's name
 shortName | false | String | | Member's nickname
 JerseyNumber | false | Integer | | Member's jersey number
+imgVer | false | Integer |  | Image version (add to image url)
 
 ## lineupsMember
 
@@ -1217,10 +1234,10 @@ Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 competitor | true | Object | | [Description](#competitor)
 group | false | Integer |  | Use if competition has groups, id and display name
-gamesPlayed | true | Integer |  | Competitor games played on current league
-gamesWon | true | Integer |  | Competitor wins on current league
-gamesLost | true | Integer |  | Competitor loses on current league
-gamesEven | true | Integer |  | Competitor draws on current league
+gamesPlayed | true | Integer |  | Competitor games played on current competition
+gamesWon | true | Integer |  | Competitor wins on current competition
+gamesLost | true | Integer |  | Competitor loses on current competition
+gamesEven | true | Integer |  | Competitor draws on current competition
 for | true | Integer |  | Competitor goals
 against | true | Integer |  | Competitor conceded goals
 ratio | true | Integer |  | Competitor goals - conceded goals
@@ -1233,10 +1250,10 @@ gamesLossOnOverTime | true | Integer |  | Total games that lost after over time
 gamesLossOnPenalties | true | Integer |  | Total games that lost after penalties
 position | true | Integer |  | Position on Standing (row number)
 trend | false | Integer |  | On live game if team goes up or down on Standing 
-recentForm | false | Array |  | trend for recent matches on current league
+recentForm | false | Array |  | trend for recent matches on current competition
 destinationId | false | Integer |  | Destination by position
 destinationGuaranteed | false | Boolean |  | If Destination guaranteed for current competitor
-isWinner | false | Boolean |  | If current competitor won the league title
+isWinner | false | Boolean |  | If current competitor won the competition title
 
 ### Destinations
 

@@ -9,14 +9,16 @@
         "name": "Argentina",
         "nameForURL": "argentina",
         "liveGames": 2,
-        "totalGames": 5
+        "totalGames": 5,
+        "imgVer": 1
     },
     {
         "id": 2,
         "name": "Brazil",
         "nameForURL": "brazil",
         "liveGames": 2,
-        "totalGames": 5
+        "totalGames": 5,
+        "imgVer": 1
     }
 ]
 ```
