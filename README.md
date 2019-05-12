@@ -117,6 +117,3 @@ Special Thanks
 
 bundle exec middleman server
 bundle exec middleman build --clean
-
-
-

@@ -32,8 +32,9 @@
                          "liveGames": 2,
                          "totalGames": 5
                    }],
-                   
-                                       
+    "paging":{
+        "nextPage": "/web/games/?langId=1&timezoneId=15&userCountryId=31&startDate=07/08/2018&endDate=07/08/2018&aftergame=1703516&direction=1"
+            },                                 
    "games": [{
              "id": 1,
              "statusGroup": 1,
@@ -112,6 +113,7 @@ games | false | '' | 131132 | | Return specific games by ids
 lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
 startDate | false |  current date | 07/08/2018 |  | Return games from specific date(included)
 endDate | false |  current date | 09/08/2018 |  |  Return games until specific date(included)
+pageSize | false |  all games | 100 |  |  Return amount of games each page
 
 ### Examples
 
