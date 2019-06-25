@@ -558,6 +558,7 @@ isWinner | false | Boolean |  | If competitor qualified to next stage
 redCards | false | Integer |  | If competitor qualified to next stage
 countryId | true | Integer |  | Competitor's country
 lineups | false | Array | | [Description](#lineups)
+type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
 
 ## Stage
 
