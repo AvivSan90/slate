@@ -32,8 +32,9 @@
                          "liveGames": 2,
                          "totalGames": 5
                    }],
-                   
-                                       
+    "paging":{
+        "nextPage": "/web/games/?langId=1&timezoneId=15&userCountryId=31&startDate=07/08/2018&endDate=07/08/2018&aftergame=1703516&direction=1"
+            },                                 
    "games": [{
              "id": 1,
              "statusGroup": 1,
@@ -49,16 +50,13 @@
              "hasLineups": true,
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
+             "displayTitle": "Semi Final",
              "sportId": 1,
              "competitionId": 1,
              "roundNum": 3,
              "seasonNum": 6,
              "stageNum": 4,
-             "datetime":{
-                 "msFromEpoch": 12334423423423,
-                 "dateText": "16/07/2018",
-                 "timeText": "21:00 AM"
-             },
+             "startTime": "2018-12-06T17:15:00+02:00",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -67,7 +65,8 @@
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 0,
-                  "countryId": 11
+                  "countryId": 11,
+                  "imgVer": 1
              },
              "awayCompetitor": {
                   "id": 2,
@@ -77,7 +76,8 @@
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 1,
-                  "countryId": 12
+                  "countryId": 12,
+                  "imgVer": 1
              }
        }]
 }
@@ -113,6 +113,7 @@ games | false | '' | 131132 | | Return specific games by ids
 lastUpdateId | false | '' | 848293001 | | Return only updated properties from the current lastUpdateId 
 startDate | false |  current date | 07/08/2018 |  | Return games from specific date(included)
 endDate | false |  current date | 09/08/2018 |  |  Return games until specific date(included)
+pageSize | false |  all games | 100 |  |  Return amount of games each page
 
 ### Examples
 
@@ -166,11 +167,7 @@ Don't forget general parameters.
                 "groupNum": 2,
                 "competitionId": 1,
                 "sportId": 1,
-                 "datetime":{
-                                "timeStamp": 12334423423423,
-                                "dateText": "16/07/2018",
-                                "timeText": "21:00 AM"
-                            },
+                "startTime": "2018-12-06T17:15:00+02:00",
                 "venue": {
                     "id": 1,
                     "name": "Saint-Petersburg Stadium",
@@ -195,6 +192,7 @@ Don't forget general parameters.
                                 "shortName": "MoC",
                                 "JerseyNumber": 6,
                                 "statusText": "Rising star",
+                                "imgVer": 1
                             }],
                 "homeCompetitor": {
                      "id": 1,
@@ -204,6 +202,7 @@ Don't forget general parameters.
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 1,
+                     "imgVer": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -246,6 +245,7 @@ Don't forget general parameters.
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 2,
+                     "imgVer": 1,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -424,17 +424,20 @@ Don't forget general parameters.
                     "id": 1,
                     "name": "Argentina",
                     "nameForURL": "argentina",
+                    "imgVer": 1
                     
                 },{
                     "id": 2,
                     "name": "Brazil",
                     "nameForURL": "brazil",
+                    "imgVer": 2
                 }],
     "competitions": [{
                       "id": 1,
                       "name": "World Cup",
                       "nameForURL": "world-cup",
-                      "countryId": 1
+                      "countryId": 1,
+                      "imgVer": 1
                  }],
     "sports":[{
                  "id": 1,
@@ -454,7 +457,6 @@ Don't forget general parameters.
 Object | Usage | Description | Example
 --------- | ------- | --------- | -----
 game | Game center | Game's full data | [See Example](#full-game)
-datetime | Game center header | Date and time data already formatted by timezone and country | [See Example](#datetime)
 hasLineups | false | Boolean | | if game have full lineups
 hasMissingPlayers | false | Boolean | | if game have only missing player lineups
 hasFieldPositions | false | Boolean | | if game have positions for lineups yard

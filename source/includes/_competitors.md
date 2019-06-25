@@ -7,17 +7,20 @@
    "countries":[
       {
          "id":12,
-         "name":"Spain"
+         "name":"Spain",
+         "imgVer": 1
       },
       {
          "id":112,
-         "name":"Israel"
+         "name":"Israel",
+         "imgVer": 1
       }
    ],
    "sports":[
       {
          "id":1,
-         "name":"Football"
+         "name":"Football",
+         "imgVer": 1
       }
    ],
    "competitions":[{
@@ -28,7 +31,8 @@
                     "sportId": 1,
                     "countryId": 1,
                     "liveGames": 2,
-                    "totalGames": 5
+                    "totalGames": 5,
+                    "imgVer": 1
                },
                {
                     "id": 11,
@@ -38,7 +42,8 @@
                     "sportId": 1,
                     "countryId": 12,
                     "liveGames": 2,
-                    "totalGames": 5
+                    "totalGames": 5,
+                    "imgVer": 1
                }
    
    ],
@@ -48,14 +53,16 @@
          "name":"Barcelona",
          "sportId":1,
          "countryId":1,
-         "competitions":[1, 12]
+         "competitions":[1, 12],
+         "imgVer": 1
       },
       {
          "id":562,
          "name":"Maccabi Haifa",
          "sportId":1,
          "countryId":112,
-         "competitions":[42]
+         "competitions":[42],
+         "imgVer": 1
          
       }
    ]

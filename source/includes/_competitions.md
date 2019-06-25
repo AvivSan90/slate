@@ -74,11 +74,13 @@ Don't forget general parameters.
 {
     "countries":[{
                      "id": 1,
-                     "name": "Argentina"
+                     "name": "Argentina",
+                     "imgVer": 1
                 },
                 {
                      "id": 12,
-                     "name": "Spain"
+                     "name": "Spain",
+                     "imgVer": 1
                 }],
     "sports":[{
                     "id": 1,
@@ -92,7 +94,8 @@ Don't forget general parameters.
                      "sportId": 1,
                      "countryId": 1,
                      "liveGames": 2,
-                     "totalGames": 5
+                     "totalGames": 5,
+                     "imgVer": 1
                 },
                 {
                      "id": 121,
@@ -102,7 +105,8 @@ Don't forget general parameters.
                      "sportId": 1,
                      "countryId": 12,
                      "liveGames": 2,
-                     "totalGames": 5
+                     "totalGames": 5,
+                     "imgVer": 1
                 }]
 }
 ```
