@@ -38,7 +38,8 @@
    "games": [{
              "id": 1,
              "statusGroup": 1,
-             "statusText": "ET",
+             "statusText": "Extra time",
+             "shortStatusText": "ET",
              "gameTime": 109,
              "gameTimeDisplay": "109'",
              "gameTimeAndStatusDisplayType": 1,
@@ -148,7 +149,8 @@ Don't forget general parameters.
     "game": {
                 "id": 1,
                 "status": "started",
-                "statusText": "ET",
+                "statusText": "Extra time",
+                "shortStatusText": "ET",
                 "gameTime": 109,
                 "gameTimeDisplay": "109'",
                 "gameTimeAndStatusDisplayType": 1,
@@ -168,6 +170,12 @@ Don't forget general parameters.
                 "competitionId": 1,
                 "sportId": 1,
                 "startTime": "2018-12-06T17:15:00+02:00",
+                "widgets": [{
+                                "provider": "OPTA_LAW",
+                                "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
+                                "url": "http://optawidgets.365scores.com/api/OptaLAW/GetWidget?partnerId=football%7C68zplepppndhl8bfdvgy9vgu1%7C2ip4f1aefabczfkw80hj7uz8p%7Ceok1bv6y79ugi4480fnh7qtey&lang=1&tz=",
+                                "ratio": 1.777
+                }],
                 "venue": {
                     "id": 1,
                     "name": "Saint-Petersburg Stadium",
@@ -470,6 +478,7 @@ events | Match events | Lineups & Match events | Array of match events | [See Ex
 officials | Game Info | Array of officials | [See Example](#officials)
 tvNetworks | Game Info | Array of TV Networks | [See Example](#tv-networks)
 venue | Game Info | Data of the stadium | [See Example](#venue)
+widgets | false | Array | | [See Example](#gameWidget)
 
 ### HTTP Request
 

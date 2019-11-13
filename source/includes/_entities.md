@@ -111,7 +111,8 @@ link | true | Integer | | Bookmaker's website link
     "game": {
                 "id": 1,
                 "statusGroup": 1,
-                "statusText": "ET",
+                "statusText": "Extra time",
+                "shortStatusText": "ET",
                 "gameTimeDisplay": "89'",
                 "gameTime": 89,
                 "gameTimeAndStatusDisplayType": 1,
@@ -130,6 +131,12 @@ link | true | Integer | | Bookmaker's website link
                 "stageNum": 4,
                 "groupNum": 1,
                 "startTime": "2018-12-06T17:15:00+02:00",
+                "widgets": [{
+                                "provider": "OPTA_LAW",
+                                "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
+                                "url": "http://optawidgets.365scores.com/api/OptaLAW/GetWidget?partnerId=football%7C68zplepppndhl8bfdvgy9vgu1%7C2ip4f1aefabczfkw80hj7uz8p%7Ceok1bv6y79ugi4480fnh7qtey&lang=1&tz=",
+                                "ratio": 1.777
+                }],
                 "venue": {
                     "name": "Saint-Petersburg Stadium",
                     "capacity": "20,000",
@@ -371,6 +378,7 @@ lastUpdateId | true | Integer |  | Game's update id for delta fetching
 ttl | true | Integer |  | Seconds for next game request 
 statusGroup | true | Integer | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
 statusText | false | String | | Game's Status formatted text
+shortStatusText | false | String | | Game's Status short formatted text
 showCountdown | false | Boolean | | if game card should show countdown
 gameTime | false | Integer | | Game's time 
 gameTimeDisplay | false | String | | Game's time formatted text
@@ -383,6 +391,7 @@ isFutureGame | false | Boolean |  | if true don't display game
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
 lmt | false | String |  | if exist use iframe with the lmt url
+widgets | false | Array | | [Description](#gameWidget)
 venue | false | Object | | [Description](#venue)
 members | false | Array | | Game's members (both competitors, include management) [Description](#gameMember)
 stages | false | Array | | Game's stages [Description](#stage)
@@ -401,6 +410,24 @@ seasonNum | false | Integer | | Game part of season
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
  
+
+## gameWidget
+
+```json
+{
+    "provider": "OPTA_LAW",
+    "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
+    "url": "http://optawidgets.365scores.com/api/OptaLAW/GetWidget?partnerId=football%7C68zplepppndhl8bfdvgy9vgu1%7C2ip4f1aefabczfkw80hj7uz8p%7Ceok1bv6y79ugi4480fnh7qtey&lang=1&tz=",
+    "ratio": 1.777
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+provider | true | String |  | Widget's provider name
+partnerId | true | Integer |  | Widget's partner id (added to url}
+url | true | String |  | Widget's url (used on iframe)
+ratio | true | Integer |  | Widget's ratio
 
 ## Partial Game
 
@@ -438,7 +465,8 @@ groupNum | false | Integer | | Game part of group
    "games": [{
              "id": 1,
              "statusGroup": 1,
-             "statusText": "ET",
+             "statusText": "Extra time",
+             "shortStatusText": "ET",
              "gameTimeDisplay": "89'",
              "gameTime": 89,
              "gameTimeAndStatusDisplayType": 1,
@@ -494,6 +522,7 @@ id | true | Integer |  | Game's id
 startTime | true | String |  | ISO string game start time
 statusGroup | true | Integer | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
 statusText | false | Integer | | Game's time
+shortStatusText | false | String | | Game's Status short formatted text
 gameTimeDisplay | false | String | | Game's time formatted text
 gameTime | false | Integer | | Game's time formatted text
 isFutureGame | false | Boolean |  | if true don't display game
