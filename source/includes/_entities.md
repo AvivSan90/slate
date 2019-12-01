@@ -1253,6 +1253,52 @@ isMajor | false | Integer |  | If show on small view
     "gamesLossOnPenalties": 0,
     "position": 1,
     "trend": 0,
+    "detailedRecentForm": [{
+        "id": 1,
+        "statusGroup": 1,
+        "statusText": "Extra time",
+        "shortStatusText": "ET",
+        "gameTime": 109,
+        "gameTimeDisplay": "109'",
+        "gameTimeAndStatusDisplayType": 1,
+        "isFutureGame": false,
+        "lineupsStatus": 1,
+        "hasTVNetworks": false,
+        "hasBetsTeaser": false,
+        "hasFieldPositions": true,
+        "hasLineups": true,
+        "description": "Barcelona has won 5-3 after Penalties",
+        "aggregatedText": "aggregated 4-2",
+        "displayTitle": "Semi Final",
+        "sportId": 1,
+        "competitionId": 1,
+        "roundNum": 3,
+        "seasonNum": 6,
+        "stageNum": 4,
+        "startTime": "2018-12-06T17:15:00+02:00",
+        "homeCompetitor": {
+            "id": 1,
+            "name": "Argentina",
+            "score": 2,
+            "aggregatedScore": 4,
+            "isQualified": false,
+            "isWinner": false,
+            "redCards": 0,
+            "countryId": 11,
+            "imgVer": 1
+        },
+        "awayCompetitor": {
+            "id": 2,
+            "name": "Brazil",
+            "score": 0,
+            "aggregatedScore": 2,
+            "isQualified": false,
+            "isWinner": false,
+            "redCards": 1,
+            "countryId": 12,
+            "imgVer": 1
+        }
+    }],
     "recentForm": [0,1,2,2,1],
     "destinationId": 1,
     "destinationGuaranteed": true,
@@ -1281,6 +1327,7 @@ gamesLossOnPenalties | true | Integer |  | Total games that lost after penalties
 position | true | Integer |  | Position on Standing (row number)
 trend | false | Integer |  | On live game if team goes up or down on Standing 
 recentForm | false | Array |  | trend for recent matches on current competition
+detailedRecentForm | false | Array<PartialGame> |  | Array of last (Max) 5 games
 destinationId | false | Integer |  | Destination by position
 destinationGuaranteed | false | Boolean |  | If Destination guaranteed for current competitor
 isWinner | false | Boolean |  | If current competitor won the competition title

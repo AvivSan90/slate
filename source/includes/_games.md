@@ -6,6 +6,11 @@
 {
   "lastUpdateId": 987654321,
    "ttl": 10,
+    "bookmakers": [{
+                        "id": 1,
+                        "name": "winner",
+                        "link": "https://www.winner.co.il"
+                }],
    "sport":[{
                "id": 1,
                "name": "Football",
@@ -79,7 +84,42 @@
                   "redCards": 1,
                   "countryId": 12,
                   "imgVer": 1
-             }
+             },
+             "odds": {
+                        "bookmakerId": 1,
+                        "lines":[{
+                                    "link": "https://www.winner.co.il",
+                                    "bookmakerId": 1,
+                                    "rates":[{
+                                                "rateOptions":{
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                "oldRate": "1.10",
+                                                "kickOffRate": "1.25",
+                                                "num": 1
+                                            },{
+                                                "rateOptions":{
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                "oldRate": "1.10",
+                                                "kickOffRate": "1.25",
+                                                "num": 2
+                                            },{
+                                                "rateOptions":{
+                                                                    "american": "+100",
+                                                                    "fractional": "100/150",
+                                                                    "decimal": "1.25"
+                                                                },
+                                                "oldRate": "1.10",
+                                                "kickOffRate": "1.25",
+                                                "num": 3
+                                            }]
+                                }]
+                    },
        }]
 }
 ```
@@ -90,6 +130,7 @@ Object | Usage | Description | Example
 --------- | ------- | ----------- | ---------
 game | dashboard, competition scores, team scores (game card) | Game's partial data | [See Example](#full-game)
 competitor | team at game card | Competitor critical data | [See Example](#competitor)
+odds | Odds | Array of odds | [See Example](#odds)
 
 Partial object of game 
 
@@ -288,115 +329,40 @@ Don't forget general parameters.
                                         "isMajor": true,
                                    }]
                 },
-                "odds": {
-                    "current": {
-                                "bookmakerId": 1,
-                                "lines":[{
-                                            "link": "https://www.winner.co.il",
-                                            "bookmakerId": 1,
-                                            "rates":[{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 1
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 2
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 3
-                                                    }]
-                                        }]
-                            },
-                    "teaser": {
-                                "bookmakerId": 1,
-                                "games": [{
-                                            "gameId": 123123,
-                                            "lines":[{
-                                            "link": "https://www.winner.co.il",
-                                            "bookmakerId": 1,
-                                            "rates":[{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 1
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 2
-                                                    },{
-                                                        "rateOptions":{
-                                                                            "american": "+100",
-                                                                            "fractional": "100/150",
-                                                                            "decimal": "1.25"
-                                                                        },
-                                                        "oldRate": "1.10",
-                                                        "kickOffRate": "1.25",
-                                                        "num": 3
-                                                    }]
-                                        }]
-                                         },{
-                                            "gameId": 123134,
-                                            "lines":[{
-                                                        "link": "https://www.winner.co.il",
-                                                        "bookmakerId": 1,
-                                                        "rates":[{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 1
-                                                                },{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 2
-                                                                },{
-                                                                    "rateOptions":{
-                                                                                        "american": "+100",
-                                                                                        "fractional": "100/150",
-                                                                                        "decimal": "1.25"
-                                                                                    },
-                                                                    "oldRate": "1.10",
-                                                                    "kickOffRate": "1.25",
-                                                                    "num": 3
-                                                                }]
-                                                    }]
-                                         }]
-                            }
-                },
+                "bestOdds": [{
+                            "bookmakerId": 1,
+                            "lines":[{
+                                        "link": "https://www.winner.co.il",
+                                        "bookmakerId": 1,
+                                        "rates":[{
+                                                    "rateOptions":{
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                    "oldRate": "1.10",
+                                                    "kickOffRate": "1.25",
+                                                    "num": 1
+                                                },{
+                                                    "rateOptions":{
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                    "oldRate": "1.10",
+                                                    "kickOffRate": "1.25",
+                                                    "num": 2
+                                                },{
+                                                    "rateOptions":{
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
+                                                    "oldRate": "1.10",
+                                                    "kickOffRate": "1.25",
+                                                }]
+                                    }]
+                        }],
                 "previousMeetings": ["gameIds"],
                 "events": [{
                     "index": 1,

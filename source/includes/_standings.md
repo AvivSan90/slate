@@ -83,23 +83,53 @@
                                 "gamesLossOnPenalties": 0,
                                 "position": 1,
                                 "trend": 0,
-                                "recentForm": [{
-                                   "status": 0,
-                                   "startTime": "2018-12-06T17:15:00+02:00",
-                                   "homeCompetitor": {
+                                "detailedRecentForm" :[{
+                                    "id": 1,
+                                    "statusGroup": 1,
+                                    "statusText": "Extra time",
+                                    "shortStatusText": "ET",
+                                    "gameTime": 109,
+                                    "gameTimeDisplay": "109'",
+                                    "gameTimeAndStatusDisplayType": 1,
+                                    "isFutureGame": false,
+                                    "lineupsStatus": 1,
+                                    "hasTVNetworks": false,
+                                    "hasBetsTeaser": false,
+                                    "hasFieldPositions": true,
+                                    "hasLineups": true,
+                                    "description": "Barcelona has won 5-3 after Penalties",
+                                    "aggregatedText": "aggregated 4-2",
+                                    "displayTitle": "Semi Final",
+                                    "sportId": 1,
+                                    "competitionId": 1,
+                                    "roundNum": 3,
+                                    "seasonNum": 6,
+                                    "stageNum": 4,
+                                    "startTime": "2018-12-06T17:15:00+02:00",
+                                    "homeCompetitor": {
                                         "id": 1,
                                         "name": "Argentina",
                                         "score": 2,
-                                        "isWinner": true
-                                   },
-                                   "awayCompetitor": {
+                                        "aggregatedScore": 4,
+                                        "isQualified": false,
+                                        "isWinner": false,
+                                        "redCards": 0,
+                                        "countryId": 11,
+                                        "imgVer": 1
+                                    },
+                                    "awayCompetitor": {
                                         "id": 2,
                                         "name": "Brazil",
                                         "score": 0,
-                                        "isWinner": false
-                                   }                                  
-                                }
-                                ],
+                                        "aggregatedScore": 2,
+                                        "isQualified": false,
+                                        "isWinner": false,
+                                        "redCards": 1,
+                                        "countryId": 12,
+                                        "imgVer": 1
+                                    }
+                                }],
+                                "recentForm": [1, 2, 0, 1, 2],
                                 "destinationId": 1,
                                 "destinationGuaranteed": true,
                                 "isWinner": true
@@ -119,7 +149,7 @@
                     "sportId": 1,
                     "name": "Premier League",
                     "nameForURL": "premier-league",
-                    "hasStandings": true
+                    "hasStandings": true,
                     "hasStandingGroups": true,
                 }],
     "sports":[{
