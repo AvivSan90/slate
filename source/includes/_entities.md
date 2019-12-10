@@ -337,7 +337,117 @@ link | true | Integer | | Bookmaker's website link
                                   "countryId": 2,
                                   "website": "https://www.iba.org.il",
                                   "bookmakerId": 0
-                              }]
+                              }],
+                "predictions": [
+                    {
+                        "id": 123456789,
+                        "title": "Who will win?",
+                        "insight": {
+                            "statisticalAnalsys": "Beitar",
+                            "text": "Beitar won last 5 matches at home",
+                            "odds": {
+                                "num": 1,
+                                "rate": {
+                                    "decimal": 1.15,
+                                    "fractional": "3/20",
+                                    "american": "-667"
+                                },
+                                "oldRate": {
+                                    "decimal": 1.30,
+                                    "fractional": "5/20",
+                                    "american": "-444"
+                                },
+                                "trend": 2
+                            },
+                            "showVotes": true,
+                            "totalVotes": 14118,
+                            "odds": {
+                                "lineId": 51046073,
+                                "gameId": 2098432,
+                                "bookmakerId": 7,
+                                "lineTypeId": 1,
+                                "trackingUrl": "http://www.365365.com",
+                                "bookmaker": {
+                                    "id": 7,
+                                    "name": "1xBet",
+                                    "link": "http://refpavdjhx.top/L?tag=d_241617m_5437c_&site=241617&ad=5437",
+                                    "nameForURL": "1xbet",
+                                    "actionButton": {
+                                        "link": "http://refpavdjhx.top/L?tag=d_241617m_5437c_&site=241617&ad=5437",
+                                        "label": "Bet Now"
+                                    }
+                                },
+                                "options": [{
+                                            "num": 1,
+                                            "rate": {
+                                                "decimal": 1.15,
+                                                "fractional": "3/20",
+                                                "american": "-667"
+                                            },
+                                            "oldRate": {
+                                                "decimal": 1.30,
+                                                "fractional": "5/20",
+                                                "american": "-444"
+                                            },
+                                            "trend": 2
+                                        },{
+                                            "num": 2,
+                                            "rate": {
+                                                "decimal": 1.15,
+                                                "fractional": "3/20",
+                                                "american": "-667"
+                                            },
+                                            "oldRate": {
+                                                "decimal": 1.30,
+                                                "fractional": "5/20",
+                                                "american": "-444"
+                                            },
+                                            "trend": 2
+                                        },{
+                                            "num": 3,
+                                            "rate": {
+                                                "decimal": 1.15,
+                                                "fractional": "3/20",
+                                                "american": "-667"
+                                            },
+                                            "oldRate": {
+                                                "decimal": 1.30,
+                                                "fractional": "5/20",
+                                                "american": "-444"
+                                            },
+                                            "trend": 2
+                                        }
+                                ],
+                            },
+                            "options": [{
+                                "num": 1,
+                                "name": "Beitar",
+                                "symbol": 0,
+                                "vote": {
+                                    "count": 9306,
+                                    "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+                                    "percentage": 65
+                                },
+                                "num": 2,
+                                "name": "Draw",
+                                "symbol": 0,
+                                "vote": {
+                                    "count": 3061,
+                                    "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+                                    "percentage": 21
+                                },
+                                "num": 3,
+                                "name": "Hapoel",
+                                "symbol": 0,
+                                "vote": {
+                                    "count": 2010,
+                                    "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+                                    "percentage": 14
+                                }
+                            }],
+                        }
+                    }
+                ]
             },
     "countries": [{
                     "id": 1,
@@ -409,7 +519,196 @@ roundNum | false | Integer | | Game part of round
 seasonNum | false | Integer | | Game part of season 
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
- 
+
+## prediction
+
+```json
+{
+    "id": 123456789,
+    "title": "Who will win?",
+    "insight": {
+        "statisticalAnalsys": "Beitar",
+        "text": "Beitar won last 5 matches at home",
+        "odds": {
+            "num": 1,
+            "rate": {
+                "decimal": 1.15,
+                "fractional": "3/20",
+                "american": "-667"
+            },
+            "oldRate": {
+                "decimal": 1.30,
+                "fractional": "5/20",
+                "american": "-444"
+            },
+            "trend": 2
+        },
+    },
+    "showVotes": true,
+    "totalVotes": 14118,
+    "odds": {
+        "lineId": 51046073,
+        "gameId": 2098432,
+        "bookmakerId": 7,
+        "lineTypeId": 1,
+        "trackingUrl": "http://www.365365.com",
+        "bookmaker": {
+            "id": 7,
+            "name": "1xBet",
+            "link": "http://refpavdjhx.top/L?tag=d_241617m_5437c_&site=241617&ad=5437",
+            "nameForURL": "1xbet",
+            "actionButton": {
+                "link": "http://refpavdjhx.top/L?tag=d_241617m_5437c_&site=241617&ad=5437",
+                "label": "Bet Now"
+            }
+        },
+        "options": [{
+                    "num": 1,
+                    "rate": {
+                        "decimal": 1.15,
+                        "fractional": "3/20",
+                        "american": "-667"
+                    },
+                    "oldRate": {
+                        "decimal": 1.30,
+                        "fractional": "5/20",
+                        "american": "-444"
+                    },
+                    "trend": 2
+                },{
+                    "num": 2,
+                    "rate": {
+                        "decimal": 1.15,
+                        "fractional": "3/20",
+                        "american": "-667"
+                    },
+                    "oldRate": {
+                        "decimal": 1.30,
+                        "fractional": "5/20",
+                        "american": "-444"
+                    },
+                    "trend": 2
+                },{
+                    "num": 3,
+                    "rate": {
+                        "decimal": 1.15,
+                        "fractional": "3/20",
+                        "american": "-667"
+                    },
+                    "oldRate": {
+                        "decimal": 1.30,
+                        "fractional": "5/20",
+                        "american": "-444"
+                    },
+                    "trend": 2
+                }
+        ],
+    },
+    "options": [{
+        "num": 1,
+        "name": "Beitar",
+        "symbol": 0,
+        "vote": {
+            "count": 9306,
+            "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+            "percentage": 65
+        },
+        "num": 2,
+        "name": "Draw",
+        "symbol": 0,
+        "vote": {
+            "count": 3061,
+            "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+            "percentage": 21
+        },
+        "num": 3,
+        "name": "Hapoel",
+        "symbol": 0,
+        "vote": {
+            "count": 2010,
+            "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+            "percentage": 14
+        }
+    }],
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | true | Integer |  | Predision's id
+title | true | String |  | Predision's title
+insight | false | Object |  | [Description](#insight)
+showVotes | true | Boolean | | if to show votes count or percentage
+totalVotes | true | Integer | | total votes
+odds | false |  | Object | [Description](#odds)
+options | true | Object |  | [Description](#predictionOptions)
+
+
+## insight
+
+```json
+{
+    "statisticalAnalsys": "Beitar",
+    "text": "Beitar won last 5 matches at home",
+    "odds": {
+        "num": 1,
+        "rate": {
+            "decimal": 1.15,
+            "fractional": "3/20",
+            "american": "-667"
+        },
+        "oldRate": {
+            "decimal": 1.30,
+            "fractional": "5/20",
+            "american": "-444"
+        },
+        "trend": 2
+    },
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+statisticalAnalsys | true | String |  | option name that provide by insight
+text | true | String |  | Description of statistical analsys
+odds | false |  | Object | [Description](#rate)
+
+## predictionOption
+
+```json
+{
+    "num": 1,
+    "name": "Beitar",
+    "symbol": 0,
+    "vote": {
+        "count": 9306,
+        "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+        "percentage": 65
+    },
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+num | true | Integer |  | option num
+name | true | String |  | option name
+vote | true |  | Object | [Description](#vote)
+
+## vote
+
+```json
+{
+    "count": 9306,
+    "key": "http://www.365scores.com/Objects/Game/WWW/?GameID=2098432",
+    "percentage": 65
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+count | true | Integer |  | votes count per option
+key | true | String |  | key for POST request
+percentage | true | | String | votes percentage per option
 
 ## gameWidget
 
