@@ -98,7 +98,8 @@
                                                                 },
                                                 "oldRate": "1.10",
                                                 "kickOffRate": "1.25",
-                                                "num": 1
+                                                "num": 1,
+                                                "trend": 2
                                             },{
                                                 "rateOptions":{
                                                                     "american": "+100",
@@ -107,7 +108,8 @@
                                                                 },
                                                 "oldRate": "1.10",
                                                 "kickOffRate": "1.25",
-                                                "num": 2
+                                                "num": 2,
+                                                "trend": 1
                                             },{
                                                 "rateOptions":{
                                                                     "american": "+100",
@@ -116,7 +118,8 @@
                                                                 },
                                                 "oldRate": "1.10",
                                                 "kickOffRate": "1.25",
-                                                "num": 3
+                                                "num": 3,
+                                                "trend": 3
                                             }]
                                 }]
                     },
@@ -156,6 +159,7 @@ lastUpdateId | false | '' | 848293001 | | Return only updated properties from th
 startDate | false |  current date | 07/08/2018 |  | Return games from specific date(included)
 endDate | false |  current date | 09/08/2018 |  |  Return games until specific date(included)
 pageSize | false |  all games | 100 |  |  Return amount of games each page
+predictions | array of predictions | Array | | [See Example](#prediction)
 
 ### Examples
 
@@ -334,13 +338,17 @@ Don't forget general parameters.
                             "lines":[{
                                         "link": "https://www.winner.co.il",
                                         "bookmakerId": 1,
-                                        "rates":[{
-                                                    "rateOptions":{
+                                        "options":[{
+                                                    "rate":{
                                                                         "american": "+100",
                                                                         "fractional": "100/150",
                                                                         "decimal": "1.25"
                                                                     },
-                                                    "oldRate": "1.10",
+                                                    "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                     "kickOffRate": "1.25",
                                                     "num": 1
                                                 },{
@@ -349,7 +357,11 @@ Don't forget general parameters.
                                                                         "fractional": "100/150",
                                                                         "decimal": "1.25"
                                                                     },
-                                                    "oldRate": "1.10",
+                                                    "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                     "kickOffRate": "1.25",
                                                     "num": 2
                                                 },{
@@ -358,7 +370,11 @@ Don't forget general parameters.
                                                                         "fractional": "100/150",
                                                                         "decimal": "1.25"
                                                                     },
-                                                    "oldRate": "1.10",
+                                                    "oldRate": {
+                                                                        "american": "+100",
+                                                                        "fractional": "100/150",
+                                                                        "decimal": "1.25"
+                                                                    },
                                                     "kickOffRate": "1.25",
                                                 }]
                                     }]

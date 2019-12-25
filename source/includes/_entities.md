@@ -520,7 +520,7 @@ seasonNum | false | Integer | | Game part of season
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
 
-## prediction
+## Prediction
 
 ```json
 {

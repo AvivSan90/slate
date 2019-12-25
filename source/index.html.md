@@ -14,6 +14,7 @@ includes:
   - standings
   - competitors
   - competitions
+  - predictions
   - search
   - entities
   - errors
