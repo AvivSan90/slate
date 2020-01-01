@@ -890,6 +890,7 @@ name | true | String |  | Competitor's name
 score | false | Integer |  | Competitor's score for specific game
 aggregatedScore | false | Integer |  | Competitor's aggregatedScore for specific game
 isQualified | false | Boolean |  | If competitor qualified to next stage
+inPosition | false | Boolean |  | If competitor is in position
 isWinner | false | Boolean |  | If competitor qualified to next stage
 redCards | false | Integer |  | If competitor qualified to next stage
 countryId | true | Integer |  | Competitor's country
@@ -905,7 +906,8 @@ type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
     "name": "Halftime",
     "shortName": "HT",
     "homeCompetitorScore": 0,
-    "awayCompetitorScore": 0
+    "awayCompetitorScore": 0,
+    "isCurrent": true,
 }
 ```
 
@@ -916,6 +918,7 @@ name | true | String |  | stage's name
 shortName | false | String |  | stage's short name
 homeCompetitorScore | true | Integer |  | stage's home competitor score
 awayCompetitorScore | true | Integer |  | stage's away competitor scored
+isCurrent | false | Boolean |  | if stage is current result
 
 ## Lineups
 

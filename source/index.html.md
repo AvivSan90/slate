@@ -26,7 +26,7 @@ search: true
 
 Welcome to the 365Scores Web API documentation!
 
-Last Modified - 10/12/2019 11:00
+Last Modified - 01/01/2020 13:00
 
 
 

@@ -235,6 +235,14 @@ Don't forget general parameters.
                                 "shortName": "HT",
                                 "homeCompetitorScore": 0,
                                 "awayCompetitorScore": 0
+                            },
+                            {
+                                "id": 8,
+                                "name": "Current Result",
+                                "shortName": "R",
+                                "homeCompetitorScore": 1,
+                                "awayCompetitorScore": 0,
+                                "isCurrent": true,
                             }],
                 "members": [{
                                 "status": 1,
@@ -253,6 +261,7 @@ Don't forget general parameters.
                      "score": 2,
                      "aggregatedScore": 4,
                      "isQualified": false,
+                     "inPosition": true,
                      "isWinner": false,
                      "countryid": 1,
                      "imgVer": 1,
