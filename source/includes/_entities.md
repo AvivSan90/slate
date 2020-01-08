@@ -144,12 +144,17 @@ link | true | Integer | | Bookmaker's website link
                     "googlePlaceId": 1
                 }, 
                 "stages": [{
-                                "id": 7,
-                                "name": "Halftime",
-                                "shortName": "HT",
-                                "homeCompetitorScore": 0,
-                                "awayCompetitorScore": 0
-                            }],
+                               "id": 7,
+                               "name": "Halftime",
+                               "shortName": "HT",
+                               "homeCompetitorScore": 0,
+                               "awayCompetitorScore": 0,
+                               "homeCompetitorExtraScore": 2,
+                               "awayCompetitorExtraScore": 3,
+                               "isCurrent": true,
+                               "isLive": false,
+                               "isEnded": false
+                           }],
                 "members": [{
                                 "status": 1,
                                 "playerId": 6688408,
@@ -907,7 +912,11 @@ type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
     "shortName": "HT",
     "homeCompetitorScore": 0,
     "awayCompetitorScore": 0,
+    "homeCompetitorExtraScore": 2,
+    "awayCompetitorExtraScore": 3,
     "isCurrent": true,
+    "isLive": false,
+    "isEnded": false
 }
 ```
 
@@ -918,7 +927,11 @@ name | true | String |  | stage's name
 shortName | false | String |  | stage's short name
 homeCompetitorScore | true | Integer |  | stage's home competitor score
 awayCompetitorScore | true | Integer |  | stage's away competitor scored
+homeCompetitorExtraScore | false | Integer |  | stage's home competitor extra score (tie breaker)
+awayCompetitorExtraScore | false | Integer |  | stage's away competitor extra score (tie breaker)
 isCurrent | false | Boolean |  | if stage is current result
+isLive | false | Boolean |  | if stage is live
+isEnded | false | Boolean |  | if stage is ended
 
 ## Lineups
 

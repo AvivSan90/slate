@@ -230,19 +230,25 @@ Don't forget general parameters.
                     "googlePlaceId": 1,
                 },
                 "stages": [{
-                                "id": 7,
-                                "name": "Halftime",
-                                "shortName": "HT",
-                                "homeCompetitorScore": 0,
-                                "awayCompetitorScore": 0
-                            },
+                               "id": 7,
+                               "name": "Halftime",
+                               "shortName": "HT",
+                               "homeCompetitorScore": 0,
+                               "awayCompetitorScore": 0,
+                               "isCurrent": true,
+                               "isEnded": true
+                           },
                             {
                                 "id": 8,
-                                "name": "Current Result",
-                                "shortName": "R",
-                                "homeCompetitorScore": 1,
+                                "name": "End Of 90 Min",
+                                "shortName": "FT",
+                                "homeCompetitorScore": 0,
                                 "awayCompetitorScore": 0,
+                                "homeCompetitorExtraScore": 2,
+                                "awayCompetitorExtraScore": 3,
                                 "isCurrent": true,
+                                "isLive": false,
+                                "isEnded": false
                             }],
                 "members": [{
                                 "status": 1,
