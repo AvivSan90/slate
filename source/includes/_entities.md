@@ -914,6 +914,7 @@ type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
     "awayCompetitorScore": 0,
     "homeCompetitorExtraScore": 2,
     "awayCompetitorExtraScore": 3,
+    "time": "47'",
     "isCurrent": true,
     "isLive": false,
     "isEnded": false
@@ -929,6 +930,7 @@ homeCompetitorScore | true | Integer |  | stage's home competitor score
 awayCompetitorScore | true | Integer |  | stage's away competitor scored
 homeCompetitorExtraScore | false | Integer |  | stage's home competitor extra score (tie breaker)
 awayCompetitorExtraScore | false | Integer |  | stage's away competitor extra score (tie breaker)
+time | false | String |  | stage's time
 isCurrent | false | Boolean |  | if stage is current result
 isLive | false | Boolean |  | if stage is live
 isEnded | false | Boolean |  | if stage is ended

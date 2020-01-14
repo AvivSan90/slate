@@ -235,6 +235,7 @@ Don't forget general parameters.
                                "shortName": "HT",
                                "homeCompetitorScore": 0,
                                "awayCompetitorScore": 0,
+                               "time": "47'",
                                "isCurrent": true,
                                "isEnded": true
                            },
@@ -246,6 +247,7 @@ Don't forget general parameters.
                                 "awayCompetitorScore": 0,
                                 "homeCompetitorExtraScore": 2,
                                 "awayCompetitorExtraScore": 3,
+                                "time": "49'",
                                 "isCurrent": true,
                                 "isLive": false,
                                 "isEnded": false
