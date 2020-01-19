@@ -271,6 +271,7 @@ Don't forget general parameters.
                      "isWinner": false,
                      "countryid": 1,
                      "imgVer": 1,
+                     "type": 2,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -314,6 +315,7 @@ Don't forget general parameters.
                      "isWinner": false,
                      "countryid": 2,
                      "imgVer": 1,
+                     "type": 2,
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -355,42 +357,54 @@ Don't forget general parameters.
                                         "bookmakerId": 1,
                                         "options":[{
                                                     "rate":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "oldRate": {
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "kickOffRate": "1.25",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                    "kickOffRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "num": 1
                                                 },{
-                                                    "rateOptions":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
+                                                    "rate":{
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "oldRate": {
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "kickOffRate": "1.25",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                    "kickOffRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "num": 2
                                                 },{
-                                                    "rateOptions":{
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
+                                                    "rate":{
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "oldRate": {
-                                                                        "american": "+100",
-                                                                        "fractional": "100/150",
-                                                                        "decimal": "1.25"
-                                                                    },
-                                                    "kickOffRate": "1.25",
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                    "kickOffRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                 }]
                                     }]
                         }],

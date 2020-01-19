@@ -862,6 +862,7 @@ groupNum | false | Integer | | Game part of group
     "isWinner": false,
     "redCards": 0,
     "countryId": 11,
+    "type": 2,
     "lineups": {
                 "status": "Not Confirmed",
                 "formation": "4-4-2",
@@ -1113,50 +1114,62 @@ isMajor  | true | Boolean | ?????? | If current statistic is major
                             "link": "https://www.winner.co.il",
                             "bookmakerId": 1,
                             "rates":[{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
-                                        "name": "1",
-                                        "template": "#COMPETITOR1",
-                                        "competitorId": 132
+                                    "rate":{
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "oldRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "kickOffRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "name": "1",
+                                    "template": "#COMPETITOR1",
+                                    "competitorId": 132
                                     },{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
-                                        "name": "X",
-                                        "template": "Draw",
-                                        "competitorId": 132
+                                    "rate":{
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "oldRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "kickOffRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "name": "X",
+                                    "template": "Draw",
+                                    "competitorId": 132
                                     },{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
-                                        "name": "2",
-                                        "template": "#COMPETITOR2",
-                                        "competitorId": 131
+                                    "rate":{
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "oldRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "kickOffRate": {
+                                        "american": "+100",
+                                        "fractional": "100/150",
+                                        "decimal": "1.25"
+                                    },
+                                    "name": "2",
+                                    "template": "#COMPETITOR2",
+                                    "competitorId": 131
                                     }]
                         }]
             },
@@ -1168,47 +1181,60 @@ isMajor  | true | Boolean | ?????? | If current statistic is major
                             "link": "https://www.winner.co.il",
                             "bookmakerId": 1,
                             "rates":[{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
+                                        "rate":{
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
+                                        "kickOffRate": {
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "name": "1",
                                         "template": "#COMPETITOR1",
                                         "competitorId": 132
                                     },{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
+                                        "rate":{
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
+                                        "kickOffRate": {
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "name": "X",
                                         "template": "Draw",
                                         "competitorId": 132
                                     },{
-                                        "rateOptions":{
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
+                                        
+                                        "rate":{
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "oldRate": {
-                                                        "american": "+100",
-                                                        "fractional": "100/150",
-                                                        "decimal": "1.25"
-                                                    },
-                                        "kickOffRate": "1.25",
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
+                                        "kickOffRate": {
+                                            "american": "+100",
+                                            "fractional": "100/150",
+                                            "decimal": "1.25"
+                                        },
                                         "name": "2",
                                         "template": "#COMPETITOR2",
                                         "competitorId": 131
@@ -1219,51 +1245,63 @@ isMajor  | true | Boolean | ?????? | If current statistic is major
                                         "link": "https://www.winner.co.il",
                                         "bookmakerId": 1,
                                         "rates":[{
-                                                    "rateOptions":{
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
+                                                    "rate":{
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "oldRate": {
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
-                                                    "kickOffRate": "1.25",
-                                                    "name": "1",
-                                                    "template": "#COMPETITOR1",
-                                                    "competitorId": 132
-                                                },{
-                                                    "rateOptions":{
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                    "kickOffRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                            "name": "1",
+                                            "template": "#COMPETITOR1",
+                                            "competitorId": 132
+                                            },{
+                                                    "rate":{
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
                                                     "oldRate": {
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
-                                                    "kickOffRate": "1.25",
-                                                    "name": "X",
-                                                    "template": "Draw",
-                                                    "competitorId": 132
-                                                },{
-                                                    "rateOptions":{
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
-                                                    "oldRate": {
-                                                                    "american": "+100",
-                                                                    "fractional": "100/150",
-                                                                    "decimal": "1.25"
-                                                                },
-                                                    "kickOffRate": "1.25",
-                                                    "name": "2",
-                                                    "template": "#COMPETITOR2",
-                                                    "competitorId": 131
-                                                }]
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                    "kickOffRate": {
+                                                        "american": "+100",
+                                                        "fractional": "100/150",
+                                                        "decimal": "1.25"
+                                                    },
+                                                "name": "X",
+                                                "template": "Draw",
+                                                "competitorId": 132
+                                            },{
+                                                "rate":{
+                                                    "american": "+100",
+                                                    "fractional": "100/150",
+                                                    "decimal": "1.25"
+                                                },
+                                                "oldRate": {
+                                                    "american": "+100",
+                                                    "fractional": "100/150",
+                                                    "decimal": "1.25"
+                                                },
+                                                "kickOffRate": {
+                                                    "american": "+100",
+                                                    "fractional": "100/150",
+                                                    "decimal": "1.25"
+                                                },
+                                                "name": "2",
+                                                "template": "#COMPETITOR2",
+                                                "competitorId": 131
+                                            }]
                                     }]
                          }]
             }
