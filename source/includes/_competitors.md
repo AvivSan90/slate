@@ -54,7 +54,8 @@
          "sportId":1,
          "countryId":1,
          "competitions":[1, 12],
-         "imgVer": 1
+         "imgVer": 1,
+         "type": 1,
       },
       {
          "id":562,
@@ -62,7 +63,8 @@
          "sportId":1,
          "countryId":112,
          "competitions":[42],
-         "imgVer": 1
+         "imgVer": 1,
+         "type": 2,
          
       }
    ]
