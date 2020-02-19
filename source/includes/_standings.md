@@ -156,7 +156,51 @@
                     "id": 1,
                     "name": "Football",
                     "nameForURL": "football"
-             }]
+             }],
+    "games": [{
+                    "id": 2034294,
+                    "sportId": 1,
+                    "competitionId": 4,
+                    "seasonNum": 8,
+                    "stageNum": 1,
+                    "roundNum": 35,
+                    "competitionDisplayName": "National League",
+                    "startTime": "2020-02-18T21:45:00+02:00",
+                    "statusGroup": 3,
+                    "statusText": "Halftime",
+                    "gameTimeAndStatusDisplayType": 1,
+                    "gameTime": 45,
+                    "gameTimeDisplay": "45'",
+                    "hasLineups": true,
+                    "hasFieldPositions": true,
+                    "hasTVNetworks": false,
+                    "homeCompetitor": {
+                    "id": 69,
+                    "countryId": 1,
+                    "sportId": 1,
+                    "name": "Barnet",
+                    "score": 1,
+                    "aggregatedScore": -1,
+                    "isQualified": false,
+                    "isWinner": false,
+                    "redCards": 0,
+                    "nameForURL": "barnet",
+                    "type": 1
+                    },
+                    "awayCompetitor": {
+                    "id": 10026,
+                    "countryId": 1,
+                    "sportId": 1,
+                    "name": "Harrogate Town",
+                    "score": 1,
+                    "aggregatedScore": -1,
+                    "isQualified": false,
+                    "isWinner": false,
+                    "redCards": 0,
+                    "nameForURL": "harrogate-town",
+                    "type": 1
+                    }
+              }]     
 }
 ```
 

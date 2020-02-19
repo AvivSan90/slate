@@ -1617,9 +1617,12 @@ isMajor | false | Integer |  | If show on small view
         }
     }],
     "recentForm": [0,1,2,2,1],
-    "destinationId": 1,
+    "destinationNum": 1,
     "destinationGuaranteed": true,
-    "isWinner": true
+    "isWinner": true,
+    "liveGameId": 2034294,
+    "liveGameStatus": 0,
+    "previousPosition": 3
 }]
 ```
 
@@ -1642,12 +1645,15 @@ gamesWonOnPenalties | true | Integer |  | Total games that won after penalties
 gamesLossOnOverTime | true | Integer |  | Total games that lost after over time
 gamesLossOnPenalties | true | Integer |  | Total games that lost after penalties
 position | true | Integer |  | Position on Standing (row number)
-trend | false | Integer |  | On live game if team goes up or down on Standing 
+trend | false | Integer |1 - up, 0 - even, -1 - down| On live game if team goes up or down on Standing 
 recentForm | false | Array |  | trend for recent matches on current competition
 detailedRecentForm | false | Array<PartialGame> |  | Array of last (Max) 5 games
-destinationId | false | Integer |  | Destination by position
+destinationNum | false | Integer |  | Destination by position
 destinationGuaranteed | false | Boolean |  | If Destination guaranteed for current competitor
 isWinner | false | Boolean |  | If current competitor won the competition title
+liveGameId | false | Integer |  | Live game id
+liveGameStatus | false | Integer | 1 - winner, 0 - draw, -1 - lose | On live game if team winner, draw or lose 
+previousPosition | false | Integer |  | Previous position on standing on live game (row number)
 
 ### Destinations
 
