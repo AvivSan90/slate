@@ -180,6 +180,48 @@ link | true | Integer | | Bookmaker's website link
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
                                     "hasFieldPositions": true,
+                                     "playersStatistics": {
+                                                            "Subjects": [{
+                                                                            "id": 328865,
+                                                                            "name": "Pass"
+                                                                        }],
+                                                            "Categories": [{
+                                                                                "id": 1,
+                                                                                "name": "Passing",
+                                                                                "shortName": "Passing",
+                                                                                "subjectId": 328865
+                                                                            }],
+                                                            "Tables": [{
+                                                                            "categoryId": 1,
+                                                                            "groups": [{
+                                                                                            "id": 1,
+                                                                                            "name": "Starters"
+                                                                                        }],
+                                                                            "columns": [{
+                                                                                            "num": 1,
+                                                                                            "name": "C",
+                                                                                            "shortName": "C",
+                                                                                            "order": 147,
+                                                                                            "isMajor": true
+                                                                                        }],
+                                                                            "rows": [{
+                                                                                        "playerId": 1139046,
+                                                                                        "num": 1,
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                    }],
+                                                                            "summary": [{
+                                                                                        "title": "Team Totals",
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                        }],
+                                                                            }],
+                                                            "Expandable": false
+                                                        },
                                     "members": [{
                                                     "playerId": 6688408,
                                                     "position": {
@@ -223,6 +265,48 @@ link | true | Integer | | Bookmaker's website link
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
                                     "hasFieldPositions": true,
+                                     "playersStatistics": {
+                                                            "Subjects": [{
+                                                                            "id": 328865,
+                                                                            "name": "Pass"
+                                                                        }],
+                                                            "Categories": [{
+                                                                                "id": 1,
+                                                                                "name": "Passing",
+                                                                                "shortName": "Passing",
+                                                                                "subjectId": 328865
+                                                                            }],
+                                                            "Tables": [{
+                                                                            "categoryId": 1,
+                                                                            "groups": [{
+                                                                                            "id": 1,
+                                                                                            "name": "Starters"
+                                                                                        }],
+                                                                            "columns": [{
+                                                                                            "num": 1,
+                                                                                            "name": "C",
+                                                                                            "shortName": "C",
+                                                                                            "order": 147,
+                                                                                            "isMajor": true
+                                                                                        }],
+                                                                            "rows": [{
+                                                                                        "playerId": 1139046,
+                                                                                        "num": 1,
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                    }],
+                                                                            "summary": [{
+                                                                                        "title": "Team Totals",
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                        }],
+                                                                            }],
+                                                            "Expandable": false
+                                                        },
                                     "members": [{
                                                     "playerId": 6688408,
                                                     "position": {
@@ -867,6 +951,48 @@ groupNum | false | Integer | | Game part of group
                 "status": "Not Confirmed",
                 "formation": "4-4-2",
                 "hasFieldPositions": true,
+                 "playersStatistics": {
+                                        "Subjects": [{
+                                                        "id": 328865,
+                                                        "name": "Pass"
+                                                    }],
+                                        "Categories": [{
+                                                            "id": 1,
+                                                            "name": "Passing",
+                                                            "shortName": "Passing",
+                                                            "subjectId": 328865
+                                                        }],
+                                        "Tables": [{
+                                                        "categoryId": 1,
+                                                        "groups": [{
+                                                                        "id": 1,
+                                                                        "name": "Starters"
+                                                                    }],
+                                                        "columns": [{
+                                                                        "num": 1,
+                                                                        "name": "C",
+                                                                        "shortName": "C",
+                                                                        "order": 147,
+                                                                        "isMajor": true
+                                                                    }],
+                                                        "rows": [{
+                                                                    "playerId": 1139046,
+                                                                    "num": 1,
+                                                                    "values": [{
+                                                                                    "columnNum": 1,
+                                                                                    "value": "26"
+                                                                                }],
+                                                                }],
+                                                        "summary": [{
+                                                                    "title": "Team Totals",
+                                                                    "values": [{
+                                                                                    "columnNum": 1,
+                                                                                    "value": "26"
+                                                                                }],
+                                                                    }],
+                                                        }],
+                                        "Expandable": false
+                                    },
                 "members": [{
                                 "playerId": 6688408,
                                 "position": {
@@ -940,10 +1066,52 @@ isEnded | false | Boolean |  | if stage is ended
 
 ```json
 {
-     "status": "Not Confirmed",
-     "formation": "4-4-2",
-     "hasFieldPositions": true,
-     "members": [{
+    "status": "Not Confirmed",
+    "formation": "4-4-2",
+    "hasFieldPositions": true,
+    "playersStatistics": {
+                            "Subjects": [{
+                                            "id": 328865,
+                                            "name": "Pass"
+                                        }],
+                            "Categories": [{
+                                                "id": 1,
+                                                "name": "Passing",
+                                                "shortName": "Passing",
+                                                "subjectId": 328865
+                                            }],
+                            "Tables": [{
+                                            "categoryId": 1,
+                                            "groups": [{
+                                                            "id": 1,
+                                                            "name": "Starters"
+                                                        }],
+                                            "columns": [{
+                                                            "num": 1,
+                                                            "name": "C",
+                                                            "shortName": "C",
+                                                            "order": 147,
+                                                            "isMajor": true
+                                                        }],
+                                            "rows": [{
+                                                        "playerId": 1139046,
+                                                        "num": 1,
+                                                        "values": [{
+                                                                        "columnNum": 1,
+                                                                        "value": "26"
+                                                                    }],
+                                                    }],
+                                            "summary": [{
+                                                        "title": "Team Totals",
+                                                        "values": [{
+                                                                        "columnNum": 1,
+                                                                        "value": "26"
+                                                                    }],
+                                                        }],
+                                            }],
+                            "Expandable": false
+                        },
+    "members": [{
                     "playerId": 6688408,
                     "position": {
                                     "id": 1,
@@ -975,6 +1143,7 @@ Parameter | required | type | Options | Description
 status | true | Integer | ??? | Lineup's status
 formation | false | String |  | Competitor's lineups formation
 hasFieldPositions | false | Boolean |  | Flag if members has field positions
+playersStatistics | false | Object |  | players statistics for box-score [Description](#playersStatistics)
 members | false | Array | | array of lineups members [Description](#lineupsMember)
 
 ## gameMember
@@ -1002,6 +1171,219 @@ name | true | String | | Member's name
 shortName | false | String | | Member's nickname
 JerseyNumber | false | Integer | | Member's jersey number
 imgVer | false | Integer |  | Image version (add to image url)
+
+## playersStatistics
+
+```json
+{
+    "Subjects": [{
+                    "id": 328865,
+                    "name": "Pass"
+                }],
+    "Categories": [{
+                        "id": 1,
+                        "name": "Passing",
+                        "shortName": "Passing",
+                        "subjectId": 328865
+                    }],
+    "Tables": [{
+                    "categoryId": 1,
+                    "groups": [{
+                                    "id": 1,
+                                    "name": "Starters"
+                                }],
+                    "columns": [{
+                                    "num": 1,
+                                    "name": "C",
+                                    "shortName": "C",
+                                    "order": 147,
+                                    "isMajor": true
+                                }],
+                    "rows": [{
+                                "playerId": 1139046,
+                                "num": 1,
+                                "values": [{
+                                                "columnNum": 1,
+                                                "value": "26"
+                                            }],
+                            }],
+                    "summary": [{
+                                "title": "Team Totals",
+                                "values": [{
+                                                "columnNum": 1,
+                                                "value": "26"
+                                            }],
+                                }],
+                    }],
+    "Expandable": false
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+Subjects | false | Array | | Array of player statistics subjects [Description](#subject)
+Categories | false | Array | | Array of player statistics categories [Description](#category)
+Tables | false | Array | | Array of player statistics tables [Description](#table)
+Expandable | false | Boolean | | If playes statistics is expandable
+
+## subject
+
+```json
+[{
+    "id": 328865,
+    "name": "Pass"
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | false | Number | | Subject's id 
+name | false | String | | Subject's name 
+
+
+## category
+
+```json
+[{
+    "id": 1,
+    "name": "Passing",
+    "shortName": "Passing",
+    "subjectId": 328865
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | false | Number | | Category's id 
+name | false | String | | Category's name 
+shortName | false | String | | Category's short name 
+subjectId | false | Number | | Subject's id
+
+## table
+
+```json
+[{
+    "categoryId": 1,
+    "groups": [{
+                    "id": 1,
+                    "name": "Starters"
+                }],
+    "columns": [{
+                    "num": 1,
+                    "name": "C",
+                    "shortName": "C",
+                    "order": 147,
+                    "isMajor": true
+                }],
+    "rows": [{
+                "playerId": 1139046,
+                "num": 1,
+                "values": [{
+                                "columnNum": 1,
+                                "value": "26"
+                            }],
+            }],
+    "summary": [{
+                "title": "Team Totals",
+                "values": [{
+                                "columnNum": 1,
+                                "value": "26"
+                            }],
+                }],
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+categoryId | false | Number | | Category's id 
+groups | false | Array | | Array of group statistics [Description](#group)
+columns | false | Array | | Array of table columns [Description](#column)
+rows | false | Array | | Array of table rows [Description](#row)
+summary | false | Array | | Array of table summary [Description](#summary)
+
+## group
+
+```json
+[{
+    "id": 1,
+    "name": "Starters"
+}],
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | false | Number | | Group's id 
+name | false | String | | Group's name 
+
+## column
+
+```json
+[{
+    "num": 1,
+    "name": "C",
+    "shortName": "C",
+    "order": 147,
+    "isMajor": true
+}],
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+num | false | Number | | Column's id 
+name | false | String | | Column's name 
+shortName | false | String | | Column's short name 
+order | false | Number | | Column's order number 
+isMajor | false | Boolean | | If column it's statistics highlight
+
+## row
+
+```json
+[{
+"playerId": 1139046,
+"num": 1,
+"values": [{
+                "columnNum": 1,
+                "value": "26"
+            }],
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+playerId | false | Number | | Player's id 
+num | false | Number | | Row's nun 
+values | false | Array | | Array of value in row [Description](#value)
+
+## summary
+
+```json
+[{
+    "title": "Team Totals",
+    "values": [{
+                    "columnNum": 1,
+                    "value": "26"
+                }],
+}],
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+title | false | String | | Summary's title 
+values | false | Array | | Array of value in summary [Description](#value)
+
+## value
+
+```json
+[{
+    "columnNum": 1,
+    "value": "26"
+}],
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+columnNum | false | String | | Column's num 
+value | false | ArraNumbery | | Statistic's value 
 
 ## lineupsMember
 
@@ -1032,7 +1414,6 @@ playerId | true | Integer | | Member's id (id for specific game)
 position | true | Object | | [Description](#position)
 formation | false | Object | | [Description](#formation)
 yardFormation | false | Object | | [Description](#yardFormation)
-
 
 ## Position
 

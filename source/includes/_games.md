@@ -279,6 +279,48 @@ Don't forget general parameters.
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
                                     "hasFieldPositions": true,
+                                    "playersStatistics": {
+                                                            "Subjects": [{
+                                                                            "id": 328865,
+                                                                            "name": "Pass"
+                                                                        }],
+                                                            "Categories": [{
+                                                                                "id": 1,
+                                                                                "name": "Passing",
+                                                                                "shortName": "Passing",
+                                                                                "subjectId": 328865
+                                                                            }],
+                                                            "Tables": [{
+                                                                            "categoryId": 1,
+                                                                            "groups": [{
+                                                                                            "id": 1,
+                                                                                            "name": "Starters"
+                                                                                        }],
+                                                                            "columns": [{
+                                                                                            "num": 1,
+                                                                                            "name": "C",
+                                                                                            "shortName": "C",
+                                                                                            "order": 147,
+                                                                                            "isMajor": true
+                                                                                        }],
+                                                                            "rows": [{
+                                                                                        "playerId": 1139046,
+                                                                                        "num": 1,
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                    }],
+                                                                            "summary": [{
+                                                                                        "title": "Team Totals",
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                        }],
+                                                                            }],
+                                                            "Expandable": false
+                                                        },
                                     "members": [{
                                                     "playerId": 6688408,
                                                     "position": {
@@ -323,6 +365,48 @@ Don't forget general parameters.
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
                                     "hasFieldPositions": true,
+                                    "playersStatistics": {
+                                                            "Subjects": [{
+                                                                            "id": 328865,
+                                                                            "name": "Pass"
+                                                                        }],
+                                                            "Categories": [{
+                                                                                "id": 1,
+                                                                                "name": "Passing",
+                                                                                "shortName": "Passing",
+                                                                                "subjectId": 328865
+                                                                            }],
+                                                            "Tables": [{
+                                                                            "categoryId": 1,
+                                                                            "groups": [{
+                                                                                            "id": 1,
+                                                                                            "name": "Starters"
+                                                                                        }],
+                                                                            "columns": [{
+                                                                                            "num": 1,
+                                                                                            "name": "C",
+                                                                                            "shortName": "C",
+                                                                                            "order": 147,
+                                                                                            "isMajor": true
+                                                                                        }],
+                                                                            "rows": [{
+                                                                                        "playerId": 1139046,
+                                                                                        "num": 1,
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                    }],
+                                                                            "summary": [{
+                                                                                        "title": "Team Totals",
+                                                                                        "values": [{
+                                                                                                        "columnNum": 1,
+                                                                                                        "value": "26"
+                                                                                                    }],
+                                                                                        }],
+                                                                            }],
+                                                            "Expandable": false
+                                                        },
                                     "members": [{
                                                     "playerId": 6688408,
                                                     "position": {
