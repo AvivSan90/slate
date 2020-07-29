@@ -1296,10 +1296,10 @@ subjectId | false | Number | | Subject's id
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 categoryId | false | Number | | Category's id 
-groups | false | Array | | Array of group statistics [Description](#group)
-columns | false | Array | | Array of table columns [Description](#column)
+groups | false | Array | | Array of statistics groups[Description](#group)
+columns | false | Array | | Array of statistics table columns [Description](#column)
 rows | false | Array | | Array of table rows [Description](#row)
-summary | false | Array | | Array of table summary [Description](#summary)
+summary | false | Array | | Array of statistics table summary [Description](#summary)
 
 ## group
 
@@ -1330,8 +1330,8 @@ name | false | String | | Group's name
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 num | false | Number | | Column's id 
-name | false | String | | Column's name 
-shortName | false | String | | Column's short name 
+name | false | String | | statistic's name 
+shortName | false | String | | statistic's short name 
 order | false | Number | | Column's order number 
 isMajor | false | Boolean | | If column it's statistics highlight
 
