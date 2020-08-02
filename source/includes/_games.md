@@ -304,6 +304,7 @@ Don't forget general parameters.
                                                                                             "isMajor": true
                                                                                         }],
                                                                             "rows": [{
+                                                                                        "groupId": 1,
                                                                                         "playerId": 1139046,
                                                                                         "num": 1,
                                                                                         "values": [{
@@ -390,6 +391,7 @@ Don't forget general parameters.
                                                                                             "isMajor": true
                                                                                         }],
                                                                             "rows": [{
+                                                                                        "groupId": 1,
                                                                                         "playerId": 1139046,
                                                                                         "num": 1,
                                                                                         "values": [{

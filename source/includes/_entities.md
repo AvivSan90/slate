@@ -205,6 +205,7 @@ link | true | Integer | | Bookmaker's website link
                                                                                             "isMajor": true
                                                                                         }],
                                                                             "rows": [{
+                                                                                        "groupId": 1,
                                                                                         "playerId": 1139046,
                                                                                         "num": 1,
                                                                                         "values": [{
@@ -290,6 +291,7 @@ link | true | Integer | | Bookmaker's website link
                                                                                             "isMajor": true
                                                                                         }],
                                                                             "rows": [{
+                                                                                        "groupId": 1,
                                                                                         "playerId": 1139046,
                                                                                         "num": 1,
                                                                                         "values": [{
@@ -976,6 +978,7 @@ groupNum | false | Integer | | Game part of group
                                                                         "isMajor": true
                                                                     }],
                                                         "rows": [{
+                                                                    "groupId": 1,
                                                                     "playerId": 1139046,
                                                                     "num": 1,
                                                                     "values": [{
@@ -1094,6 +1097,7 @@ isEnded | false | Boolean |  | if stage is ended
                                                             "isMajor": true
                                                         }],
                                             "rows": [{
+                                                        "groupId": 1
                                                         "playerId": 1139046,
                                                         "num": 1,
                                                         "values": [{
@@ -1200,6 +1204,7 @@ imgVer | false | Integer |  | Image version (add to image url)
                                     "isMajor": true
                                 }],
                     "rows": [{
+                                "groupId": 1,
                                 "playerId": 1139046,
                                 "num": 1,
                                 "values": [{
@@ -1276,6 +1281,7 @@ subjectId | false | Number | | Subject's id
                     "isMajor": true
                 }],
     "rows": [{
+                "groupId": 1,
                 "playerId": 1139046,
                 "num": 1,
                 "values": [{
@@ -1351,6 +1357,7 @@ isMajor | false | Boolean | | If column it's statistics highlight
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
 playerId | false | Number | | Player's id 
+groupId | false | Number | | Table group's id 
 num | false | Number | | Row's nun 
 values | false | Array | | Array of value in row [Description](#value)
 
