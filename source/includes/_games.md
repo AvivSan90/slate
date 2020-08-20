@@ -17,14 +17,20 @@
                "nameForUrl": "football"
            }],
    "countries":[{
-                     "id": 11,
-                     "name": "Argentina",
-                     "nameForUrl": "argentina"
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 13]
                },
                {
                      "id": 12,
                      "name": "Brazil",
-                     "nameForUrl": "brazil"
+                     "nameForUrl": "brazil",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
                  }],
    "competitions":[{
                          "id": 1,
@@ -641,13 +647,16 @@ Don't forget general parameters.
                     "id": 1,
                     "name": "Argentina",
                     "nameForURL": "argentina",
-                    "imgVer": 1
-                    
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 },{
-                    "id": 2,
-                    "name": "Brazil",
-                    "nameForURL": "brazil",
-                    "imgVer": 2
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 13]
                 }],
     "competitions": [{
                       "id": 1,

@@ -5,12 +5,20 @@
 ```json
 {
     "countries":[{
-                     "id": 1,
-                     "name": "Argentina"
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 },
                 {
-                     "id": 12,
-                     "name": "Spain"
+                     "id": 2,
+                    "name": "Brazil",
+                    "nameForURL": "brazil",
+                    "liveGames": 2,
+                    "totalGames": 6,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 }],
     "sports":[{
                     "id": 1,
@@ -73,14 +81,20 @@ Don't forget general parameters.
 ```json
 {
     "countries":[{
-                     "id": 1,
-                     "name": "Argentina",
-                     "imgVer": 1
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 },
                 {
-                     "id": 12,
-                     "name": "Spain",
-                     "imgVer": 1
+                     "id": 2,
+                    "name": "Brazil",
+                    "nameForURL": "brazil",
+                    "liveGames": 2,
+                    "totalGames": 6,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 }],
     "sports":[{
                     "id": 1,

@@ -47,7 +47,7 @@ name | true | String |  | Sport's name
     "nameForURL": "argentina",
     "liveGames": 2,
     "totalGames": 5,
-    "imgVer": 1
+    "sportTypes": [1, 2, 8, 13]
 }
 ```
 
@@ -57,7 +57,7 @@ id | true | Integer |  | Country's id
 name | true | String | | Country's name
 liveGames | false | Integer |  | Live games for current country
 totalGames | false | Integer |  | Total games for current country
-imgVer | false | Integer |  | Image version (add to image url)
+sportTypes | false | Array |  | All types of sports that have competitions for current country
 
 ## Competition
 
@@ -540,16 +540,21 @@ link | true | Integer | | Bookmaker's website link
                     }
                 ]
             },
-    "countries": [{
+    "countries":[{
                     "id": 1,
                     "name": "Argentina",
                     "nameForURL": "argentina",
-                    "imgVer": 1
-                },{
-                    "id": 2,
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
+                },
+                {
+                     "id": 2,
                     "name": "Brazil",
                     "nameForURL": "brazil",
-                    "imgVer": 1
+                    "liveGames": 2,
+                    "totalGames": 6,
+                    "sportTypes": [1, 2, 8, 12, 13]
                 }],
     "competitions": [{
                       "id": 1,
@@ -832,17 +837,21 @@ ratio | true | Integer |  | Widget's ratio
                "nameForURL": "football"
            }],
    "countries":[{
-                     "id": 11,
-                     "name": "Argentina",
-                     "nameForURL": "argentina",
-                     "imgVer": 1
-               },
-               {
-                     "id": 12,
-                     "name": "Brazil",
-                     "nameForURL": "brazil",
-                     "imgVer": 1
-                 }],
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 12, 13]
+                },
+                {
+                     "id": 2,
+                    "name": "Brazil",
+                    "nameForURL": "brazil",
+                    "liveGames": 2,
+                    "totalGames": 6,
+                    "sportTypes": [1, 2, 8, 12, 13]
+                }],
    "competitions":[{
                          "id": 1,
                          "name": "World Cup",

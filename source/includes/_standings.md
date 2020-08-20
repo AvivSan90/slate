@@ -137,11 +137,12 @@
                     }],
     
     "countries":[{
-                     "id": 1,
-                     "name": "Argentina",
-                     "nameForURL": "argentina"
-                     
-
+                    "id": 1,
+                    "name": "Argentina",
+                    "nameForURL": "argentina",
+                    "liveGames": 2,
+                    "totalGames": 5,
+                    "sportTypes": [1, 2, 8, 13]
                 }],
     "competitions": [{
                     "id": 7,

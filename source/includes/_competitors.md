@@ -6,14 +6,20 @@
 {
    "countries":[
       {
-         "id":12,
-         "name":"Spain",
-         "imgVer": 1
+         "id": 1,
+         "name": "Argentina",
+         "nameForURL": "argentina",
+         "liveGames": 2,
+         "totalGames": 5,
+         "sportTypes": [1, 2, 8, 12, 13]
       },
       {
-         "id":112,
-         "name":"Israel",
-         "imgVer": 1
+         "id": 2,
+         "name": "Brazil",
+         "nameForURL": "brazil",
+         "liveGames": 2,
+         "totalGames": 6,
+         "sportTypes": [1, 2, 8, 12, 13]
       }
    ],
    "sports":[
