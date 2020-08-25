@@ -139,7 +139,17 @@
                                                 "fractional": "5/20",
                                                 "american": "-444"
                                             },
-                                            "trend": 2
+                                            "prematchRate": {
+                                                "decimal": 1.18,
+                                                "fractional": "9/50",
+                                                "american": "-556"
+                                            },
+                                            "link": "https://www.bet365.com/olp/open-account?affiliate=365_00957510",
+                                            "trend": 1,
+                                            "extraLinks": [{
+                                                "context": "OddsComparison",
+                                                "link": "https://www.bet365.com/olp/open-account?affiliate=365_00963028"
+                                            }],
                                         },{
                                             "num": 2,
                                             "rate": {
@@ -152,7 +162,17 @@
                                                 "fractional": "5/20",
                                                 "american": "-444"
                                             },
-                                            "trend": 2
+                                            "prematchRate": {
+                                                "decimal": 1.18,
+                                                "fractional": "9/50",
+                                                "american": "-556"
+                                            },
+                                            "link": "https://www.bet365.com/olp/open-account?affiliate=365_00957510",
+                                            "trend": 2,
+                                            "extraLinks": [{
+                                                "context": "OddsComparison",
+                                                "link": "https://www.bet365.com/olp/open-account?affiliate=365_00963028"
+                                            }],
                                         },{
                                             "num": 3,
                                             "rate": {
@@ -165,10 +185,19 @@
                                                 "fractional": "5/20",
                                                 "american": "-444"
                                             },
-                                            "trend": 2
+                                            "prematchRate": {
+                                                "decimal": 1.18,
+                                                "fractional": "9/50",
+                                                "american": "-556"
+                                            },
+                                            "link": "https://www.bet365.com/olp/open-account?affiliate=365_00957510",
+                                            "trend": 3,
+                                            "extraLinks": [{
+                                                "context": "OddsComparison",
+                                                "link": "https://www.bet365.com/olp/open-account?affiliate=365_00963028"
+                                            }],
                                         }
-                                ],
-                            },
+                                ]},
                             "options": [{
                                 "num": 1,
                                 "name": "Beitar",
