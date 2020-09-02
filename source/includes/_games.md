@@ -745,6 +745,7 @@ tvNetworks | Game Info | Array of TV Networks | [See Example](#tv-networks)
 venue | Game Info | Data of the stadium | [See Example](#venue)
 widgets | false | Array | | [See Example](#gameWidget)
 predictions | false | Array | | [See Example](#prediction)
+relatedGames | false | Array | | [See Example](#relateGame)
 
 
 ### HTTP Request

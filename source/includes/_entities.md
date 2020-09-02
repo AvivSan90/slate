@@ -567,8 +567,58 @@ link | true | Integer | | Bookmaker's website link
                             }],
                         }
                     }
-                ]
-            },
+                ],
+                "relatedGame": [{
+                                "id": 2154532,
+                                "sportId": 1,
+                                "competitionId": 572,
+                                "seasonNum": 11,
+                                "stageNum": 2,
+                                "groupNum": 3,
+                                "competitionDisplayName": "Champions League - Round of 16",
+                                "startTime": "2020-02-25T22:00:00+02:00",
+                                "statusGroup": 4,
+                                "statusText": "Ended",
+                                "shortStatusText": "Ended",
+                                "gameTimeAndStatusDisplayType": 1,
+                                "gameTime": 90,
+                                "gameTimeDisplay": "90'",
+                                "hasLineups": true,
+                                "hasMissingPlayers": true,
+                                "hasFieldPositions": true,
+                                "hasTVNetworks": false,
+                                "homeCompetitor": {
+                                                    "id": 234,
+                                                    "countryId": 3,
+                                                    "sportId": 1,
+                                                    "name": "Napoli",
+                                                    "score": 1,
+                                                    "aggregatedScore": -1,
+                                                    "isQualified": false,
+                                                    "toQualify": false,
+                                                    "isWinner": false,
+                                                    "redCards": 0,
+                                                    "nameForURL": "napoli",
+                                                    "type": 1,
+                                                    "popularityRank": 7609181
+                                },
+                                "awayCompetitor": {
+                                                    "id": 132,
+                                                    "countryId": 2,
+                                                    "sportId": 1,
+                                                    "name": "FC Barcelona",
+                                                    "score": 1,
+                                                    "aggregatedScore": -1,
+                                                    "isQualified": false,
+                                                    "toQualify": false,
+                                                    "isWinner": false,
+                                                    "redCards": 0,
+                                                    "nameForURL": "fc-barcelona",
+                                                    "type": 1,
+                                                    "popularityRank": 30065530
+                                }
+                    }]
+    },
     "countries":[{
                     "id": 1,
                     "name": "Argentina",
@@ -644,6 +694,8 @@ roundNum | false | Integer | | Game part of round
 seasonNum | false | Integer | | Game part of season 
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
+relatedGames | false | Array | | [See Example](#relateGame)
+
 
 ## Prediction
 
@@ -1000,7 +1052,8 @@ sportId | true | Integer | | Game's sport type
 roundNum | false | Integer | | Game part of round 
 seasonNum | false | Integer | | Game part of season 
 stageNum | false | Integer | | Game part of stage 
-groupNum | false | Integer | | Game part of group 
+groupNum | false | Integer | | Game part of group
+relatedGames | false | Array | | [See Example](#relateGame)
 
 ## Competitor
 
@@ -1081,6 +1134,56 @@ groupNum | false | Integer | | Game part of group
                                                 "fieldSide": 0
                                             }
                             }],
+                "relatedGame": [{
+                                "id": 2154532,
+                                "sportId": 1,
+                                "competitionId": 572,
+                                "seasonNum": 11,
+                                "stageNum": 2,
+                                "groupNum": 3,
+                                "competitionDisplayName": "Champions League - Round of 16",
+                                "startTime": "2020-02-25T22:00:00+02:00",
+                                "statusGroup": 4,
+                                "statusText": "Ended",
+                                "shortStatusText": "Ended",
+                                "gameTimeAndStatusDisplayType": 1,
+                                "gameTime": 90,
+                                "gameTimeDisplay": "90'",
+                                "hasLineups": true,
+                                "hasMissingPlayers": true,
+                                "hasFieldPositions": true,
+                                "hasTVNetworks": false,
+                                "homeCompetitor": {
+                                                    "id": 234,
+                                                    "countryId": 3,
+                                                    "sportId": 1,
+                                                    "name": "Napoli",
+                                                    "score": 1,
+                                                    "aggregatedScore": -1,
+                                                    "isQualified": false,
+                                                    "toQualify": false,
+                                                    "isWinner": false,
+                                                    "redCards": 0,
+                                                    "nameForURL": "napoli",
+                                                    "type": 1,
+                                                    "popularityRank": 7609181
+                                },
+                                "awayCompetitor": {
+                                                    "id": 132,
+                                                    "countryId": 2,
+                                                    "sportId": 1,
+                                                    "name": "FC Barcelona",
+                                                    "score": 1,
+                                                    "aggregatedScore": -1,
+                                                    "isQualified": false,
+                                                    "toQualify": false,
+                                                    "isWinner": false,
+                                                    "redCards": 0,
+                                                    "nameForURL": "fc-barcelona",
+                                                    "type": 1,
+                                                    "popularityRank": 30065530
+                                }
+                    }]
             },
 }
 ```
@@ -1099,6 +1202,7 @@ countryId | true | Integer |  | Competitor's country
 lineups | false | Array | | [Description](#lineups)
 imgVer | false | Integer |  | Image version (add to image url)
 type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
+relatedGames | false | Array | | [See Example](#relateGame)
 
 ## Stage
 
@@ -2166,3 +2270,81 @@ id | true | Integer | | Key of column use as key for Standing rows
 name | true | String |  | Destination competition name
 color | true | String |  | Destination display color
 type | true | Integer | ??????? | Destination's type
+
+
+## relateGame
+
+```json
+[{
+
+    "relatedGame": [{
+                    "id": 2154532,
+                    "sportId": 1,
+                    "competitionId": 572,
+                    "seasonNum": 11,
+                    "stageNum": 2,
+                    "groupNum": 3,
+                    "competitionDisplayName": "Champions League - Round of 16",
+                    "startTime": "2020-02-25T22:00:00+02:00",
+                    "statusGroup": 4,
+                    "statusText": "Ended",
+                    "shortStatusText": "Ended",
+                    "gameTimeAndStatusDisplayType": 1,
+                    "gameTime": 90,
+                    "gameTimeDisplay": "90'",
+                    "hasLineups": true,
+                    "hasMissingPlayers": true,
+                    "hasFieldPositions": true,
+                    "hasTVNetworks": false,
+                    "homeCompetitor": {
+                                        "id": 234,
+                                        "countryId": 3,
+                                        "sportId": 1,
+                                        "name": "Napoli",
+                                        "score": 1,
+                                        "aggregatedScore": -1,
+                                        "isQualified": false,
+                                        "toQualify": false,
+                                        "isWinner": false,
+                                        "redCards": 0,
+                                        "nameForURL": "napoli",
+                                        "type": 1,
+                                        "popularityRank": 7609181
+                    },
+                    "awayCompetitor": {
+                                        "id": 132,
+                                        "countryId": 2,
+                                        "sportId": 1,
+                                        "name": "FC Barcelona",
+                                        "score": 1,
+                                        "aggregatedScore": -1,
+                                        "isQualified": false,
+                                        "toQualify": false,
+                                        "isWinner": false,
+                                        "redCards": 0,
+                                        "nameForURL": "fc-barcelona",
+                                        "type": 1,
+                                        "popularityRank": 30065530
+                    }
+        }]
+}]
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | true | Integer | | Match id number
+sportId | true | Integer |  | Sport id number
+competitionId | true | Integer |  | Competition id number
+seasonNum | true | Integer | ??????? | Number of Season
+groupNum | true | Integer | | Number of group
+competitionDisplayName | true | String |  | Competition name
+startTime | true | String |  | DISO string game start time
+statusGroup | true | Integer | ??????? | 1 - 'Anticipated', 2 - 'Scheduled', 3 - 'Live', 4 - 'Finished' | Game's Status
+statusText | false | Integer | | Game's time
+shortStatusText | false | String | | Game's Status short formatted text
+gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
+hasLineups | true | Boolean | ??????? | Match has lineups
+hasMissingPlayers | true | Boolean | | Match has missing playr
+hasFieldPositions | true | Boolean |  | Match has field positions
+hasTVNetworks | true | Boolean |  | Match has tv-network
+homeCompetitor | true | Object | ??????? | [Description](#competitor)
