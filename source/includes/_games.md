@@ -41,7 +41,8 @@
                          "countryId": 11,
                          "sportId": 1,
                          "liveGames": 2,
-                         "totalGames": 5
+                         "totalGames": 5,
+                         "isTop": true
                    }],
     "paging":{
         "nextPage": "/web/games/?langId=1&timezoneId=15&userCountryId=31&startDate=07/08/2018&endDate=07/08/2018&aftergame=1703516&direction=1"

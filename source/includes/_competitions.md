@@ -32,7 +32,8 @@
                      "sportId": 1,
                      "countryId": 1,
                      "liveGames": 2,
-                     "totalGames": 5
+                     "totalGames": 5,
+                     "isTop": true
                 },
                 {
                      "id": 121,
@@ -42,7 +43,9 @@
                      "sportId": 1,
                      "countryId": 12,
                      "liveGames": 2,
-                     "totalGames": 5
+                     "totalGames": 5,
+                     "isTop": true
+
                 }]
 }
 ```
@@ -109,7 +112,8 @@ Don't forget general parameters.
                      "countryId": 1,
                      "liveGames": 2,
                      "totalGames": 5,
-                     "imgVer": 1
+                     "imgVer": 1,
+                     "isTop": true
                 },
                 {
                      "id": 121,
@@ -120,7 +124,8 @@ Don't forget general parameters.
                      "countryId": 12,
                      "liveGames": 2,
                      "totalGames": 5,
-                     "imgVer": 1
+                     "imgVer": 1,
+                     "isTop": true
                 }]
 }
 ```

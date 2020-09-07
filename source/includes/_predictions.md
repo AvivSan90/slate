@@ -41,7 +41,8 @@
                          "countryId": 11,
                          "sportId": 1,
                          "liveGames": 2,
-                         "totalGames": 5
+                         "totalGames": 5,
+                         "isTop": true
                    }],                           
    "games": [{
              "id": 1,

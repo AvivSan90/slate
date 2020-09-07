@@ -72,7 +72,8 @@ sportTypes | false | Array |  | All types of sports that have competitions for c
       "sportId": 11,
       "liveGames": 2,
       "totalGames": 5,
-      "imgVer": 1
+      "imgVer": 1,
+      "isTop": true
 }
 ```
 
@@ -87,6 +88,8 @@ hasStandingGroups | false | Boolean | | If Standing has groups
 liveGames | false | Integer | | Live games for current competition
 totalGames | false | Integer | | Total games for current competition
 imgVer | false | Integer |  | Image version (add to image url)
+isTop | false | Boolean | | If Competition is top competition
+
 
 ## Bookmaker
 
