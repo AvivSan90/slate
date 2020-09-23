@@ -134,6 +134,7 @@ link | true | Integer | | Bookmaker's website link
                 "stageNum": 4,
                 "groupNum": 1,
                 "startTime": "2018-12-06T17:15:00+02:00",
+                "inSeries": "true",
                 "widgets": [{
                                 "provider": "OPTA_LAW",
                                 "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
@@ -179,6 +180,7 @@ link | true | Integer | | Bookmaker's website link
                      "isWinner": false,
                      "countryid": 1,
                      "recentMatches": ["gameIds"],
+                     "seriesScore": 1,
                      "lineups": {
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
@@ -265,6 +267,7 @@ link | true | Integer | | Bookmaker's website link
                      "countryid": 2,
                      "imgVer": 1,
                      "recentMatches": ["gameIds"],
+                     "seriesScore": 2,
                      "lineups": {
                                     "status": "Not Confirmed",
                                     "formation": "4-4-2",
@@ -603,7 +606,8 @@ link | true | Integer | | Bookmaker's website link
                                                     "redCards": 0,
                                                     "nameForURL": "napoli",
                                                     "type": 1,
-                                                    "popularityRank": 7609181
+                                                    "popularityRank": 7609181,
+                                                    "seriesScore": 2
                                 },
                                 "awayCompetitor": {
                                                     "id": 132,
@@ -618,7 +622,8 @@ link | true | Integer | | Bookmaker's website link
                                                     "redCards": 0,
                                                     "nameForURL": "fc-barcelona",
                                                     "type": 1,
-                                                    "popularityRank": 30065530
+                                                    "popularityRank": 30065530,
+                                                    "seriesScore": 1       
                                 }
                     }]
     },
@@ -698,7 +703,7 @@ seasonNum | false | Integer | | Game part of season
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
 relatedGames | false | Array | | [See Example](#relateGame)
-
+inSeries | false | Boolean |  | Indicate if game is in series
 
 ## Prediction
 
@@ -993,6 +998,7 @@ ratio | true | Integer |  | Widget's ratio
              "description": "Barcelona has won 5-3 after Penalties",
              "aggregatedText": "aggregated 4-2",
              "startTime": "2018-12-06T17:15:00+02:00",
+             "inSeries": true,
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -1002,7 +1008,8 @@ ratio | true | Integer |  | Widget's ratio
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 0,
-                  "countryId": 11
+                  "countryId": 11,
+                  "seriesScore": 1
              },
              "awayCompetitor": {
                   "id": 2,
@@ -1013,7 +1020,8 @@ ratio | true | Integer |  | Widget's ratio
                   "isQualified": false,
                   "isWinner": false,
                   "redCards": 1,
-                  "countryId": 12
+                  "countryId": 12,
+                  "seriesScore": 2
              },
              "sportId": 1,
              "competitionId": 1,
@@ -1057,7 +1065,7 @@ seasonNum | false | Integer | | Game part of season
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group
 relatedGames | false | Array | | [See Example](#relateGame)
-
+inSeries | false | Boolean | | Indicate if game is in series
 ## Competitor
 
 ```json
@@ -1066,6 +1074,7 @@ relatedGames | false | Array | | [See Example](#relateGame)
     "name": "Argentina",
     "imgVer": 1,
     "score": 2,
+    "seriesScore": 2,
     "aggregatedScore": 4,
     "isQualified": false,
     "isWinner": false,
@@ -1206,7 +1215,7 @@ lineups | false | Array | | [Description](#lineups)
 imgVer | false | Integer |  | Image version (add to image url)
 type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
 relatedGames | false | Array | | [See Example](#relateGame)
-
+seriesScore | false | Integer | | if inSeries competition show competitor's series score for specific series 
 ## Stage
 
 ```json

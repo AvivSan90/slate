@@ -70,6 +70,7 @@
              "seasonNum": 6,
              "stageNum": 4,
              "startTime": "2018-12-06T17:15:00+02:00",
+             "inSeries": "true",
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
@@ -79,7 +80,8 @@
                   "isWinner": false,
                   "redCards": 0,
                   "countryId": 11,
-                  "imgVer": 1
+                  "imgVer": 1,
+                  "seriesScore": 1
              },
              "awayCompetitor": {
                   "id": 2,
@@ -90,7 +92,8 @@
                   "isWinner": false,
                   "redCards": 1,
                   "countryId": 12,
-                  "imgVer": 1
+                  "imgVer": 1,
+                  "seriesScore": 2
              },
              "odds": {
                         "bookmakerId": 1,
@@ -222,6 +225,7 @@ Don't forget general parameters.
                 "competitionId": 1,
                 "sportId": 1,
                 "startTime": "2018-12-06T17:15:00+02:00",
+                "inSeries": true,
                 "widgets": [{
                                 "provider": "OPTA_LAW",
                                 "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
@@ -274,6 +278,7 @@ Don't forget general parameters.
                      "id": 1,
                      "name": "Argentina",
                      "score": 2,
+                     "seriesScore": 1,
                      "aggregatedScore": 4,
                      "isQualified": false,
                      "inPosition": true,
@@ -362,6 +367,7 @@ Don't forget general parameters.
                      "id": 2,
                      "name": "Brazil",
                      "score": 0,
+                     "seriesScore": 2,
                      "aggregatedScore": 2,
                      "isQualified": false,
                      "isWinner": false,
