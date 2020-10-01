@@ -170,6 +170,7 @@ startDate | false |  current date | 07/08/2018 |  | Return games from specific d
 endDate | false |  current date | 09/08/2018 |  |  Return games until specific date(included)
 pageSize | false |  all games | 100 |  |  Return amount of games each page
 predictions | array of predictions | Array | | [See Example](#prediction)
+numberOfGames | false | 20 | 5 | | Return specific number of games upon request
 
 ### Examples
 
@@ -192,6 +193,9 @@ predictions | array of predictions | Array | | [See Example](#prediction)
 ####partial games
 
 `GET https://ws.365scores.com/web/games/?games=123123,123456,165432`
+
+####top games
+`GET https://ws.365scores.com/web/games/top/?&appTypeId=5&langId=1&timezoneName=Asia/Jerusalem&startDate=23/09/2020&endDate=30/09/2020&showOdds=true&numberOfGames=5`
 
 <aside class="notice">
 Don't forget general parameters.
