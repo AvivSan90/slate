@@ -1129,7 +1129,9 @@ inSeries | false | Boolean | | Indicate if game is in series
                                         "Expandable": false
                                     },
                 "members": [{
-                                "playerId": 6688408,
+                                "id": 6688408,
+                                "status": 1,
+                                "statusText": "Starting",
                                 "position": {
                                                 "id": 1,
                                                 "name": "striker"
@@ -1144,7 +1146,15 @@ inSeries | false | Boolean | | Indicate if game is in series
                                                 "fieldPosition": 2,
                                                 "fieldLine": 33,
                                                 "fieldSide": 0
-                                            }
+                                                 },
+                                 "substitute": {
+                                                 "playerId": 22,
+                                                  "time": 90.0,
+                                                  "type": 1,
+                                                  "status": 1
+                                                 },
+                                  "ranking": 9.7,
+                                   "hasHighestRanking": true
                             }],
                 "relatedGame": [{
                                 "id": 2154532,
@@ -1299,7 +1309,9 @@ isEnded | false | Boolean |  | if stage is ended
                             "Expandable": false
                         },
     "members": [{
-                    "playerId": 6688408,
+                    "id": 6688408,
+                    "status": 1,
+                    "statusText": "Starting",
                     "position": {
                                     "id": 1,
                                     "name": "striker"
@@ -1320,8 +1332,10 @@ isEnded | false | Boolean |  | if stage is ended
                                     "time": 90.0,
                                     "type": 1,
                                     "status": 1
-                                }
-                }]
+                                },
+                    "ranking": 9.7,
+                    "hasHighestRanking": true
+                }] 
 }
 ```
 
@@ -1579,7 +1593,9 @@ value | false | ArraNumbery | | Statistic's value
 
 ```json
 [{
-    "playerId": 6688408,
+    "id": 6688408,
+    "status": 1,
+    "statusText": "Starting",
     "position": {
                     "id": 1,
                     "name": "striker"
@@ -1594,16 +1610,30 @@ value | false | ArraNumbery | | Statistic's value
                      "fieldPosition": 2,
                      "fieldLine": 33,
                      "fieldSide": 0
-                 }
+                 },
+    "substitution": {
+                    "playerId": 514236,
+                    "time": 83,
+                    "type": 2,
+                    "status": 8     
+                 },
+    "ranking": 9.7,
+    "hasHighestRanking": true
 }]
 ```
 
 Parameter | required | type | Options | Description
 --------- | ------- |  ----- |  ----- | ---------
-playerId | true | Integer | | Member's id (id for specific game)
+id | true | Integer | | Member's id (id for specific game)
+status | true | Integer | | Member status id
+statusText | true | String | | Member status text
 position | true | Object | | [Description](#position)
 formation | false | Object | | [Description](#formation)
-yardFormation | false | Object | | [Description](#yardFormation)
+yardFormation | false | Object | | [Description](#yard-formation)
+substitution | false | Object | | [Description](#substitution)
+ranking | false | Integer | | Player ranking appears only after games begins
+hasHighestRanking | false | Boolean | |  Player with highest ranking get true
+
 
 ## Position
 
@@ -1635,7 +1665,7 @@ id | true | Integer | | Formation's id
 name | true | String | | Formation's name
 shortName | false | String | | Formation's nickname
 
-## Yard formation
+## Yard Formation
 
 ```json
 {
@@ -1652,6 +1682,25 @@ line | true | Integer | | ?????????
 fieldPosition | true | String | | ???????????
 fieldLine | false | String | | ????????????
 fieldSide  | false | String | | ???????????
+
+## Substitution
+
+```json
+{
+    "playerId": 514236,
+    "time": 83,
+    "type": 2,
+    "status": 8     
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+playerId | true | Integer | | Substitution playerId
+time | true | Integer | | Substitution time
+type | false | Integer | | Entering or leaving the game
+status  | false | Integer | | Substitution status
+
 
 ## Statistics
 
@@ -2014,10 +2063,10 @@ gameTimeDisplay | false | String | | Game's time formatted text
 gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
 playerId | true | Integer | | Main player for the event
 extraPlayers | false | Array | | array of extra players [playerId]
-eventType | true | Object |  |  [Description](#EventType)
+eventType | true | Object |  |  [Description]( #eventType)
 isMajor | false | Boolean |  | If event are major (filter top)
 
-## Event Type
+## EventType
 
 ```json
 {
