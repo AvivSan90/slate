@@ -290,6 +290,7 @@ Don't forget general parameters.
                      "countryid": 1,
                      "imgVer": 1,
                      "type": 2,
+                     "recentMatchesTrends" : ["gameTrends"],
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",
@@ -378,6 +379,7 @@ Don't forget general parameters.
                      "countryid": 2,
                      "imgVer": 1,
                      "type": 2,
+                     "recentMatchesTrends" : ["gameTrends"],
                      "recentMatches": ["gameIds"],
                      "lineups": {
                                     "status": "Not Confirmed",

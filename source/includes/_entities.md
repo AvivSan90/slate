@@ -179,6 +179,7 @@ link | true | Integer | | Bookmaker's website link
                      "isQualified": false,
                      "isWinner": false,
                      "countryid": 1,
+                     "recentMatchesTrends" : ["gameTrends"],       
                      "recentMatches": ["gameIds"],
                      "seriesScore": 1,
                      "lineups": {
@@ -266,6 +267,7 @@ link | true | Integer | | Bookmaker's website link
                      "isWinner": false,
                      "countryid": 2,
                      "imgVer": 1,
+                     "recentMatchesTrends" : ["gameTrends"],
                      "recentMatches": ["gameIds"],
                      "seriesScore": 2,
                      "lineups": {
@@ -1081,6 +1083,8 @@ inSeries | false | Boolean | | Indicate if game is in series
     "redCards": 0,
     "countryId": 11,
     "type": 2,
+    "recentMatchesTrends": [1],
+    "recentMatches": [2203572],
     "lineups": {
                 "status": "Not Confirmed",
                 "formation": "4-4-2",
@@ -1224,6 +1228,8 @@ countryId | true | Integer |  | Competitor's country
 lineups | false | Array | | [Description](#lineups)
 imgVer | false | Integer |  | Image version (add to image url)
 type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
+recentMatchesTrends | false | Array | | Competitor recent matches trends
+recentMatches | false | Array | | Competitor recent matches
 relatedGames | false | Array | | [See Example](#relateGame)
 seriesScore | false | Integer | | if inSeries competition show competitor's series score for specific series 
 ## Stage
