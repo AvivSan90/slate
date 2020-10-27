@@ -118,6 +118,12 @@ link | true | Integer | | Bookmaker's website link
                 "shortStatusText": "ET",
                 "gameTimeDisplay": "89'",
                 "gameTime": 89,
+                "preciseGameTime:": {
+                  "minutes": 89,
+                  "seconds" 0,
+                  "autoProgress": true,
+                  "clockDirection": 1 
+                 },
                 "gameTimeAndStatusDisplayType": 1,
                 "hasLineups": false,
                 "hasMissingPlayers": false,
@@ -677,6 +683,7 @@ shortStatusText | false | String | | Game's Status short formatted text
 showCountdown | false | Boolean | | if game card should show countdown
 gameTime | false | Integer | | Game's time 
 gameTimeDisplay | false | String | | Game's time formatted text
+preciseGameTime | false | Array | | [Description](#precise-game-time)
 gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
 hasLineups | false | Boolean | | if game have full lineups
 hasMissingPlayers | false | Boolean | | if game have only missing player lineups
@@ -706,6 +713,25 @@ stageNum | false | Integer | | Game part of stage
 groupNum | false | Integer | | Game part of group 
 relatedGames | false | Array | | [See Example](#relateGame)
 inSeries | false | Boolean |  | Indicate if game is in series
+
+## Precise Game Time
+
+```json
+{
+    "minutes": 25,
+    "seconds": 0,
+    "autoProgress": true,
+    "clockDirection": 1 
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+minutes | false | Integer |  | Precise minutes game time
+seconds | false | Integer |  | Precise minutes game time
+autoProgress | false | Boolean |  | Indication if the clock needs to be run
+clockDirection | false | Integer |  | Clock direction 
+
 
 ## Prediction
 
@@ -987,6 +1013,12 @@ ratio | true | Integer |  | Widget's ratio
              "statusText": "Extra time",
              "shortStatusText": "ET",
              "gameTimeDisplay": "89'",
+             "preciseGameTime:": {
+                 "minutes": 89,
+                 "seconds" 0,
+                 "autoProgress": true,
+                 "clockDirection": 1 
+              },
              "gameTime": 89,
              "gameTimeAndStatusDisplayType": 1,
              "isFutureGame": false,

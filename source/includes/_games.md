@@ -54,6 +54,12 @@
              "shortStatusText": "ET",
              "gameTime": 109,
              "gameTimeDisplay": "109'",
+             "preciseGameTime:": {
+                 "minutes": 109,
+                 "seconds" 0,
+                 "autoProgress": true,
+                 "clockDirection": 1 
+              },
              "gameTimeAndStatusDisplayType": 1,
              "isFutureGame": false,
              "lineupsStatus": 1,
@@ -212,6 +218,11 @@ Don't forget general parameters.
                 "shortStatusText": "ET",
                 "gameTime": 109,
                 "gameTimeDisplay": "109'",
+                "preciseGameTime:": {
+                      "minutes": 109,
+                      "seconds" 0,
+                      "autoProgress": true
+                 },
                 "gameTimeAndStatusDisplayType": 1,
                 "isFutureGame": false,
                 "description": "Barcelona has won 5-3 after Penalties",

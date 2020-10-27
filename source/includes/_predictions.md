@@ -51,6 +51,11 @@
              "shortStatusText": "ET",
              "gameTime": 109,
              "gameTimeDisplay": "109'",
+             "preciseGameTime:": {
+                "minutes": 109,
+                "seconds" 0,
+                "autoProgress": true
+             },
              "gameTimeAndStatusDisplayType": 1,
              "isFutureGame": false,
              "lineupsStatus": 1,
