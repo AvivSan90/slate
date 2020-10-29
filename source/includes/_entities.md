@@ -1,7 +1,7 @@
 # Entities
 
 
-## LiveData
+## Live Data
 
 ```json
 {
@@ -633,7 +633,17 @@ link | true | Integer | | Bookmaker's website link
                                                     "popularityRank": 30065530,
                                                     "seriesScore": 1       
                                 }
-                    }]
+                    }],
+                    "matchFacts" : [
+                                  {
+                                    "Id" : "Pre_3",
+                                    "Text": "Celtic have won three of their last four Europa League home games (L1), as many victories as they managed in their previous 10 such matches at Celtic<br /> Park (D2 L5)."
+                                  },
+                                  {
+                                   "Id": "Pre_1",
+                                   "Text": "Celtic and AC Milan have met on 10 previous occasions in major European competition, all of which in the European Cup/Champions League. Celtic have won just one of those meetings – a 2-1 victory in October 2007."
+                                   }
+                              ],
     },
     "countries":[{
                     "id": 1,
@@ -693,9 +703,9 @@ isFutureGame | false | Boolean |  | if true don't display game
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
 lmt | false | String |  | if exist use iframe with the lmt url
-widgets | false | Array | | [Description](#gameWidget)
+widgets | false | Array | | [Description](#game-widget)
 venue | false | Object | | [Description](#venue)
-members | false | Array | | Game's members (both competitors, include management) [Description](#gameMember)
+members | false | Array | | [Description](#game-member)  Game's members (both competitors, include management) 
 stages | false | Array | | Game's stages [Description](#stage)
 homeCompetitor | true | Object | | [Description](#competitor)
 awayCompetitor | true | Object | | [Description](#competitor) 
@@ -711,8 +721,9 @@ roundNum | false | Integer | | Game part of round
 seasonNum | false | Integer | | Game part of season 
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group 
-relatedGames | false | Array | | [See Example](#relateGame)
+relatedGames | false | Array | | [See Example](#relate-game)
 inSeries | false | Boolean |  | Indicate if game is in series
+matchFacts | false | Array |  | [See Example](#match-facts)
 
 ## Precise Game Time
 
@@ -731,6 +742,40 @@ minutes | false | Integer |  | Precise minutes game time
 seconds | false | Integer |  | Precise minutes game time
 autoProgress | false | Boolean |  | Indication if the clock needs to be run
 clockDirection | false | Integer |  | Clock direction 
+
+## Match Facts
+
+```json
+{
+    "id": "Pre_3",
+    "text": "Celtic have won three of their last four Europa League home games (L1), as many victories as they managed in their previous 10 such matches at Celtic<br /> Park (D2 L5)."
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | false | String |  | Match fact id
+text | false | String |  | Match fact text
+
+
+
+## Game Widget
+
+```json
+{
+          "provider": "OPTA_LAW",
+          "partnerId": "football|68zplepppndhl8bfdvgy9vgu1|2ip4f1aefabczfkw80hj7uz8p|eok1bv6y79ugi4480fnh7qtey",
+          "url": "http://optawidgets.365scores.com/api/OptaLAW/GetWidget?partnerId=football%7C68zplepppndhl8bfdvgy9vgu1%7C2ip4f1aefabczfkw80hj7uz8p%7Ceok1bv6y79ugi4480fnh7qtey&lang=1&tz=",
+          "ratio": 1.777
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+provider | false | String |  | 
+partnerId | false | String |  | 
+url | false | String |  | 
+ratio | false | Double |  |
 
 
 ## Prediction
@@ -883,10 +928,10 @@ insight | false | Object |  | [Description](#insight)
 showVotes | true | Boolean | | if to show votes count or percentage
 totalVotes | true | Integer | | total votes
 odds | false |  | Object | [Description](#odds)
-options | true | Object |  | [Description](#predictionOptions)
+options | true | Object |  | [Description](#prediction-options)
 
 
-## insight
+## Insight
 
 ```json
 {
@@ -915,7 +960,7 @@ statisticalAnalsys | true | String |  | option name that provide by insight
 text | true | String |  | Description of statistical analsys
 odds | false |  | Object | [Description](#rate)
 
-## predictionOption
+## Prediction Option
 
 ```json
 {
@@ -936,7 +981,7 @@ num | true | Integer |  | option num
 name | true | String |  | option name
 vote | true |  | Object | [Description](#vote)
 
-## vote
+## Vote
 
 ```json
 {
@@ -952,7 +997,7 @@ count | true | Integer |  | votes count per option
 key | true | String |  | key for POST request
 percentage | true | | String | votes percentage per option
 
-## gameWidget
+## Game Widget
 
 ```json
 {
@@ -1089,7 +1134,7 @@ showCountdown | false | Boolean | | if game card should show countdown
 hasBetsTeaser | false | Boolean | | if games have odds (icon display functionality)
 description | false | String |  | Game's description
 aggregatedText | false | String |  | Aggregate score formatted text
-members | false | Array | | game's Members [Description](#gameMember)
+members | false | Array | | game's Members [Description](#game-member)
 homeCompetitor | true | Object | | [Description](#competitor)
 awayCompetitor | true | Object | | [Description](#competitor)
 competitionId | true | Integer | | Game's competition
@@ -1098,7 +1143,7 @@ roundNum | false | Integer | | Game part of round
 seasonNum | false | Integer | | Game part of season 
 stageNum | false | Integer | | Game part of stage 
 groupNum | false | Integer | | Game part of group
-relatedGames | false | Array | | [See Example](#relateGame)
+relatedGames | false | Array | | [See Example](#relate-game)
 inSeries | false | Boolean | | Indicate if game is in series
 ## Competitor
 
@@ -1262,7 +1307,7 @@ imgVer | false | Integer |  | Image version (add to image url)
 type | true | Integer | | Competitor type (team, nationalTeam, player, coupl)
 recentMatchesTrends | false | Array | | Competitor recent matches trends
 recentMatches | false | Array | | Competitor recent matches
-relatedGames | false | Array | | [See Example](#relateGame)
+relatedGames | false | Array | | [See Example](#relate-game)
 seriesScore | false | Integer | | if inSeries competition show competitor's series score for specific series 
 ## Stage
 
@@ -1382,10 +1427,10 @@ Parameter | required | type | Options | Description
 status | true | Integer | ??? | Lineup's status
 formation | false | String |  | Competitor's lineups formation
 hasFieldPositions | false | Boolean |  | Flag if members has field positions
-playersStatistics | false | Object |  | players statistics for box-score [Description](#playersStatistics)
-members | false | Array | | array of lineups members [Description](#lineupsMember)
+playersStatistics | false | Object |  | players statistics for box-score [Description](#players-statistics)
+members | false | Array | | array of lineups members [Description](#lineups-member)
 
-## gameMember
+## Game Member
 
 ```json
 [{
@@ -1411,7 +1456,7 @@ shortName | false | String | | Member's nickname
 JerseyNumber | false | Integer | | Member's jersey number
 imgVer | false | Integer |  | Image version (add to image url)
 
-## playersStatistics
+## Players Statistics
 
 ```json
 {
@@ -1466,7 +1511,7 @@ Categories | false | Array | | Array of player statistics categories [Descriptio
 Tables | false | Array | | Array of player statistics tables [Description](#table)
 Expandable | false | Boolean | | If playes statistics is expandable
 
-## subject
+## Subject
 
 ```json
 [{
@@ -1481,7 +1526,7 @@ id | false | Number | | Subject's id
 name | false | String | | Subject's name 
 
 
-## category
+## Category
 
 ```json
 [{
@@ -1499,7 +1544,7 @@ name | false | String | | Category's name
 shortName | false | String | | Category's short name 
 subjectId | false | Number | | Subject's id
 
-## table
+## Table
 
 ```json
 [{
@@ -1542,7 +1587,7 @@ columns | false | Array | | Array of statistics table columns [Description](#col
 rows | false | Array | | Array of table rows [Description](#row)
 summary | false | Array | | Array of statistics table summary [Description](#summary)
 
-## group
+## Group
 
 ```json
 [{
@@ -1556,7 +1601,7 @@ Parameter | required | type | Options | Description
 id | false | Number | | Group's id 
 name | false | String | | Group's name 
 
-## column
+## Column
 
 ```json
 [{
@@ -1576,7 +1621,7 @@ shortName | false | String | | statistic's short name
 order | false | Number | | Column's order number 
 isMajor | false | Boolean | | If column it's statistics highlight
 
-## row
+## Row
 
 ```json
 [{
@@ -1596,7 +1641,7 @@ groupId | false | Number | | Table group's id
 num | false | Number | | Row's nun 
 values | false | Array | | Array of value in row [Description](#value)
 
-## summary
+## Summary
 
 ```json
 [{
@@ -1613,7 +1658,7 @@ Parameter | required | type | Options | Description
 title | false | String | | Summary's title 
 values | false | Array | | Array of value in summary [Description](#value)
 
-## value
+## Value
 
 ```json
 [{
@@ -1627,7 +1672,7 @@ Parameter | required | type | Options | Description
 columnNum | false | String | | Column's num 
 value | false | ArraNumbery | | Statistic's value 
 
-## lineupsMember
+## Lineups Member
 
 ```json
 [{
@@ -2105,10 +2150,10 @@ gameTimeDisplay | false | String | | Game's time formatted text
 gameTimeAndStatusDisplayType | false | Integer | | Enum to present gameTimeDisplay or/and statusText
 playerId | true | Integer | | Main player for the event
 extraPlayers | false | Array | | array of extra players [playerId]
-eventType | true | Object |  |  [Description]( #eventType)
+eventType | true | Object |  |  [Description]( #event-type)
 isMajor | false | Boolean |  | If event are major (filter top)
 
-## EventType
+## Event Type
 
 ```json
 {
@@ -2375,7 +2420,7 @@ color | true | String |  | Destination display color
 type | true | Integer | ??????? | Destination's type
 
 
-## relateGame
+## Relate Game
 
 ```json
 [{

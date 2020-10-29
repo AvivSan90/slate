@@ -237,13 +237,13 @@
 }
 ```
 
-### Entities map 
+### Entities Map 
 
 Object | Usage | Description | Example
 --------- | ------- | ----------- | ---------
 game | dashboard, competition scores, team scores (game card) | Game's partial data | [See Example](#full-game)
 competitor | team at game card | Competitor critical data | [See Example](#competitor)
-predictions | main prediction for current game | Array | | [See Example](#prediction)
+predictions | main prediction for current game | Array | [See Example](#prediction)
 
 Partial object of game with main prediction
 

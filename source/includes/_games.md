@@ -143,7 +143,7 @@
 }
 ```
 
-### Entities map 
+### Entities Map 
 
 Object | Usage | Description | Example
 --------- | ------- | ----------- | ---------
@@ -712,6 +712,16 @@ Don't forget general parameters.
                             }],
                         }
                     }
+                ],
+                "matchFacts" : [
+                    {
+                      "Id" : "Pre_3",
+                      "Text": "Celtic have won three of their last four Europa League home games (L1), as many victories as they managed in their previous 10 such matches at Celtic<br /> Park (D2 L5)."
+                    },
+                    {
+                     "Id": "Pre_1",
+                     "Text": "Celtic and AC Milan have met on 10 previous occasions in major European competition, all of which in the European Cup/Champions League. Celtic have won just one of those meetings – a 2-1 victory in October 2007."
+                     }
                 ]
             },
     "countries": [{
@@ -749,28 +759,28 @@ Don't forget general parameters.
 }
 ```
 
-### Entities map 
+### Entities Map 
 
 Object | Usage | Description | Example
 --------- | ------- | --------- | -----
 game | Game center | Game's full data | [See Example](#full-game)
-hasLineups | false | Boolean | | if game have full lineups
-hasMissingPlayers | false | Boolean | | if game have only missing player lineups
-hasFieldPositions | false | Boolean | | if game have positions for lineups yard
+hasLineups | false | Boolean |  if game have full lineups
+hasMissingPlayers | false | Boolean |  if game have only missing player lineups
+hasFieldPositions | false | Boolean |  if game have positions for lineups yard
 competitor | Team at Game center header | Competitor critical data | [See Example](#competitor)
 lineups | Lineups at Game center | Competitor lineups data | [See Example](#lineups)
-members | Match events | Lineups & Match events | Array of game members | [See Example](#gameMember)
-stages | false | Array | | Game's stages [Description](#stage)
+members | Match events | Array of game members | [See Example](#game-member)
+stages | false | Array | Game's stages [Description](#stage)
 statistics | Stats | Array of match statistics | [See Example](#statistics)
 odds | Stats | Array of match statistics | [See Example](#odds)
-events | Match events | Lineups & Match events | Array of match events | [See Example](#events)
+events | Match events | Lineups & Match events | [See Example](#events) Array of match events 
 officials | Game Info | Array of officials | [See Example](#officials)
 tvNetworks | Game Info | Array of TV Networks | [See Example](#tv-networks)
 venue | Game Info | Data of the stadium | [See Example](#venue)
-widgets | false | Array | | [See Example](#gameWidget)
-predictions | false | Array | | [See Example](#prediction)
-relatedGames | false | Array | | [See Example](#relateGame)
-
+widgets | false | Array | [See Example](#game-widget)
+predictions | false | Array | [See Example](#prediction)
+relatedGames | false | Array | [See Example](#relate-game)
+matchFacts | false | Array | [See Example](#match-facts)
 
 ### HTTP Request
 
@@ -791,3 +801,5 @@ lastUpdateId | false | '' | 848293001 | | Return only updated properties from th
 <aside class="notice">
 Don't forget general parameters.
 </aside>
+
+
