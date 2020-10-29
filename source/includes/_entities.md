@@ -1656,7 +1656,9 @@ value | false | ArraNumbery | | Statistic's value
                     "status": 8     
                  },
     "ranking": 9.7,
-    "hasHighestRanking": true
+    "hasHighestRanking": true,
+    "didNotPlayed": true,
+    "didNotPlayedReason": "DNP - COACH'S DECISION"
 }]
 ```
 
@@ -1671,6 +1673,8 @@ yardFormation | false | Object | | [Description](#yard-formation)
 substitution | false | Object | | [Description](#substitution)
 ranking | false | Integer | | Player ranking appears only after games begins
 hasHighestRanking | false | Boolean | |  Player with highest ranking get true
+didNotPlayed | false | Boolean | |  If player did not play
+didNotPlayedReason | false | String | | If a player have not data (Did Not Play) - show the DNP text
 
 
 ## Position
