@@ -1700,6 +1700,12 @@ value | false | ArraNumbery | | Statistic's value
                     "type": 2,
                     "status": 8     
                  },
+    "seasonStats": {
+                   "type": 5,
+                   "text": "Appearences(3/8)",
+                   "isSignificant": true,
+                   "color": "#FFC107"
+                  },
     "ranking": 9.7,
     "hasHighestRanking": true,
     "didNotPlayed": true,
@@ -1716,6 +1722,7 @@ position | true | Object | | [Description](#position)
 formation | false | Object | | [Description](#formation)
 yardFormation | false | Object | | [Description](#yard-formation)
 substitution | false | Object | | [Description](#substitution)
+seasonStats ֿ| false | Object | | [Description](#season-stats)
 ranking | false | Integer | | Player ranking appears only after games begins
 hasHighestRanking | false | Boolean | |  Player with highest ranking get true
 didNotPlayed | false | Boolean | |  If player did not play
@@ -1788,6 +1795,22 @@ time | true | Integer | | Substitution time
 type | false | Integer | | Entering or leaving the game
 status  | false | Integer | | Substitution status
 
+## Season Stats
+```json
+{
+     "type": 5,
+     "text": "Appearences(3/8)",
+     "isSignificant": true,
+     "color": "#FFC107"    
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+type | true | Integer | | Athlets Statistic Types Id
+text | true | String | |  Athlets Statistic Types with value in parenthesis
+isSignificant | false | Boolean | | Is Significant
+color  | false | String | | Text color
 
 ## Statistics
 
