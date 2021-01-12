@@ -120,7 +120,7 @@ link | true | Integer | | Bookmaker's website link
                 "gameTime": 89,
                 "preciseGameTime:": {
                   "minutes": 89,
-                  "seconds" 0,
+                  "seconds": 0,
                   "autoProgress": true,
                   "clockDirection": 1 
                  },
@@ -1209,34 +1209,181 @@ inSeries | false | Boolean | | Indicate if game is in series
                                                         }],
                                         "Expandable": false
                                     },
-                "members": [{
-                                "id": 6688408,
-                                "status": 1,
-                                "statusText": "Starting",
-                                "position": {
-                                                "id": 1,
-                                                "name": "striker"
-                                            },
-                                "formation": {
-                                                "id": 1,
-                                                "name": "left back",
-                                                "shortName": "LB"
-                                            },
-                                "yardFormation": {
-                                                "line": 2,
-                                                "fieldPosition": 2,
-                                                "fieldLine": 33,
-                                                "fieldSide": 0
-                                                 },
-                                 "substitute": {
-                                                 "playerId": 22,
-                                                  "time": 90.0,
-                                                  "type": 1,
-                                                  "status": 1
-                                                 },
-                                  "ranking": 9.7,
-                                   "hasHighestRanking": true
-                            }],
+                  "members": [{
+                                  "id": 6688408,
+                                  "status": 1,
+                                  "statusText": "Starting",
+                                  "position": {
+                                                  "id": 1,
+                                                  "name": "striker"
+                                              },
+                                  "formation": {
+                                                  "id": 1,
+                                                  "name": "left back",
+                                                  "shortName": "LB"
+                                              },
+                                  "yardFormation": {
+                                                  "line": 2,
+                                                  "fieldPosition": 2,
+                                                  "fieldLine": 33,
+                                                  "fieldSide": 0
+                                                   },
+                                   "substitute": {
+                                                   "playerId": 22,
+                                                    "time": 90.0,
+                                                    "type": 1,
+                                                    "status": 1
+                                                   },
+                                    "ranking": 9.7,
+                                    "hasHighestRanking": true,
+                                    "hasStats": true,
+                                    "stats": [
+                                      {
+                                        "type": 30,
+                                        "value": "90'",
+                                        "isTop": true,
+                                        "categoryId": 2,
+                                        "name": "Minutes",
+                                        "shortName": "Min",
+                                        "order": 329,
+                                        "imageId": 229
+                                      },
+                                      {
+                                        "type": 3,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Total Shots",
+                                        "order": 7,
+                                        "imageId": 3
+                                      },
+                                      {
+                                        "type": 23,
+                                        "value": "2",
+                                        "isTop": true,
+                                        "categoryId": 3,
+                                        "name": "Goalkeeper Saves",
+                                        "shortName": "Saves",
+                                        "order": 101,
+                                        "imageId": 222
+                                      },
+                                      {
+                                        "type": 27,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Goals",
+                                        "order": 326,
+                                        "imageId": 226
+                                      },
+                                      {
+                                        "type": 26,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Assists",
+                                        "order": 325,
+                                        "imageId": 225
+                                      },
+                                      {
+                                        "type": 35,
+                                        "value": "2",
+                                        "isTop": true,
+                                        "categoryId": 3,
+                                        "name": "Goals Conceded",
+                                        "shortName": "Conceded",
+                                        "order": 335,
+                                        "imageId": 235
+                                      },
+                                      {
+                                        "type": 46,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Key passes",
+                                        "order": 14,
+                                        "imageId": 238
+                                      },
+                                      {
+                                        "type": 21,
+                                        "value": "23",
+                                        "categoryId": 2,
+                                        "name": "Total passes",
+                                        "order": 15,
+                                        "imageId": 220
+                                      },
+                                      {
+                                        "type": 19,
+                                        "value": "18/23 (78%)",
+                                        "categoryId": 2,
+                                        "name": "Passes Completed",
+                                        "order": 16,
+                                        "imageId": 175
+                                      },
+                                      {
+                                        "type": 45,
+                                        "value": "28",
+                                        "categoryId": 2,
+                                        "name": "Touches",
+                                        "order": 17,
+                                        "imageId": 237
+                                      },
+                                      {
+                                        "type": 9,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Offsides",
+                                        "order": 19,
+                                        "imageId": 9
+                                      },
+                                      {
+                                        "type": 37,
+                                        "value": "0",
+                                        "categoryId": 2,
+                                        "name": "Was Fouled",
+                                        "order": 342,
+                                        "imageId": 242
+                                      },
+                                      {
+                                        "type": 39,
+                                        "value": "0",
+                                        "categoryId": 3,
+                                        "name": "Tackles Won",
+                                        "order": 344,
+                                        "imageId": 244
+                                      },
+                                      {
+                                        "type": 40,
+                                        "value": "0",
+                                        "categoryId": 3,
+                                        "name": "Clearances",
+                                        "order": 345,
+                                        "imageId": 245
+                                      },
+                                      {
+                                        "type": 41,
+                                        "value": "0",
+                                        "categoryId": 3,
+                                        "name": "Interceptions",
+                                        "order": 346,
+                                        "imageId": 246
+                                      },
+                                      {
+                                        "type": 42,
+                                        "value": "0",
+                                        "categoryId": 3,
+                                        "name": "Fouls made",
+                                        "order": 347,
+                                        "imageId": 247
+                                      },
+                                      {
+                                        "type": 43,
+                                        "value": "0",
+                                        "categoryId": 3,
+                                        "name": "Punches",
+                                        "order": 348,
+                                        "imageId": 248
+                                      }
+                                    ],
+                                    "heatMap": "https://imagecache.365scores.com/image/fetch/w_1080,q_auto:eco,f_webp/https%3a%2f%2fheatmap.365scores.com%2f%3fcompressed_data%3dz0E02S0224R04042Q07492S045R02022S02z0X02P0%26dir%3dltr"
+                               }
+                  ],
                 "relatedGame": [{
                                 "id": 2154532,
                                 "sportId": 1,
@@ -1709,7 +1856,20 @@ value | false | ArraNumbery | | Statistic's value
     "ranking": 9.7,
     "hasHighestRanking": true,
     "didNotPlayed": true,
-    "didNotPlayedReason": "DNP - COACH'S DECISION"
+    "didNotPlayedReason": "DNP - COACH'S DECISION",
+    "hasStats": true,
+    "stats": [
+       {
+          "type": 30,
+          "value": "90'",
+          "isTop": true,
+          "categoryId": 2,
+          "name": "Minutes",
+          "shortName": "Min",
+          "order": 329,
+          "imageId": 229
+        }],
+    "heatMap": "https://imagecache.365scores.com/image/fetch/w_1080,q_auto:eco,f_webp/https%3a%2f%2fheatmap.365scores.com%2f%3fcompressed_data%3dz0E02S0224R04042Q07492S045R02022S02z0X02P0%26dir%3dltr"
 }]
 ```
 
@@ -1727,6 +1887,9 @@ ranking | false | Integer | | Player ranking appears only after games begins
 hasHighestRanking | false | Boolean | |  Player with highest ranking get true
 didNotPlayed | false | Boolean | |  If player did not play
 didNotPlayedReason | false | String | | If a player have not data (Did Not Play) - show the DNP text
+hasStats | false | Boolean | | If player have stats for player card popup
+stats | false | Object | | [Description](#stats)
+heatMap | false | String | | Player heatMap for player card popup
 
 
 ## Position
@@ -1776,6 +1939,73 @@ line | true | Integer | | ?????????
 fieldPosition | true | String | | ???????????
 fieldLine | false | String | | ????????????
 fieldSide  | false | String | | ???????????
+
+## Stats
+
+```json
+{
+    "type": 30,
+    "value": "90'",
+    "isTop": true,
+    "categoryId": 2,
+    "name": "Minutes",
+    "shortName": "Min",
+    "order": 329,
+    "imageId": 229     
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+type | true | Integer | | Stats type Id
+value | true | Integer | | Stats value
+isTop | false | Boolean | | Is top stats card
+categoryId  | true | Integer | | Stats type categoryId
+name  | true | String | | Stats type name
+shortName  | false | String | | Stats type shortName
+order  | true | Integer | | Stats type order
+imageId  | true | Integer | | Stats type imageId
+
+## Stats Category
+```json
+{
+    "id": 2,
+    "name": "Attacking",
+    "orderLevel": 20,
+    "orderByPosition": [
+      {
+        "position": 1,
+        "positionOrder": 2
+      },
+      {
+        "position": 2,
+        "positionOrder": 2
+      }
+    ]    
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+id | true | Integer | | Stats category id
+name | true | String | | Stats category name
+orderLevel | true | Integer | | Stats category order level
+orderByPosition  | false | Object | | [Description](#order-by-position)
+
+## order By Position
+
+```json
+{
+    "position": 1,
+    "positionOrder": 2    
+}
+```
+
+Parameter | required | type | Options | Description
+--------- | ------- |  ----- |  ----- | ---------
+position | true | Integer | | position
+positionOrder | true | Integer | | position order
+
 
 ## Substitution
 
