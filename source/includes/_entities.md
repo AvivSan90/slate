@@ -724,7 +724,7 @@ groupNum | false | Integer | | Game part of group
 relatedGames | false | Array | | [See Example](#relate-game)
 inSeries | false | Boolean |  | Indicate if game is in series
 matchFacts | false | Array |  | [See Example](#match-facts)
-
+hasLiveStreaming | false | Boolean |  | Indicate if game has live streaming
 ## Precise Game Time
 
 ```json
@@ -1078,6 +1078,7 @@ ratio | true | Integer |  | Widget's ratio
              "aggregatedText": "aggregated 4-2",
              "startTime": "2018-12-06T17:15:00+02:00",
              "inSeries": true,
+             "hasLiveStreaming": true,
              "homeCompetitor": {
                   "id": 1,
                   "name": "Argentina",
