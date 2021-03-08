@@ -33,7 +33,8 @@
                      "countryId": 1,
                      "liveGames": 2,
                      "totalGames": 5,
-                     "isTop": true
+                     "isTop": true,
+                     "tableName": "Standings"
                 },
                 {
                      "id": 121,
@@ -44,8 +45,8 @@
                      "countryId": 12,
                      "liveGames": 2,
                      "totalGames": 5,
-                     "isTop": true
-
+                     "isTop": true,
+                     "tableName": "Groups"
                 }]
 }
 ```
